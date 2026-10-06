@@ -1,0 +1,6327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>通城方言字音记录表 · 5000 常用汉字</title>
+<style>
+  :root{
+    --bg:#f2f5fa;
+    --bg2:#e9eef7;
+    --card:#ffffff;
+    --ink:#1c2333;
+    --ink2:#414b60;
+    --muted:#7c8798;
+    --line:#e4e9f2;
+    --line2:#d5dced;
+    --primary:#2f6fed;
+    --primary-d:#2258c9;
+    --primary-soft:#eaf1ff;
+    --accent:#c8553d;
+    --accent-soft:#fdeeea;
+    --ok:#1a9c7c;
+    --ok-soft:#e6f7f1;
+    --warn:#d97706;
+    --shadow:0 1px 2px rgba(28,35,51,.05),0 8px 24px -12px rgba(28,35,51,.16);
+    --shadow-s:0 1px 2px rgba(28,35,51,.06);
+    --radius:14px;
+    --font:"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+    --serif:"Songti SC","Source Han Serif SC","Noto Serif SC",Georgia,"SimSun",serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:var(--font);
+    color:var(--ink);
+    background:
+      radial-gradient(1200px 500px at 12% -8%, #dfe9ff 0%, rgba(223,233,255,0) 60%),
+      radial-gradient(900px 420px at 96% 0%, #ffece4 0%, rgba(255,236,228,0) 55%),
+      linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);
+    background-attachment:fixed;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1720px;margin:0 auto;padding:22px 22px 60px}
+
+  /* ============ footer / 公歧子 ============ */
+  .app-foot{
+    margin-top:24px;padding:20px 26px;
+    background:linear-gradient(135deg,#ffffff 0%,#f8fbff 58%,#fdf4f0 100%);
+    border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    display:flex;gap:22px;align-items:center;flex-wrap:wrap;
+  }
+  .foot-mark{display:flex;gap:14px;align-items:center;flex:0 0 auto}
+  .foot-seal{
+    width:54px;height:54px;flex:0 0 54px;border-radius:11px;
+    background:linear-gradient(150deg,#c8553d,#a83f2b);
+    color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:19px;line-height:1.1;letter-spacing:0;
+    box-shadow:0 6px 16px -6px rgba(200,85,61,.75);
+  }
+  .foot-seal b{display:block;font-weight:600}
+  .foot-name{
+    font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);
+    letter-spacing:4px;line-height:1.1;
+  }
+  .foot-role{font-size:10.5px;color:var(--muted);letter-spacing:2px;margin-top:5px}
+  .foot-note{
+    flex:1 1 320px;min-width:280px;
+    font-size:11.8px;color:#8b95a6;line-height:1.9;
+    border-left:1px dashed var(--line2);padding-left:22px;
+  }
+  .foot-note b{color:var(--ink2);font-weight:600}
+  .foot-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+  .foot-tag{
+    font-size:10.5px;color:#5a6b8c;background:#f2f6fd;border:1px solid #dce7fb;
+    border-radius:99px;padding:2px 10px;letter-spacing:.3px;white-space:nowrap;
+  }
+  .foot-sign{
+    flex:0 0 auto;text-align:right;padding-left:22px;
+    border-left:1px dashed var(--line2);
+  }
+  .foot-sign-t{font-family:var(--serif);font-size:13.5px;color:var(--ink2);letter-spacing:1px}
+  .foot-sign-s{font-size:10.5px;color:#aab3c2;letter-spacing:1.5px;margin-top:6px}
+  @media (max-width:900px){
+    .foot-note,.foot-sign{border-left:none;padding-left:0;text-align:left}
+    .foot-sign{text-align:left}
+  }
+
+  /* ============ header ============ */
+  .app-head{
+    background:linear-gradient(135deg,#ffffff 0%,#f7faff 55%,#fdf3ef 100%);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:20px 24px;
+    display:flex;gap:26px;align-items:center;flex-wrap:wrap;
+  }
+  .brand{display:flex;gap:16px;align-items:center;min-width:420px;flex:1}
+  .seal{
+    width:60px;height:60px;flex:0 0 60px;border-radius:12px;
+    background:linear-gradient(150deg,#c8553d,#a83f2b);
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:22px;line-height:1.15;letter-spacing:0;
+    box-shadow:0 6px 16px -6px rgba(200,85,61,.75);
+  }
+  .seal b{display:block;font-weight:600}
+  .title h1{margin:0;font-size:23px;letter-spacing:.5px;font-weight:700}
+  .title p{margin:6px 0 0;font-size:12.5px;color:var(--muted);line-height:1.6;max-width:760px}
+  .title .chips{margin-top:9px;display:flex;gap:7px;flex-wrap:wrap}
+  .chip{
+    font-size:11.5px;padding:3px 9px;border-radius:999px;
+    background:var(--primary-soft);color:var(--primary-d);border:1px solid #d4e2ff;
+  }
+  .chip.warm{background:var(--accent-soft);color:#a83f2b;border-color:#f6d9d0}
+
+  .gauge{display:flex;align-items:center;gap:18px;padding-left:24px;border-left:1px solid var(--line)}
+  .ring{position:relative;width:86px;height:86px}
+  .ring svg{transform:rotate(-90deg)}
+  .ring .val{
+    position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  }
+  .ring .val b{font-size:19px;line-height:1}
+  .ring .val span{font-size:10.5px;color:var(--muted);margin-top:2px}
+  .nums{display:flex;flex-direction:column;gap:6px;font-size:12.5px;color:var(--ink2)}
+  .nums div{display:flex;justify-content:space-between;gap:14px;min-width:132px}
+  .nums b{font-variant-numeric:tabular-nums}
+  .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:1px}
+  .dot.g{background:var(--ok)} .dot.w{background:#e3c07a}
+
+  /* ============ panels ============ */
+  .panel{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);margin-top:16px;
+  }
+  .toolbar{padding:14px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .field{display:flex;align-items:center;gap:7px}
+  .field > label{font-size:12.5px;color:var(--muted);white-space:nowrap}
+  input[type=text],input[type=search],select{
+    font-family:var(--font);font-size:13px;color:var(--ink);
+    padding:7px 10px;border:1px solid var(--line2);border-radius:9px;background:#fff;
+    outline:none;transition:.15s;min-width:0;
+  }
+  input[type=text]:focus,input[type=search]:focus,select:focus{
+    border-color:var(--primary);box-shadow:0 0 0 3px rgba(47,111,237,.14)
+  }
+  select{cursor:pointer;padding-right:26px;appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path d='M1 3l4 4 4-4' fill='none' stroke='%237c8798' stroke-width='1.4' stroke-linecap='round'/></svg>");
+    background-repeat:no-repeat;background-position:right 9px center}
+  .search-box{position:relative;flex:1;min-width:230px}
+  .search-box input{width:100%;padding-left:32px}
+  .search-box svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);opacity:.5}
+  .btn{
+    font-family:var(--font);font-size:13px;font-weight:600;cursor:pointer;
+    padding:8px 14px;border-radius:9px;border:1px solid var(--line2);background:#fff;color:var(--ink2);
+    transition:.15s;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;
+  }
+  .btn:hover{border-color:#bfcbe6;background:#f8faff;transform:translateY(-1px)}
+  .btn:active{transform:translateY(0)}
+  .btn.primary{background:linear-gradient(180deg,#3f7df2,#2a62d8);border-color:#2a62d8;color:#fff;box-shadow:0 6px 14px -8px rgba(47,111,237,.9)}
+  .btn.primary:hover{background:linear-gradient(180deg,#4c88f4,#2f6fed)}
+  .btn.warm{background:#fff;border-color:#f0c8bd;color:#a83f2b}
+  .btn.warm:hover{background:#fdf3ef}
+  .btn.ghost{border-style:dashed}
+  .sep{width:1px;height:26px;background:var(--line);margin:0 3px}
+  .grow{flex:1}
+
+  .hintbar{
+    display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+    padding:9px 16px;border-top:1px dashed var(--line);font-size:12px;color:var(--muted);
+  }
+  .hintbar kbd{
+    font-family:var(--font);font-size:11px;background:#f3f6fc;border:1px solid var(--line2);
+    border-bottom-width:2px;border-radius:5px;padding:1px 5px;color:var(--ink2)
+  }
+
+  /* ============ table ============ */
+  .tablewrap{position:relative;overflow:auto;max-height:62vh;border-radius:0 0 var(--radius) var(--radius)}
+  table{border-collapse:separate;border-spacing:0;width:100%;min-width:1400px;font-size:13.5px}
+  th,td{padding:0;text-align:left}
+  thead th{
+    position:sticky;background:linear-gradient(180deg,#f8faff,#eef3fc);
+    border-bottom:1px solid var(--line2);z-index:3;
+    font-size:12.5px;font-weight:700;color:var(--ink2);white-space:nowrap;
+  }
+  thead tr:first-child th{top:0;height:34px;padding:0 12px;border-bottom:1px solid var(--line2)}
+  thead tr:nth-child(2) th{top:34px;height:36px;padding:0 12px;font-weight:600;font-size:12px;color:var(--muted)}
+  thead th.grp{text-align:center;letter-spacing:2px;font-size:12px;border-left:1px solid var(--line2);border-right:1px solid var(--line2)}
+  thead th.grp.mand{color:#2258c9;background:linear-gradient(180deg,#eef4ff,#e5eeff)}
+  thead th.grp.tc{color:#a83f2b;background:linear-gradient(180deg,#fff3ef,#ffe9e2)}
+  thead th.first{border-left:0}
+  tbody tr{background:#fff;transition:background .12s}
+  tbody tr:nth-child(even){background:#fbfcfe}
+  tbody tr:hover{background:#f4f8ff}
+  tbody td{border-bottom:1px solid var(--line);vertical-align:middle;height:40px;padding:0 10px}
+  tbody td.idx{
+    text-align:center;color:var(--muted);font-variant-numeric:tabular-nums;font-size:12px;
+    position:relative;width:56px;border-right:1px solid var(--line)
+  }
+  tbody tr.done td.idx{color:var(--ok);font-weight:700}
+  tbody td.zi{width:66px;text-align:center}
+  tbody td.zi .han{font-family:var(--serif);font-size:23px;line-height:1}
+  tbody td.py{width:112px}
+  tbody td.py .p{font-size:14px;letter-spacing:.3px}
+  tbody td.py .alt{font-size:11px;color:#a8b2c4;margin-top:1px;white-space:nowrap}
+  tbody td.sm,tbody td.ym{width:74px;color:var(--ink2)}
+  tbody td.sd{width:92px;white-space:nowrap}
+  tbody td.tcsm{width:132px;border-left:1px solid var(--line)}
+  tbody td.tcym{width:132px}
+  tbody td.tcread{width:140px}
+  tbody td.tcsd{width:156px}
+  tbody td.tczi{width:104px}
+  tbody td.note{width:150px}
+  tbody td.note input{border-color:transparent}
+  tbody td.zi .empty{font-family:var(--font);font-size:12px;color:#c3cbd9}
+
+  .tone-badge{
+    display:inline-block;font-size:11px;font-weight:700;border-radius:6px;
+    padding:2px 7px;line-height:1.5;letter-spacing:.5px
+  }
+  .t1{background:#e8f0ff;color:#2258c9}
+  .t2{background:#e3f7f0;color:#0f7c61}
+  .t3{background:#fdf1de;color:#a35c00}
+  .t4{background:#fdeceb;color:#b03a2e}
+  .t0{background:#eef1f6;color:#6b7280}
+  .t5{background:#f3ebfd;color:#6d4bd8}
+  .t6{background:#fdece7;color:#a83f2b}
+  .tn{font-size:11px;color:#a8b2c4;margin-left:5px;font-variant-numeric:tabular-nums}
+
+  /* 可输入 + 下拉 */
+  .combo{position:relative;display:flex;align-items:center}
+  .combo input{
+    width:100%;border:1px solid transparent;background:transparent;border-radius:8px;
+    padding:6px 22px 6px 8px;font-size:13.5px;font-family:var(--font);color:var(--ink);
+    outline:none;transition:.15s
+  }
+  .combo input::placeholder{color:#c3cbd9;font-size:12.5px}
+  .combo:hover input{background:#f7f9fd;border-color:var(--line2)}
+  .combo input:focus{background:#fff;border-color:var(--primary);box-shadow:0 0 0 3px rgba(47,111,237,.14)}
+  .combo input.filled{font-weight:600;color:#1c2333}
+  .combo .caret{
+    position:absolute;right:4px;width:18px;height:18px;border-radius:5px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;color:#9aa5b8;font-size:9px;
+    opacity:.55;transition:.15s;user-select:none
+  }
+  .combo:hover .caret{opacity:1;background:#eef3fd;color:var(--primary)}
+  .combo .mini{
+    position:absolute;right:24px;width:18px;height:18px;border-radius:5px;cursor:pointer;
+    display:none;align-items:center;justify-content:center;color:var(--ok);font-size:11px;background:#e6f7f1
+  }
+  .combo:hover .mini{display:flex}
+  .combo .mini:hover{background:#cdeee2}
+
+  /* combobox 弹层 */
+  #pop{
+    position:fixed;z-index:99;width:298px;max-height:352px;display:none;
+    background:#fff;border:1px solid var(--line2);border-radius:12px;
+    box-shadow:0 18px 46px -14px rgba(28,35,51,.4);overflow:hidden
+  }
+  #pop .p-head{padding:9px;border-bottom:1px solid var(--line);background:#fafcff}
+  #pop .p-head input{
+    width:100%;font-size:13px;padding:6px 9px;border:1px solid var(--line2);border-radius:8px;outline:none
+  }
+  #pop .p-head input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(47,111,237,.12)}
+  #pop .p-list{overflow:auto;max-height:290px;padding:5px}
+  #pop .p-group{
+    font-size:11px;color:var(--muted);padding:7px 9px 5px;letter-spacing:1px;
+    position:sticky;top:0;background:#fff;z-index:1
+  }
+  #pop .p-item{
+    display:flex;align-items:center;gap:9px;padding:6px 9px;border-radius:8px;cursor:pointer;font-size:13px
+  }
+  #pop .p-item:hover,#pop .p-item.hl{background:var(--primary-soft)}
+  #pop .p-item .k{
+    font-size:14px;min-width:44px;font-weight:600;color:var(--primary-d);
+    font-family:"Segoe UI",var(--font)
+  }
+  #pop .p-item .e{color:var(--muted);font-size:12px;font-family:var(--serif)}
+  #pop .p-item .n{margin-left:auto;font-size:10.5px;color:#b6bfcd}
+  #pop .p-item.sel{background:#e6f7f1}
+  #pop .p-empty{padding:16px;text-align:center;color:var(--muted);font-size:12.5px}
+  #pop .p-foot{
+    display:flex;gap:6px;padding:7px 9px;border-top:1px solid var(--line);background:#fafcff
+  }
+  #pop .p-foot button{
+    flex:1;font-size:12px;padding:5px;border-radius:7px;border:1px solid var(--line2);background:#fff;cursor:pointer;color:var(--ink2)
+  }
+  #pop .p-foot button:hover{background:#f2f6fd;border-color:#bfcbe6}
+  #pop .p-foot button.danger:hover{background:#fdeceb;border-color:#f3c6c1;color:#b03a2e}
+
+  /* ============ pagination ============ */
+  .pager{display:flex;align-items:center;gap:10px;padding:12px 16px;border-top:1px solid var(--line);flex-wrap:wrap}
+  .pager .info{font-size:12.5px;color:var(--muted)}
+  .pgbtn{
+    min-width:32px;height:32px;padding:0 10px;border-radius:8px;border:1px solid var(--line2);
+    background:#fff;font-size:12.5px;cursor:pointer;color:var(--ink2);transition:.15s
+  }
+  .pgbtn:hover:not(:disabled){border-color:#bfcbe6;background:#f6f9ff}
+  .pgbtn:disabled{opacity:.4;cursor:not-allowed}
+  .pgbtn.cur{background:var(--primary);border-color:var(--primary);color:#fff;font-weight:700}
+  .ellipsis{color:var(--muted);font-size:12px}
+
+  /* ============ reference ============ */
+  .refwrap{padding:0}
+  summary{
+    cursor:pointer;list-style:none;padding:15px 18px;font-size:14px;font-weight:700;color:var(--ink);
+    display:flex;align-items:center;gap:10px
+  }
+  summary::-webkit-details-marker{display:none}
+  summary .arw{transition:.2s;color:var(--muted);font-size:11px}
+  details[open] summary .arw{transform:rotate(90deg)}
+  summary .sub{font-weight:400;font-size:12px;color:var(--muted)}
+  .refbody{padding:0 18px 20px;border-top:1px dashed var(--line)}
+  .refcard{margin-top:16px}
+  .refcard h3{
+    margin:0 0 10px;font-size:13.5px;color:var(--ink);display:flex;align-items:center;gap:8px
+  }
+  .refcard h3 em{font-style:normal;font-size:11.5px;color:var(--muted);font-weight:400}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:8px}
+  .gtitle{
+    font-size:11.5px;letter-spacing:1px;padding:5px 10px;border-radius:8px;margin:10px 0 2px;
+  }
+  .gtitle:first-child{margin-top:0}
+  .gtitle.blue{background:#eef4ff;color:#41609c;border:1px solid #dbe6fb}
+  .gtitle.warm{background:#fdf3ef;color:#a1685a;border:1px solid #f6ddd4}
+  .gitem{
+    border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:#fdfefe;
+    display:flex;align-items:baseline;gap:8px;transition:.15s
+  }
+  .gitem:hover{background:#f7faff;border-color:#cfdcf6}
+  .gitem .k{font-size:15px;font-weight:700;color:var(--primary-d);min-width:38px;font-family:"Segoe UI",var(--font)}
+  .gitem .e{font-family:var(--serif);font-size:14px;color:var(--ink2);letter-spacing:.3px}
+  .gitem .n{font-size:10.5px;color:#b6bfcd;margin-left:auto}
+  .tonegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:9px}
+  .tcard{border:1px solid var(--line);border-radius:11px;padding:11px 13px;background:#fdfefe}
+  .tcard .top{display:flex;align-items:center;gap:9px}
+  .tcard .pitch{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .tcard .ex{font-family:var(--serif);font-size:13.5px;color:var(--muted);margin-top:7px;letter-spacing:1px}
+  .refnote{
+    font-size:12.5px;color:var(--ink2);line-height:1.85;background:#fafcff;border:1px solid var(--line);
+    border-radius:11px;padding:13px 16px;margin-top:14px
+  }
+  .refnote b{color:var(--ink)}
+  .refnote ol{margin:8px 0 0;padding-left:20px}
+  .refnote li{margin:3px 0}
+  .refnote code{background:#eef3fc;border-radius:5px;padding:1px 5px;font-size:12px}
+
+  /* ============ toast ============ */
+  #toast{
+    position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+    background:#1c2333;color:#fff;font-size:13px;padding:11px 18px;border-radius:11px;
+    box-shadow:0 14px 34px -12px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:.25s;z-index:200
+  }
+  #toast.on{opacity:1;transform:translate(-50%,0)}
+  #toast.ok{background:linear-gradient(135deg,#17876a,#0f6f56)}
+  #toast.err{background:linear-gradient(135deg,#c0442e,#a4351f)}
+
+  .cellwrap{overflow:auto}
+  .minw{min-width:1400px}
+  ::-webkit-scrollbar{width:11px;height:11px}
+  ::-webkit-scrollbar-thumb{background:#cdd6e6;border-radius:8px;border:3px solid #fff}
+  ::-webkit-scrollbar-thumb:hover{background:#b6c2d8}
+  ::-webkit-scrollbar-track{background:#f6f8fc}
+  @media (max-width:900px){
+    .app-head{gap:16px}
+    .gauge{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:14px;width:100%}
+    .brand{min-width:0}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="app-head">
+    <div class="brand">
+      <div class="seal"><b>通</b><b>城</b></div>
+      <div class="title">
+        <h1>通城方言字音记录表 · 5000 常用汉字</h1>
+        <p>普通话（拼音／声母／韵母／声调）↔ 通城方言（声母／韵母／读音／声调／方言用字）对照录入表。通城音系栏目可下拉选择，也可直接输入自定义值。</p>
+        <div class="chips">
+          <span class="chip">字表：通用规范汉字表 一级 3500 + 二级 1500</span>
+          <span class="chip">拼音：pypinyin 严格模式（零声母 y/w 归零声母）</span>
+          <span class="chip warm">通城方言：赣语大通片 · 隽水镇「通城声」参考音系</span>
+        </div>
+      </div>
+    </div>
+    <div class="gauge">
+      <div class="ring">
+        <svg width="86" height="86" viewBox="0 0 86 86">
+          <circle cx="43" cy="43" r="36" fill="none" stroke="#e9eef7" stroke-width="9"></circle>
+          <circle id="ringArc" cx="43" cy="43" r="36" fill="none" stroke="url(#g1)" stroke-width="9"
+                  stroke-linecap="round" stroke-dasharray="226.2" stroke-dashoffset="226.2"></circle>
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#4c88f4"/><stop offset="100%" stop-color="#1a9c7c"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="val"><b id="pctText">0%</b><span>已录入</span></div>
+      </div>
+      <div class="nums">
+        <div><span><i class="dot g"></i>已填写</span><b id="numDone">0</b></div>
+        <div><span><i class="dot w"></i>待填写</span><b id="numTodo">5000</b></div>
+        <div><span>总字数</span><b id="numAll">5000</b></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="panel">
+    <div class="toolbar">
+      <div class="search-box">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="#7c8798" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="#7c8798" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input type="search" id="q" placeholder="搜索汉字、拼音、声母、韵母，或任意已填内容…" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label>录入状态</label>
+        <select id="fStatus">
+          <option value="all">全部</option>
+          <option value="done">已填写</option>
+          <option value="todo">未填写</option>
+          <option value="part">部分填写</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>通城声调</label>
+        <select id="fTone"><option value="">不限</option></select>
+      </div>
+      <div class="field">
+        <label>排序</label>
+        <select id="fSort">
+          <option value="idx">字表顺序</option>
+          <option value="py">按拼音</option>
+          <option value="sm">按普通话声母</option>
+          <option value="ym">按普通话韵母</option>
+          <option value="sd">按普通话声调</option>
+          <option value="tcsm">按通城声母</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>每页</label>
+        <select id="fPage">
+          <option>25</option><option selected>50</option><option>100</option><option>200</option><option value="5000">全部</option>
+        </select>
+      </div>
+      <div class="sep"></div>
+      <button class="btn primary" id="btnExportXlsx">导出 Excel</button>
+      <button class="btn" id="btnExportJson">导出 JSON</button>
+      <button class="btn" id="btnImportJson">导入 JSON</button>
+      <button class="btn ghost" id="btnFillSame" title="把所有空白「方言用字」填成与汉字相同">方言用字=汉字</button>
+      <button class="btn ghost" id="btnComposeAll" title="按「声母+韵母+调值」补全所有空白的通城读音">批量补全读音</button>
+      <button class="btn warm" id="btnClear">清空</button>
+      <input type="file" id="fileInput" accept=".json,application/json" hidden />
+    </div>
+    <div class="hintbar">
+      <span>录入提示：</span>
+      <span>点单元格右侧 <b>▾</b> 展开通城音系候选（带例字），也可直接键入；</span>
+      <span>读音点 <b>⤵</b> 自动合成（声母＋韵母＋调值）；</span>
+      <span><kbd>Enter</kbd> 跳到同列下一行，便于连续录入；</span>
+      <span>数据自动存在本机浏览器，导出 JSON 可备份／换机恢复。</span>
+      <span class="grow"></span>
+      <span id="filterInfo"></span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="tablewrap" id="tableWrap">
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="2" class="first" style="width:56px;text-align:center">序号</th>
+            <th rowspan="2" style="width:66px;text-align:center">汉字</th>
+            <th colspan="4" class="grp mand">普 通 话</th>
+            <th colspan="5" class="grp tc">通 城 方 言</th>
+            <th rowspan="2" style="width:150px">备注</th>
+          </tr>
+          <tr>
+            <th>拼音</th><th>声母</th><th>韵母</th><th>声调</th>
+            <th>声母 ▾</th><th>韵母 ▾</th><th>读音 ▾</th><th>声调 ▾</th><th>方言用字</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div id="emptyTip" style="display:none;padding:44px;text-align:center;color:#7c8798;font-size:13.5px">
+        没有符合条件的字，试试调整搜索或筛选条件。
+      </div>
+    </div>
+    <div class="pager">
+      <button class="pgbtn" id="pgFirst" title="首页">«</button>
+      <button class="pgbtn" id="pgPrev">上一页</button>
+      <span id="pgNums" style="display:flex;gap:6px;align-items:center"></span>
+      <button class="pgbtn" id="pgNext">下一页</button>
+      <button class="pgbtn" id="pgLast" title="末页">»</button>
+      <span class="info" id="pgInfo"></span>
+      <span class="grow"></span>
+      <span class="info">跳至</span>
+      <input type="text" id="pgJump" style="width:64px;text-align:center" placeholder="页码" />
+      <button class="btn" id="pgGo" style="padding:6px 12px">跳转</button>
+      <span class="sep"></span>
+      <span class="info">导出时</span>
+      <select id="expScope"><option value="all">全部 5000 行</option><option value="done">仅已填写</option><option value="view">当前筛选结果</option></select>
+    </div>
+  </section>
+
+  <details class="panel refwrap">
+    <summary>
+      <span class="arw">▶</span>
+      通城方言音系参考（声母 · 韵母 · 声调）
+      <span class="sub">据《通城方言语音分析》（祝敏鸿 2002，隽水镇）、《湖北通城方言的清浊对立及其相关问题》（夏俐萍，《语言研究》2025-4）、《赣语大通片》调值表、《鄂东南通城方言入声韵尾演变研究》整理</span>
+    </summary>
+    <div class="refbody">
+      <div class="refcard">
+        <h3>一、声母 <em id="refSmCount"></em></h3>
+        <div id="refSm"></div>
+      </div>
+      <div class="refcard">
+        <h3>二、韵母 <em id="refYmCount"></em></h3>
+        <div id="refYm"></div>
+      </div>
+      <div class="refcard">
+        <h3>三、声调 <em>六调：阴平 · 阳平 · 上声 · 阴去 · 阳去 · 入声</em></h3>
+        <div class="tonegrid" id="refTone"></div>
+      </div>
+      <div class="refnote">
+        <b>音系要点（据文献）</b>
+        <ol>
+          <li><b>清浊对立，而非送气对立</b>：通城方言只有清浊对立，没有送气与不送气的对立；古全浊声母与次清（送气）声母合流为浊音声母（“次清化浊”），故 <code>b d dz dʑ g</code> 等浊音声母是通城话的关键特征，也是幕阜山“浊音走廊”的典型表现。</li>
+          <li><b>没有卷舌音</b>：无 <code>zh ch sh r</code> 一类卷舌声母，舌尖音一律作 <code>ts dz s z</code>；另有普通话所无的舌根鼻音 <code>ŋ</code>（鹅、安、鄂）与舌面鼻音 <code>ȵ</code>（泥、银、捏）。</li>
+          <li><b>六个声调（城关／隽水）</b>：古平声、去声按清浊各分阴阳，古上声浊声母字归阳去，入声保留且自成一调。西片石南等地入声再分「全入／次入」而成七调（石南：全入 55、次入 35）。</li>
+          <li><b>入声韵尾</b>：多数点收喉塞尾 <code>[-ʔ]</code>，通城另有 <code>[-l]</code> 一类韵尾，部分点入声韵尾出现鼻化／鼻音化（[-n]、[-ŋ]），是边界方言的创新演变。</li>
+          <li><b>内部差异</b>：县内大体分三片——隽水等「通城声」（城区）、北港大坪等「湖南声」（西片，近平江、临湘）、麦市塘湖等「崇阳声」（东片）。三者声韵调系统可对比，本表以城区「通城声」为基准。</li>
+        </ol>
+      </div>
+      <div class="refnote">
+        <b>使用说明</b>
+        <ol>
+          <li>「声母 ▾ / 韵母 ▾ / 读音 ▾ / 声调 ▾」四个单元格均为<b>可输入 + 可下拉</b>：点右侧箭头从音系列表中选择，或直接键盘输入（含自定义音标、变读、白读等）。</li>
+          <li>「读音」点 <b>⤵</b> 会按「声母＋韵母＋调值」合成，例：<code>b</code> + <code>a</code> + <code>312</code> → <code>ba³¹²</code>；声调只选调类而未写调值时，自动取该调类在城关话的调值。</li>
+          <li>下拉列表中的<b>例字</b>来自上列文献的调查字，可用于核对读音是否与当地实际一致；不一致时请直接输入实际读音并在「备注」中记录发音人、村镇等信息。</li>
+          <li>记录建议：每个字尽量注明<b>发音人年龄、性别、村镇</b>（通城内部差异大，同字不同村可能不同音），有文白异读时分别记录。</li>
+          <li>数据实时保存在本机浏览器（localStorage）；导出 <b>JSON</b> 可备份与跨设备续录，导出 <b>Excel</b> 可用 Excel／WPS 继续整理统计。</li>
+        </ol>
+      </div>
+    </div>
+  </details>
+
+  <footer class="app-foot">
+    <div class="foot-mark">
+      <div class="foot-seal"><b>公</b><b>歧</b></div>
+      <div class="foot-id">
+        <div class="foot-name">公歧子</div>
+        <div class="foot-role">设计 · 制作</div>
+      </div>
+    </div>
+    <div class="foot-note">
+      <b>通城方言属赣语大通片</b>，兼具湘语特征，保留古入声，被语言学界视为汉语史的「活化石」。本表为记录工具：普通话音系由程序生成，通城音系为文献参考值，最终以当地实际读音为准。
+      <div class="foot-tags">
+        <span class="foot-tag">5000 常用汉字</span>
+        <span class="foot-tag">声母 20 · 韵母 71 · 六声</span>
+        <span class="foot-tag">Excel / JSON 导出 · JSON 导入</span>
+        <span class="foot-tag">数据存于本机浏览器</span>
+      </div>
+    </div>
+    <div class="foot-sign">
+      <div class="foot-sign-t">通城方言字音记录表</div>
+      <div class="foot-sign-s">公歧子 · 二〇二六年十月</div>
+    </div>
+  </footer>
+</div>
+
+<div id="pop">
+  <div class="p-head"><input type="text" id="popSearch" placeholder="筛选（音标 / 例字 / 调类）…" autocomplete="off" /></div>
+  <div class="p-list" id="popList"></div>
+  <div class="p-foot">
+    <button type="button" id="popClear">清空该格</button>
+    <button type="button" class="danger" id="popClose">关闭</button>
+  </div>
+</div>
+<div id="toast"></div>
+
+<script id="rawData" type="text/plain">一|yī||i|1|yí/yì
+乙|yǐ||i|3|yì/jué
+二|èr||er|4|
+十|shí|sh|i|2|
+丁|dīng|d|ing|1|zhēng
+厂|chǎng|ch|ang|3|hǎn/yán/ān
+七|qī|q|i|1|qí
+卜|bo|b|o|5|bǔ/pū
+八|bā|b|a|1|bá
+人|rén|r|en|2|
+入|rù|r|u|4|
+儿|ér||er|2|er/rén
+匕|bǐ|b|i|3|pìn
+几|jǐ|j|i|3|jī
+九|jiǔ|j|iu|3|jiū
+刁|diāo|d|iao|1|
+了|le|l|e|5|liǎo/liào
+刀|dāo|d|ao|1|diāo
+力|lì|l|i|4|
+乃|nǎi|n|ai|3|ǎi
+又|yòu||iu|4|
+三|sān|s|an|1|
+干|gàn|g|an|4|gān/àn
+于|yú||ü|2|wéi/yū/xū
+亏|kuī|k|ui|1|yú
+工|gōng|g|ong|1|
+土|tǔ|t|u|3|dù/chǎ/tú
+士|shì|sh|i|4|
+才|cái|c|ai|2|zāi
+下|xià|x|ia|4|
+寸|cùn|c|un|4|cǔn
+大|dà|d|a|4|dài/tài
+丈|zhàng|zh|ang|4|
+与|yǔ||ü|3|yù/yú
+万|wàn||uan|4|mò
+上|shàng|sh|ang|4|shǎng
+小|xiǎo|x|iao|3|
+口|kǒu|k|ou|3|
+山|shān|sh|an|1|
+巾|jīn|j|in|1|
+千|qiān|q|ian|1|
+乞|qǐ|q|i|3|qì
+川|chuān|ch|uan|1|
+亿|yì||i|4|
+个|gè|g|e|4|gě/gàn
+夕|xī|x|i|1|yì
+久|jiǔ|j|iu|3|
+么|me|m|e|5|yāo/mó/ma
+勺|sháo|sh|ao|2|shuò/zhuó/dì
+凡|fán|f|an|2|
+丸|wán||uan|2|
+及|jí|j|i|2|
+广|guǎng|g|uang|3|yǎn/ān
+亡|wáng||uang|2|wú
+门|mén|m|en|2|
+丫|yā||ia|1|
+义|yì||i|4|
+之|zhī|zh|i|1|zhū/zhì
+尸|shī|sh|i|1|
+己|jǐ|j|i|3|qǐ
+已|yǐ||i|3|sì
+巳|sì|s|i|4|yǐ
+弓|gōng|g|ong|1|
+子|zi|z|i|5|zǐ
+卫|wèi||ui|4|
+也|yě||ie|3|yí
+女|nǚ|n|ü|3|nǜ/rǔ
+刃|rèn|r|en|4|
+飞|fēi|f|ei|1|
+习|xí|x|i|2|
+叉|chā|ch|a|1|chá/chǎ/chà
+马|mǎ|m|a|3|
+乡|xiāng|x|iang|1|
+丰|fēng|f|eng|1|
+王|wáng||uang|2|wàng/yù
+开|kāi|k|ai|1|
+井|jǐng|j|ing|3|jìng
+天|tiān|t|ian|1|
+夫|fū|f|u|1|fú
+元|yuán||üan|2|
+无|wú||u|2|mó
+云|yún||ün|2|
+专|zhuān|zh|uan|1|
+丐|gài|g|ai|4|
+扎|zhā|zh|a|1|zā/zhá/zhǎ
+艺|yì||i|4|
+木|mù|m|u|4|
+五|wǔ||u|3|
+支|zhī|zh|i|1|zhì/qí
+厅|tīng|t|ing|1|
+不|bù|b|u|4|fǒu/fōu/fū
+犬|quǎn|q|üan|3|
+太|tài|t|ai|4|tā
+区|qū|q|ü|1|ōu
+历|lì|l|i|4|
+歹|dǎi|d|ai|3|è/dāi
+友|yǒu||iu|3|
+尤|yóu||iu|2|
+匹|pǐ|p|i|3|
+车|chē|ch|e|1|jū
+巨|jù|j|ü|4|qú
+牙|yá||ia|2|yà
+屯|tún|t|un|2|zhūn
+戈|gē|g|e|1|
+比|bǐ|b|i|3|bì/pí/pǐ
+互|hù|h|u|4|
+切|qiè|q|ie|4|qiē/qì
+瓦|wǎ||ua|3|wà
+止|zhǐ|zh|i|3|
+少|shǎo|sh|ao|3|shào
+曰|yuē||üe|1|
+日|rì|r|i|4|
+中|zhōng|zh|ong|1|zhòng
+贝|bèi|b|ei|4|
+冈|gāng|g|ang|1|
+内|nèi|n|ei|4|nà/ruì
+水|shuǐ|sh|ui|3|
+见|jiàn|j|ian|4|xiàn
+午|wǔ||u|3|
+牛|niú|n|iu|2|
+手|shǒu|sh|ou|3|
+气|qì|q|i|4|qǐ
+毛|máo|m|ao|2|mào
+壬|rén|r|en|2|
+升|shēng|sh|eng|1|
+夭|yāo||iao|1|wò/wāi
+长|zhǎng|zh|ang|3|cháng
+仁|rén|r|en|2|
+什|shén|sh|en|2|shí
+片|piàn|p|ian|4|piān/pàn
+仆|pū|p|u|1|pú
+化|huà|h|ua|4|huā/huò
+仇|chóu|ch|ou|2|qiú/jū
+币|bì|b|i|4|yìn
+仍|réng|r|eng|2|
+仅|jǐn|j|in|3|fù/nú/jìn
+斤|jīn|j|in|1|
+爪|zhǎo|zh|ao|3|zhuǎ
+反|fǎn|f|an|3|fàn
+介|jiè|j|ie|4|gè
+父|fù|f|u|4|fǔ
+从|cóng|c|ong|2|zòng
+仑|lún|l|un|2|
+今|jīn|j|in|1|
+凶|xiōng|x|iong|1|
+分|fēn|f|en|1|fèn/fén
+乏|fá|f|a|2|
+公|gōng|g|ong|1|
+仓|cāng|c|ang|1|
+月|yuè||üe|4|rù
+氏|shì|sh|i|4|zhī/jīng
+勿|wù||u|4|mò
+欠|qiàn|q|ian|4|
+风|fēng|f|eng|1|
+丹|dān|d|an|1|
+匀|yún||ün|2|jūn/yùn
+乌|wū||u|1|wù
+勾|gōu|g|ou|1|gòu
+凤|fèng|f|eng|4|
+六|liù|l|iu|4|lù
+文|wén||un|2|
+亢|kàng|k|ang|4|gāng/gēng
+方|fāng|f|ang|1|fáng/fǎng/páng
+火|huǒ|h|uo|3|huō
+为|wèi||ui|4|wéi
+斗|dòu|d|ou|4|dǒu/zhǔ
+忆|yì||i|4|
+计|jì|j|i|4|
+订|dìng|d|ing|4|
+户|hù|h|u|4|
+认|rèn|r|en|4|
+冗|rǒng|r|ong|3|
+讥|jī|j|i|1|
+心|xīn|x|in|1|
+尺|chǐ|ch|i|3|chě
+引|yǐn||in|3|
+丑|chǒu|ch|ou|3|
+巴|bā|b|a|1|
+孔|kǒng|k|ong|3|
+队|duì|d|ui|4|
+办|bàn|b|an|4|
+以|yǐ||i|3|sì
+允|yǔn||ün|3|yuán
+予|yǔ||ü|3|yú/zhù
+邓|dèng|d|eng|4|shān
+劝|quàn|q|üan|4|
+双|shuāng|sh|uang|1|
+书|shū|sh|u|1|
+幻|huàn|h|uan|4|
+玉|yù||ü|4|
+刊|kān|k|an|1|
+未|wèi||ui|4|
+末|mò|m|o|4|me
+示|shì|sh|i|4|qí/zhì/shí
+击|jī|j|i|1|
+打|dǎ|d|a|3|dá
+巧|qiǎo|q|iao|3|
+正|zhèng|zh|eng|4|zhēng
+扑|pū|p|u|1|pì
+卉|huì|h|ui|4|
+扒|bā|b|a|1|pá/bài/bié
+功|gōng|g|ong|1|
+扔|rēng|r|eng|1|rèng
+去|qù|q|ü|4|qū
+甘|gān|g|an|1|hān
+世|shì|sh|i|4|
+艾|ài||ai|4|yì
+古|gǔ|g|u|3|gù/kū
+节|jié|j|ie|2|jiē
+本|běn|b|en|3|bēn
+术|shù|sh|u|4|zhú/shú
+可|kě|k|e|3|kè/gē
+丙|bǐng|b|ing|3|bìng
+左|zuǒ|z|uo|3|
+厉|lì|l|i|4|
+石|shí|sh|i|2|dàn
+右|yòu||iu|4|
+布|bù|b|u|4|
+夯|hāng|h|ang|1|bèn
+戊|wù||u|4|
+龙|lóng|l|ong|2|
+平|píng|p|ing|2|pián/bìng/bēng
+灭|miè|m|ie|4|
+轧|yà||ia|4|zhá/gá
+东|dōng|d|ong|1|
+卡|kǎ|k|a|3|qiǎ
+北|běi|b|ei|3|bèi
+占|zhàn|zh|an|4|zhān/tiē
+凸|tū|t|u|1|
+卢|lú|l|u|2|
+业|yè||ie|4|
+旧|jiù|j|iu|4|
+帅|shuài|sh|uai|4|
+归|guī|g|ui|1|
+旦|dàn|d|an|4|
+目|mù|m|u|4|
+且|qiě|q|ie|3|jū/cú
+叶|yè||ie|4|xié
+甲|jiǎ|j|ia|3|
+申|shēn|sh|en|1|
+叮|dīng|d|ing|1|
+电|diàn|d|ian|4|
+号|hào|h|ao|4|háo/xiāo
+田|tián|t|ian|2|
+由|yóu||iu|2|yāo
+只|zhǐ|zh|i|3|zhī
+叭|bā|b|a|1|pā/ba
+史|shǐ|sh|i|3|
+央|yāng||iang|1|yīng
+兄|xiōng|x|iong|1|kuàng
+叽|jī|j|i|1|jiào
+叼|diāo|d|iao|1|
+叫|jiào|j|iao|4|
+叩|kòu|k|ou|4|
+叨|dāo|d|ao|1|dáo/tāo
+另|lìng|l|ing|4|
+叹|tàn|t|an|4|yǐ/yòu
+冉|rǎn|r|an|3|nán/dān
+皿|mǐn|m|in|3|mǐng
+凹|āo||ao|1|wā
+囚|qiú|q|iu|2|
+四|sì|s|i|4|
+生|shēng|sh|eng|1|
+矢|shǐ|sh|i|3|
+失|shī|sh|i|1|yì
+乍|zhà|zh|a|4|zuò
+禾|hé|h|e|2|
+丘|qiū|q|iu|1|
+付|fù|f|u|4|
+仗|zhàng|zh|ang|4|
+代|dài|d|ai|4|
+仙|xiān|x|ian|1|xiǎn
+们|men|m|en|5|mén
+仪|yí||i|2|
+白|bái|b|ai|2|bó
+仔|zǎi|z|ai|3|zǐ/zī
+他|tā|t|a|1|tuó
+斥|chì|ch|i|4|chè/zhè
+瓜|guā|g|ua|1|
+乎|hū|h|u|1|
+丛|cóng|c|ong|2|
+令|lìng|l|ing|4|líng/lǐng/lián
+用|yòng||iong|4|
+甩|shuǎi|sh|uai|3|
+印|yìn||in|4|yì
+尔|ěr||er|3|
+乐|lè|l|e|4|yuè
+句|jù|j|ü|4|gōu/gòu/qú
+匆|cōng|c|ong|1|
+册|cè|c|e|4|zhà
+卯|mǎo|m|ao|3|
+犯|fàn|f|an|4|
+外|wài||uai|4|
+处|chù|ch|u|4|chǔ
+冬|dōng|d|ong|1|
+鸟|niǎo|n|iao|3|diǎo
+务|wù||u|4|
+包|bāo|b|ao|1|páo/fú
+饥|jī|j|i|1|
+主|zhǔ|zh|u|3|zhù
+市|shì|sh|i|4|fú
+立|lì|l|i|4|wèi
+冯|féng|f|eng|2|píng
+玄|xuán|x|üan|2|xuàn
+闪|shǎn|sh|an|3|
+兰|lán|l|an|2|
+半|bàn|b|an|4|pàn
+汁|zhī|zh|i|1|xié/shí
+汇|huì|h|ui|4|
+头|tóu|t|ou|2|tou
+汉|hàn|h|an|4|
+宁|níng|n|ing|2|nìng/zhù
+穴|xué|x|üe|2|jué
+它|tā|t|a|1|tuó/yí
+讨|tǎo|t|ao|3|
+写|xiě|x|ie|3|xiè
+让|ràng|r|ang|4|
+礼|lǐ|l|i|3|
+训|xùn|x|ün|4|
+议|yì||i|4|
+必|bì|b|i|4|
+讯|xùn|x|ün|4|
+记|jì|j|i|4|
+永|yǒng||iong|3|
+司|sī|s|i|1|cí/sì
+尼|ní|n|i|2|nǐ
+民|mín|m|in|2|
+弗|fú|f|u|2|
+弘|hóng|h|ong|2|
+出|chū|ch|u|1|
+辽|liáo|l|iao|2|
+奶|nǎi|n|ai|3|
+奴|nú|n|u|2|
+召|zhào|zh|ao|4|shào
+加|jiā|j|ia|1|
+皮|pí|p|i|2|
+边|biān|b|ian|1|bian
+孕|yùn||ün|4|
+发|fā|f|a|1|fà
+圣|shèng|sh|eng|4|kū
+对|duì|d|ui|4|
+台|tái|t|ai|2|tāi/yí/sì
+矛|máo|m|ao|2|
+纠|jiū|j|iu|1|
+母|mǔ|m|u|3|mú/wǔ/wú
+幼|yòu||iu|4|yào
+丝|sī|s|i|1|
+邦|bāng|b|ang|1|
+式|shì|sh|i|4|tè
+迂|yū||ü|1|
+刑|xíng|x|ing|2|
+戎|róng|r|ong|2|rēng
+动|dòng|d|ong|4|
+扛|káng|k|ang|2|gāng
+寺|sì|s|i|4|shì
+吉|jí|j|i|2|
+扣|kòu|k|ou|4|
+考|kǎo|k|ao|3|
+托|tuō|t|uo|1|
+老|lǎo|l|ao|3|
+巩|gǒng|g|ong|3|
+圾|jī|j|i|1|jí/jié
+执|zhí|zh|i|2|
+扩|kuò|k|uo|4|
+扫|sǎo|s|ao|3|sào
+地|dì|d|i|4|de
+场|chǎng|ch|ang|3|cháng
+扬|yáng||iang|2|
+耳|ěr||er|3|réng
+芋|yù||ü|4|yú/xū/yǔ
+共|gòng|g|ong|4|gōng/gǒng/hóng
+芒|máng|m|ang|2|huāng/huǎng/wáng
+亚|yà||ia|4|
+芝|zhī|zh|i|1|
+朽|xiǔ|x|iu|3|
+朴|pǔ|p|u|3|piáo/pò/pū
+机|jī|j|i|1|wèi
+权|quán|q|üan|2|
+过|guò|g|uo|4|guō
+臣|chén|ch|en|2|
+吏|lì|l|i|4|
+再|zài|z|ai|4|
+协|xié|x|ie|2|
+西|xī|x|i|1|
+压|yā||ia|1|yà
+厌|yàn||ian|4|
+戌|xū|x|ü|1|qu
+在|zài|z|ai|4|
+百|bǎi|b|ai|3|bó/mò
+有|yǒu||iu|3|yòu/wěi
+存|cún|c|un|2|
+而|ér||er|2|néng
+页|yè||ie|4|
+匠|jiàng|j|iang|4|
+夸|kuā|k|ua|1|kuà/kuǎ
+夺|duó|d|uo|2|
+灰|huī|h|ui|1|
+达|dá|d|a|2|tì/tà
+列|liè|l|ie|4|lì
+死|sǐ|s|i|3|
+成|chéng|ch|eng|2|
+夹|jiā|j|ia|1|gā/jiá
+夷|yí||i|2|
+轨|guǐ|g|ui|3|
+邪|xié|x|ie|2|yá/yé/xú
+尧|yáo||iao|2|
+划|huà|h|ua|4|huá/guò/guǒ
+迈|mài|m|ai|4|
+毕|bì|b|i|4|
+至|zhì|zh|i|4|dié
+此|cǐ|c|i|3|
+贞|zhēn|zh|en|1|
+师|shī|sh|i|1|
+尘|chén|ch|en|2|
+尖|jiān|j|ian|1|
+劣|liè|l|ie|4|
+光|guāng|g|uang|1|guàng
+当|dāng|d|ang|1|dàng
+早|zǎo|z|ao|3|
+吁|xū|x|ü|1|yū/yù
+吐|tǔ|t|u|3|tù
+吓|xià|x|ia|4|hè/hà
+虫|chóng|ch|ong|2|huǐ
+曲|qū|q|ü|1|qǔ
+团|tuán|t|uan|2|qiú
+吕|lǚ|l|ü|3|
+同|tóng|t|ong|2|tòng
+吊|diào|d|iao|4|
+吃|chī|ch|i|1|qī
+因|yīn||in|1|
+吸|xī|x|i|1|
+吗|ma|m|a|5|má/mǎ
+吆|yāo||iao|1|
+屿|yǔ||ü|3|
+屹|yì||i|4|gē
+岁|suì|s|ui|4|
+帆|fān|f|an|1|fán/fàn
+回|huí|h|ui|2|
+岂|qǐ|q|i|3|kǎi
+则|zé|z|e|2|
+刚|gāng|g|ang|1|
+网|wǎng||uang|3|
+肉|ròu|r|ou|4|rù
+年|nián|n|ian|2|nìng
+朱|zhū|zh|u|1|shū
+先|xiān|x|ian|1|
+丢|diū|d|iu|1|
+廷|tíng|t|ing|2|
+舌|shé|sh|e|2|guā
+竹|zhú|zh|u|2|
+迁|qiān|q|ian|1|
+乔|qiáo|q|iao|2|
+迄|qì|q|i|4|
+伟|wěi||ui|3|
+传|chuán|ch|uan|2|zhuàn
+乒|pīng|p|ing|1|
+乓|pāng|p|ang|1|
+休|xiū|x|iu|1|xù
+伍|wǔ||u|3|
+伏|fú|f|u|2|fù
+优|yōu||iu|1|yóu
+臼|jiù|j|iu|4|
+伐|fá|f|a|2|
+延|yán||ian|2|
+仲|zhòng|zh|ong|4|
+件|jiàn|j|ian|4|móu
+任|rèn|r|en|4|rén/lìn
+伤|shāng|sh|ang|1|
+价|jià|j|ia|4|jie/jiè
+伦|lún|l|un|2|
+份|fèn|f|en|4|bīn
+华|huá|h|ua|2|huà/huā
+仰|yǎng||iang|3|áng
+仿|fǎng|f|ang|3|páng
+伙|huǒ|h|uo|3|huo
+伪|wěi||ui|3|
+自|zì|z|i|4|
+伊|yī||i|1|
+血|xuè|x|üe|4|xiě
+向|xiàng|x|iang|4|
+似|shì|sh|i|4|sì
+后|hòu|h|ou|4|
+行|xíng|x|ing|2|háng/héng/xìng
+舟|zhōu|zh|ou|1|
+全|quán|q|üan|2|
+会|huì|h|ui|4|kuài
+杀|shā|sh|a|1|
+合|hé|h|e|2|gě
+兆|zhào|zh|ao|4|
+企|qǐ|q|i|3|
+众|zhòng|zh|ong|4|yín
+爷|yé||ie|2|
+伞|sǎn|s|an|3|
+创|chuàng|ch|uang|4|chuāng
+肌|jī|j|i|1|jì
+肋|lē|l|e|1|lèi/lè/jīn
+朵|duǒ|d|uo|3|
+杂|zá|z|a|2|duǒ
+危|wēi||ui|1|
+旬|xún|x|ün|2|jūn
+旨|zhǐ|zh|i|3|
+旭|xù|x|ü|4|
+负|fù|f|u|4|
+匈|xiōng|x|iong|1|
+名|míng|m|ing|2|mìng
+各|gè|g|e|4|gě
+多|duō|d|uo|1|
+争|zhēng|zh|eng|1|
+色|sè|s|e|4|shǎi
+壮|zhuàng|zh|uang|4|
+冲|chōng|ch|ong|1|chòng
+妆|zhuāng|zh|uang|1|
+冰|bīng|b|ing|1|níng
+庄|zhuāng|zh|uang|1|péng
+庆|qìng|q|ing|4|
+亦|yì||i|4|
+刘|liú|l|iu|2|
+齐|qí|q|i|2|jì
+交|jiāo|j|iao|1|
+衣|yī||i|1|yì
+次|cì|c|i|4|zī/cí
+产|chǎn|ch|an|3|
+决|jué|j|üe|2|
+亥|hài|h|ai|4|jiē
+充|chōng|ch|ong|1|
+妄|wàng||uang|4|wáng
+闭|bì|b|i|4|
+问|wèn||un|4|
+闯|chuǎng|ch|uang|3|
+羊|yáng||iang|2|
+并|bìng|b|ing|4|bīng
+关|guān|g|uan|1|
+米|mǐ|m|i|3|
+灯|dēng|d|eng|1|dīng
+州|zhōu|zh|ou|1|
+汗|hàn|h|an|4|hán/gān
+污|wū||u|1|
+江|jiāng|j|iang|1|
+汛|xùn|x|ün|4|
+池|chí|ch|i|2|tuó/chè
+汝|rǔ|r|u|3|
+汤|tāng|t|ang|1|shāng
+忙|máng|m|ang|2|
+兴|xīng|x|ing|1|xìng
+宇|yǔ||ü|3|
+守|shǒu|sh|ou|3|shòu
+宅|zhái|zh|ai|2|chè/dù
+字|zì|z|i|4|
+安|ān||an|1|
+讲|jiǎng|j|iang|3|
+讳|huì|h|ui|4|
+军|jūn|j|ün|1|
+讶|yà||ia|4|
+许|xǔ|x|ü|3|hǔ
+讹|é||e|2|
+论|lùn|l|un|4|lún
+讼|sòng|s|ong|4|
+农|nóng|n|ong|2|
+讽|fěng|f|eng|3|fèng
+设|shè|sh|e|4|
+访|fǎng|f|ang|3|
+诀|jué|j|üe|2|
+寻|xún|x|ün|2|xín
+那|nà|n|a|4|nā/nuó/nuò
+迅|xùn|x|ün|4|
+尽|jǐn|j|in|3|jìn
+导|dǎo|d|ao|3|
+异|yì||i|4|yí
+弛|chí|ch|i|2|
+孙|sūn|s|un|1|
+阵|zhèn|zh|en|4|
+阳|yáng||iang|2|
+收|shōu|sh|ou|1|
+阶|jiē|j|ie|1|
+阴|yīn||in|1|
+防|fáng|f|ang|2|
+奸|jiān|j|ian|1|gān
+如|rú|r|u|2|
+妇|fù|f|u|4|
+妃|fēi|f|ei|1|pèi
+好|hǎo|h|ao|3|hào
+她|tā|t|a|1|jiě/chí
+妈|mā|m|a|1|
+戏|xì|x|i|4|hū
+羽|yǔ||ü|3|hù
+观|guān|g|uan|1|guàn
+欢|huān|h|uan|1|
+买|mǎi|m|ai|3|
+红|hóng|h|ong|2|gōng
+驮|tuó|t|uo|2|duò
+纤|xiān|x|ian|1|qiàn
+驯|xùn|x|ün|4|xún
+约|yuē||üe|1|yāo
+级|jí|j|i|2|
+纪|jì|j|i|4|jǐ
+驰|chí|ch|i|2|
+纫|rèn|r|en|4|
+巡|xún|x|ün|2|yán/shùn
+寿|shòu|sh|ou|4|
+弄|nòng|n|ong|4|lòng
+麦|mài|m|ai|4|
+玖|jiǔ|j|iu|3|
+玛|mǎ|m|a|3|
+形|xíng|x|ing|2|
+进|jìn|j|in|4|
+戒|jiè|j|ie|4|
+吞|tūn|t|un|1|tiān
+远|yuǎn||üan|3|
+违|wéi||ui|2|
+韧|rèn|r|en|4|
+运|yùn||ün|4|yǔn
+扶|fú|f|u|2|pú
+抚|fǔ|f|u|3|
+坛|tán|t|an|2|
+技|jì|j|i|4|qí
+坏|huài|h|uai|4|pī/péi
+抠|kōu|k|ou|1|
+扰|rǎo|r|ao|3|yòu
+扼|è||e|4|
+拒|jù|j|ü|4|jǔ
+找|zhǎo|zh|ao|3|huá
+批|pī|p|i|1|pí
+址|zhǐ|zh|i|3|
+扯|chě|ch|e|3|
+走|zǒu|z|ou|3|
+抄|chāo|ch|ao|1|suō/chào/chǎo
+贡|gòng|g|ong|4|
+汞|gǒng|g|ong|3|
+坝|bà|b|a|4|
+攻|gōng|g|ong|1|
+赤|chì|ch|i|4|
+折|zhé|zh|e|2|shé/zhē/tí
+抓|zhuā|zh|ua|1|
+扳|bān|b|an|1|pān
+抡|lūn|l|un|1|lún
+扮|bàn|b|an|4|fěn/fēn/huǒ
+抢|qiǎng|q|iang|3|qiāng
+孝|xiào|x|iao|4|
+坎|kǎn|k|an|3|kàn
+均|jūn|j|ün|1|yùn
+抑|yì||i|4|
+抛|pāo|p|ao|1|
+投|tóu|t|ou|2|dòu
+坟|fén|f|en|2|
+坑|kēng|k|eng|1|kàng
+抗|kàng|k|ang|4|gāng
+坊|fāng|f|ang|1|fáng
+抖|dǒu|d|ou|3|
+护|hù|h|u|4|
+壳|ké|k|e|2|qiào
+志|zhì|zh|i|4|
+块|kuài|k|uai|4|yué
+扭|niǔ|n|iu|3|chǒu/zhǒu/zhòu
+声|shēng|sh|eng|1|qìng
+把|bǎ|b|a|3|bà/pá
+报|bào|b|ao|4|
+拟|nǐ|n|i|3|
+却|què|q|üe|4|
+抒|shū|sh|u|1|
+劫|jié|j|ie|2|
+芙|fú|f|u|2|
+芜|wú||u|2|
+苇|wěi||ui|3|
+芽|yá||ia|2|
+花|huā|h|ua|1|
+芹|qín|q|in|2|
+芥|jiè|j|ie|4|gài
+芬|fēn|f|en|1|
+苍|cāng|c|ang|1|
+芳|fāng|f|ang|1|
+严|yán||ian|2|
+芦|lú|l|u|2|lǔ/hù
+芯|xīn|x|in|1|xìn
+劳|láo|l|ao|2|
+克|kè|k|e|4|
+芭|bā|b|a|1|pā
+苏|sū|s|u|1|
+杆|gān|g|an|1|gǎn/gàn
+杠|gāng|g|ang|1|gàng/gōng
+杜|dù|d|u|4|dǔ/tú
+材|cái|c|ai|2|
+村|cūn|c|un|1|
+杖|zhàng|zh|ang|4|
+杏|xìng|x|ing|4|
+杉|shān|sh|an|1|shā
+巫|wū||u|1|
+极|jí|j|i|2|
+李|lǐ|l|i|3|
+杨|yáng||iang|2|
+求|qiú|q|iu|2|
+甫|fǔ|f|u|3|fū/pǔ
+匣|xiá|x|ia|2|
+更|gèng|g|eng|4|gēng
+束|shù|sh|u|4|
+吾|wú||u|2|yú/yá
+豆|dòu|d|ou|4|
+两|liǎng|l|iang|3|
+酉|yǒu||iu|3|
+丽|lì|l|i|4|lí
+医|yī||i|1|yì
+辰|chén|ch|en|2|
+励|lì|l|i|4|
+否|fǒu|f|ou|3|pǐ
+还|hái|h|ai|2|huán/fú
+尬|gà|g|a|4|
+歼|jiān|j|ian|1|
+来|lái|l|ai|2|
+连|lián|l|ian|2|
+轩|xuān|x|üan|1|
+步|bù|b|u|4|
+卤|lǔ|l|u|3|xī
+坚|jiān|j|ian|1|
+肖|xiào|x|iao|4|xiāo
+旱|hàn|h|an|4|
+盯|dīng|d|ing|1|chéng
+呈|chéng|ch|eng|2|kuáng/chěng
+时|shí|sh|i|2|
+吴|wú||u|2|tūn
+助|zhù|zh|u|4|chú
+县|xiàn|x|ian|4|
+里|lǐ|l|i|3|li
+呆|dāi|d|ai|1|bǎo/ái
+吱|zhī|zh|i|1|zī/qì
+吠|fèi|f|ei|4|
+呕|ǒu||ou|3|ōu/òu
+园|yuán||üan|2|wán
+旷|kuàng|k|uang|4|
+围|wéi||ui|2|
+呀|ya||ia|5|yā/xiā
+吨|dūn|d|un|1|tún/tǔn
+足|zú|z|u|2|jù
+邮|yóu||iu|2|
+男|nán|n|an|2|
+困|kùn|k|un|4|
+吵|chǎo|ch|ao|3|chāo/miǎo/chào
+串|chuàn|ch|uan|4|guàn/quàn
+员|yuán||üan|2|yùn/yún
+呐|nà|n|a|4|nè/na/nuò
+听|tīng|t|ing|1|yǐn/yí
+吟|yín||in|2|yǐn/jìn
+吩|fēn|f|en|1|pèn
+呛|qiāng|q|iang|1|qiàng
+吻|wěn||un|3|
+吹|chuī|ch|ui|1|chuì
+呜|wū||u|1|
+吭|kēng|k|eng|1|háng/hàng
+吧|ba|b|a|5|bā/pā
+邑|yì||i|4|è
+吼|hǒu|h|ou|3|
+囤|dùn|d|un|4|tún
+别|bié|b|ie|2|biè
+吮|shǔn|sh|un|3|
+岖|qū|q|ü|1|
+岗|gǎng|g|ang|3|gāng
+帐|zhàng|zh|ang|4|
+财|cái|c|ai|2|
+针|zhēn|zh|en|1|
+钉|dīng|d|ing|1|dìng
+牡|mǔ|m|u|3|
+告|gào|g|ao|4|jū/gù
+我|wǒ||uo|3|
+乱|luàn|l|uan|4|
+利|lì|l|i|4|
+秃|tū|t|u|1|
+秀|xiù|x|iu|4|
+私|sī|s|i|1|
+每|měi|m|ei|3|
+兵|bīng|b|ing|1|
+估|gū|g|u|1|gù
+体|tǐ|t|i|3|tī/bèn/cuì
+何|hé|h|e|2|hè
+佐|zuǒ|z|uo|3|
+佑|yòu||iu|4|
+但|dàn|d|an|4|tǎn/yàn
+伸|shēn|sh|en|1|
+佃|diàn|d|ian|4|tián
+作|zuò|z|uo|4|zuō/zuó
+伯|bó|b|o|2|bǎi/mò/bà
+伶|líng|l|ing|2|
+佣|yōng||iong|1|yòng
+低|dī|d|i|1|
+你|nǐ|n|i|3|
+住|zhù|zh|u|4|
+位|wèi||ui|4|lì
+伴|bàn|b|an|4|pàn
+身|shēn|sh|en|1|juān
+皂|zào|z|ao|4|
+伺|cì|c|i|4|sì
+佛|fú|f|u|2|fó/bó/bì
+囱|cōng|c|ong|1|chuāng
+近|jìn|j|in|4|
+彻|chè|ch|e|4|
+役|yì||i|4|
+返|fǎn|f|an|3|
+余|yú||ü|2|tú/xú/yù
+希|xī|x|i|1|
+坐|zuò|z|uo|4|
+谷|gǔ|g|u|3|lù/yù
+妥|tuǒ|t|uo|3|
+含|hán|h|an|2|hàn
+邻|lín|l|in|2|
+岔|chà|ch|a|4|
+肝|gān|g|an|1|
+肛|gāng|g|ang|1|
+肚|dù|d|u|4|dǔ
+肘|zhǒu|zh|ou|3|
+肠|cháng|ch|ang|2|
+龟|guī|g|ui|1|jūn/qiū
+甸|diān|d|ian|1|diàn/tián/shèng
+免|miǎn|m|ian|3|wèn/wǎn
+狂|kuáng|k|uang|2|jué
+犹|yóu||iu|2|yòu
+狈|bèi|b|ei|4|
+角|jiǎo|j|iao|3|jué/lù/gǔ
+删|shān|sh|an|1|
+条|tiáo|t|iao|2|
+彤|tóng|t|ong|2|
+卵|luǎn|l|uan|3|kūn
+灸|jiǔ|j|iu|3|
+岛|dǎo|d|ao|3|
+刨|páo|p|ao|2|bào
+迎|yíng||ing|2|yìng
+饭|fàn|f|an|4|
+饮|yǐn||in|3|yìn
+系|xì|x|i|4|jì
+言|yán||ian|2|yàn/yín
+冻|dòng|d|ong|4|
+状|zhuàng|zh|uang|4|
+亩|mǔ|m|u|3|
+况|kuàng|k|uang|4|
+床|chuáng|ch|uang|2|
+库|kù|k|u|4|
+庇|bì|b|i|4|pí/pǐ
+疗|liáo|l|iao|2|
+吝|lìn|l|in|4|
+应|yīng||ing|1|yìng
+这|zhè|zh|e|4|zhèi
+冷|lěng|l|eng|3|líng/lǐng
+庐|lú|l|u|2|
+序|xù|x|ü|4|
+辛|xīn|x|in|1|
+弃|qì|q|i|4|
+冶|yě||ie|3|
+忘|wàng||uang|4|wáng
+闰|rùn|r|un|4|
+闲|xián|x|ian|2|
+间|jiān|j|ian|1|jiàn
+闷|mèn|m|en|4|mēn
+判|pàn|p|an|4|
+兑|duì|d|ui|4|ruì/duó
+灶|zào|z|ao|4|
+灿|càn|c|an|4|
+灼|zhuó|zh|uo|2|
+弟|dì|d|i|4|tì/tuí
+汪|wāng||uang|1|wǎng/hóng
+沐|mù|m|u|4|
+沛|pèi|p|ei|4|
+汰|tài|t|ai|4|
+沥|lì|l|i|4|
+沙|shā|sh|a|1|shà/suō
+汽|qì|q|i|4|gài/yǐ
+沃|wò||uo|4|
+沦|lún|l|un|2|
+汹|xiōng|x|iong|1|
+泛|fàn|f|an|4|fěng/fá
+沧|cāng|c|ang|1|
+没|méi|m|ei|2|mò/me
+沟|gōu|g|ou|1|
+沪|hù|h|u|4|
+沈|shěn|sh|en|3|chén/tán
+沉|chén|ch|en|2|
+沁|qìn|q|in|4|
+怀|huái|h|uai|2|fù
+忧|yōu||iu|1|yòu
+忱|chén|ch|en|2|dàn
+快|kuài|k|uai|4|
+完|wán||uan|2|kuān
+宋|sòng|s|ong|4|
+宏|hóng|h|ong|2|
+牢|láo|l|ao|2|lào/lóu
+究|jiū|j|iu|1|jiù
+穷|qióng|q|iong|2|
+灾|zāi|z|ai|1|
+良|liáng|l|iang|2|liǎng
+证|zhèng|zh|eng|4|
+启|qǐ|q|i|3|
+评|píng|p|ing|2|
+补|bǔ|b|u|3|
+初|chū|ch|u|1|
+社|shè|sh|e|4|
+祀|sì|s|i|4|
+识|shí|sh|i|2|shì/zhì
+诈|zhà|zh|a|4|
+诉|sù|s|u|4|
+罕|hǎn|h|an|3|hàn
+诊|zhěn|zh|en|3|
+词|cí|c|i|2|
+译|yì||i|4|
+君|jūn|j|ün|1|
+灵|líng|l|ing|2|
+即|jí|j|i|2|
+层|céng|c|eng|2|
+屁|pì|p|i|4|
+尿|niào|n|iao|4|suī
+尾|wěi||ui|3|yǐ
+迟|chí|ch|i|2|
+局|jú|j|ü|2|
+改|gǎi|g|ai|3|
+张|zhāng|zh|ang|1|
+忌|jì|j|i|4|
+际|jì|j|i|4|
+陆|lù|l|u|4|liù
+阿|ā||a|1|ē/ě/ǎ
+陈|chén|ch|en|2|
+阻|zǔ|z|u|3|zhù
+附|fù|f|u|4|bù/fū
+坠|zhuì|zh|ui|4|
+妓|jì|j|i|4|jī
+妙|miào|m|iao|4|miǎo
+妖|yāo||iao|1|jiǎo
+姊|zǐ|z|i|3|
+妨|fáng|f|ang|2|fāng
+妒|dù|d|u|4|
+努|nǔ|n|u|3|
+忍|rěn|r|en|3|rèn
+劲|jìn|j|in|4|jìng
+矣|yǐ||i|3|xián
+鸡|jī|j|i|1|
+纬|wěi||ui|3|
+驱|qū|q|ü|1|
+纯|chún|ch|un|2|
+纱|shā|sh|a|1|
+纲|gāng|g|ang|1|
+纳|nà|n|a|4|
+驳|bó|b|o|2|
+纵|zòng|z|ong|4|
+纷|fēn|f|en|1|
+纸|zhǐ|zh|i|3|
+纹|wén||un|2|wèn
+纺|fǎng|f|ang|3|
+驴|lǘ|l|ü|2|
+纽|niǔ|n|iu|3|
+奉|fèng|f|eng|4|
+玩|wán||uan|2|
+环|huán|h|uan|2|
+武|wǔ||u|3|
+青|qīng|q|ing|1|jīng
+责|zé|z|e|2|
+现|xiàn|x|ian|4|
+玫|méi|m|ei|2|
+表|biǎo|b|iao|3|
+规|guī|g|ui|1|
+抹|mǒ|m|o|3|mā/mò
+卦|guà|g|ua|4|
+坷|kě|k|e|3|kē/jiōng
+坯|pī|p|i|1|huài
+拓|tuò|t|uo|4|tà/zhí
+拢|lǒng|l|ong|3|
+拔|bá|b|a|2|bō/bié/fá
+坪|píng|p|ing|2|
+拣|jiǎn|j|ian|3|
+坦|tǎn|t|an|3|
+担|dān|d|an|1|dàn/dǎn/jiē
+坤|kūn|k|un|1|
+押|yā||ia|1|xiá/jiǎ
+抽|chōu|ch|ou|1|
+拐|guǎi|g|uai|3|
+拖|tuō|t|uo|1|chǐ
+者|zhě|zh|e|3|
+拍|pāi|p|ai|1|bó
+顶|dǐng|d|ing|3|
+拆|chāi|ch|ai|1|chè/chì/cā
+拎|līn|l|in|1|līng
+拥|yōng||iong|1|
+抵|dǐ|d|i|3|zhǐ/qí
+拘|jū|j|ü|1|gōu/jǔ/jú
+势|shì|sh|i|4|
+抱|bào|b|ao|4|pāo/pǒu
+拄|zhǔ|zh|u|3|
+垃|lā|l|a|1|la
+拉|lā|l|a|1|lá/lǎ/là
+拦|lán|l|an|2|
+幸|xìng|x|ing|4|niè
+拌|bàn|b|an|4|pān
+拧|níng|n|ing|2|nǐng/nìng
+拂|fú|f|u|2|bì/pì/fèi
+拙|zhuō|zh|uo|1|
+招|zhāo|zh|ao|1|qiáo/sháo
+坡|pō|p|o|1|
+披|pī|p|i|1|
+拨|bō|b|o|1|
+择|zé|z|e|2|zhái
+抬|tái|t|ai|2|chī
+拇|mǔ|m|u|3|
+拗|ǎo||ao|3|ào/niù/yù
+其|qí|q|i|2|jī/jì
+取|qǔ|q|ü|3|qū
+茉|mò|m|o|4|
+苦|kǔ|k|u|3|gǔ/hù
+昔|xī|x|i|1|cuò
+苛|kē|k|e|1|hē
+若|ruò|r|uo|4|ré/rè/rě
+茂|mào|m|ao|4|
+苹|píng|p|ing|2|pēng
+苗|miáo|m|iao|2|
+英|yīng||ing|1|yāng
+苟|gǒu|g|ou|3|gōu
+苑|yuàn||üan|4|yuān/yù/yùn
+苞|bāo|b|ao|1|páo/biāo
+范|fàn|f|an|4|
+直|zhí|zh|i|2|
+茁|zhuó|zh|uo|2|zhú
+茄|jiā|j|ia|1|qié
+茎|jīng|j|ing|1|
+苔|tái|t|ai|2|tāi
+茅|máo|m|ao|2|
+枉|wǎng||uang|3|kuáng
+林|lín|l|in|2|
+枝|zhī|zh|i|1|qí
+杯|bēi|b|ei|1|
+枢|shū|sh|u|1|
+柜|guì|g|ui|4|jǔ
+枚|méi|m|ei|2|
+析|xī|x|i|1|sī
+板|bǎn|b|an|3|
+松|sōng|s|ong|1|
+枪|qiāng|q|iang|1|
+枫|fēng|f|eng|1|
+构|gòu|g|ou|4|
+杭|háng|h|ang|2|kàng/kāng
+杰|jié|j|ie|2|
+述|shù|sh|u|4|
+枕|zhěn|zh|en|3|chén
+丧|sàng|s|ang|4|sāng
+或|huò|h|uo|4|yù
+画|huà|h|ua|4|
+卧|wò||uo|4|
+事|shì|sh|i|4|zì
+刺|cì|c|i|4|cī/qì
+枣|zǎo|z|ao|3|
+雨|yǔ||ü|3|yù
+卖|mài|m|ai|4|
+郁|yù||ü|4|
+矾|fán|f|an|2|
+矿|kuàng|k|uang|4|
+码|mǎ|m|a|3|
+厕|cè|c|e|4|si
+奈|nài|n|ai|4|
+奔|bēn|b|en|1|bèn/fèn
+奇|qí|q|i|2|jī/ǎi/yǐ
+奋|fèn|f|en|4|kǎng
+态|tài|t|ai|4|
+欧|ōu||ou|1|
+殴|ōu||ou|1|
+垄|lǒng|l|ong|3|
+妻|qī|q|i|1|qì
+轰|hōng|h|ong|1|
+顷|qǐng|q|ing|3|
+转|zhuǎn|zh|uan|3|zhuàn/zhuǎi
+斩|zhǎn|zh|an|3|
+轮|lún|l|un|2|
+软|ruǎn|r|uan|3|
+到|dào|d|ao|4|
+非|fēi|f|ei|1|fěi
+叔|shū|sh|u|1|
+歧|qí|q|i|2|
+肯|kěn|k|en|3|
+齿|chǐ|ch|i|3|
+些|xiē|x|ie|1|suò/suō
+卓|zhuó|zh|uo|2|zhuō
+虎|hǔ|h|u|3|hù
+虏|lǔ|l|u|3|
+肾|shèn|sh|en|4|
+贤|xián|x|ian|2|
+尚|shàng|sh|ang|4|cháng
+旺|wàng||uang|4|
+具|jù|j|ü|4|
+味|wèi||ui|4|mèi
+果|guǒ|g|uo|3|luǒ/guàn
+昆|kūn|k|un|1|hún/kùn
+国|guó|g|uo|2|
+哎|āi||ai|1|
+咕|gū|g|u|1|gu
+昌|chāng|ch|ang|1|chàng
+呵|hē|h|e|1|hā/ā/a
+畅|chàng|ch|ang|4|
+明|míng|m|ing|2|mèng
+易|yì||i|4|
+咙|lóng|l|ong|2|
+昂|áng||ang|2|yàng
+迪|dí|d|i|2|
+典|diǎn|d|ian|3|tiǎn
+固|gù|g|u|4|
+忠|zhōng|zh|ong|1|
+呻|shēn|sh|en|1|
+咒|zhòu|zh|ou|4|
+咋|zǎ|z|a|3|zé/zhā/zhà
+咐|fù|f|u|4|fú
+呼|hū|h|u|1|xiāo/xū/hè
+鸣|míng|m|ing|2|
+咏|yǒng||iong|3|
+呢|ne|n|e|5|ní/nǐ/nī
+咄|duō|d|uo|1|
+咖|kā|k|a|1|gā/jiā
+岸|àn||an|4|
+岩|yán||ian|2|
+帖|tiē|t|ie|1|tiě/tiè
+罗|luó|l|uo|2|luō
+帜|zhì|zh|i|4|
+帕|pà|p|a|4|mò
+岭|lǐng|l|ing|3|líng
+凯|kǎi|k|ai|3|
+败|bài|b|ai|4|
+账|zhàng|zh|ang|4|
+贩|fàn|f|an|4|
+贬|biǎn|b|ian|3|
+购|gòu|g|ou|4|
+贮|zhù|zh|u|4|
+图|tú|t|u|2|
+钓|diào|d|iao|4|
+制|zhì|zh|i|4|
+知|zhī|zh|i|1|zhì
+迭|dié|d|ie|2|yì/dá
+氛|fēn|f|en|1|
+垂|chuí|ch|ui|2|zhuì
+牧|mù|m|u|4|
+物|wù||u|4|
+乖|guāi|g|uai|1|
+刮|guā|g|ua|1|
+秆|gǎn|g|an|3|
+和|hé|h|e|2|hè/hú/huó
+季|jì|j|i|4|
+委|wěi||ui|3|wēi/wèi
+秉|bǐng|b|ing|3|
+佳|jiā|j|ia|1|
+侍|shì|sh|i|4|
+岳|yuè||üe|4|
+供|gōng|g|ong|1|gòng
+使|shǐ|sh|i|3|
+例|lì|l|i|4|liè
+侠|xiá|x|ia|2|
+侥|jiǎo|j|iao|3|yáo
+版|bǎn|b|an|3|
+侄|zhí|zh|i|2|
+侦|zhēn|zh|en|1|
+侣|lǚ|l|ü|3|
+侧|cè|c|e|4|zè/zhāi
+凭|píng|p|ing|2|
+侨|qiáo|q|iao|2|
+佩|pèi|p|ei|4|
+货|huò|h|uo|4|
+侈|chǐ|ch|i|3|
+依|yī||i|1|yǐ
+卑|bēi|b|ei|1|bǐ/bì/pí
+的|de|d|e|5|dī/dí/dì
+迫|pò|p|o|4|pǎi
+质|zhì|zh|i|4|
+欣|xīn|x|in|1|
+征|zhēng|zh|eng|1|
+往|wǎng||uang|3|wàng
+爬|pá|p|a|2|
+彼|bǐ|b|i|3|
+径|jìng|j|ing|4|
+所|suǒ|s|uo|3|
+舍|shě|sh|e|3|shè/shì
+金|jīn|j|in|1|jìn
+刹|shā|sh|a|1|chà
+命|mìng|m|ing|4|
+肴|yáo||iao|2|
+斧|fǔ|f|u|3|
+爸|bà|b|a|4|
+采|cǎi|c|ai|3|cài
+觅|mì|m|i|4|
+受|shòu|sh|ou|4|dào
+乳|rǔ|r|u|3|
+贪|tān|t|an|1|
+念|niàn|n|ian|4|
+贫|pín|p|in|2|
+忿|fèn|f|en|4|
+肤|fū|f|u|1|
+肺|fèi|f|ei|4|pèi
+肢|zhī|zh|i|1|shì
+肿|zhǒng|zh|ong|3|
+胀|zhàng|zh|ang|4|
+朋|péng|p|eng|2|
+股|gǔ|g|u|3|
+肮|āng||ang|1|háng/gāng
+肪|fáng|f|ang|2|
+肥|féi|f|ei|2|bǐ
+服|fú|f|u|2|fù/bì/bó
+胁|xié|x|ie|2|
+周|zhōu|zh|ou|1|
+昏|hūn|h|un|1|hùn
+鱼|yú||ü|2|
+兔|tù|t|u|4|tú/chān
+狐|hú|h|u|2|
+忽|hū|h|u|1|
+狗|gǒu|g|ou|3|
+狞|níng|n|ing|2|
+备|bèi|b|ei|4|
+饰|shì|sh|i|4|
+饱|bǎo|b|ao|3|
+饲|sì|s|i|4|
+变|biàn|b|ian|4|
+京|jīng|j|ing|1|
+享|xiǎng|x|iang|3|
+庞|páng|p|ang|2|
+店|diàn|d|ian|4|
+夜|yè||ie|4|
+庙|miào|m|iao|4|
+府|fǔ|f|u|3|
+底|dǐ|d|i|3|de
+疟|nüè|n|üe|4|yào
+疙|gē|g|e|1|yì
+疚|jiù|j|iu|4|
+剂|jì|j|i|4|
+卒|zú|z|u|2|cù/cuì
+郊|jiāo|j|iao|1|
+庚|gēng|g|eng|1|
+废|fèi|f|ei|4|
+净|jìng|j|ing|4|chēng
+盲|máng|m|ang|2|
+放|fàng|f|ang|4|fǎng/fāng
+刻|kè|k|e|4|kēi
+育|yù||ü|4|zhòu/yō
+氓|máng|m|ang|2|méng
+闸|zhá|zh|a|2|
+闹|nào|n|ao|4|
+郑|zhèng|zh|eng|4|
+券|quàn|q|üan|4|xuàn
+卷|juǎn|j|üan|3|juàn/quán/quān
+单|dān|d|an|1|chán/shàn
+炬|jù|j|ü|4|
+炒|chǎo|ch|ao|3|
+炊|chuī|ch|ui|1|
+炕|kàng|k|ang|4|hāng
+炎|yán||ian|2|yàn/tán
+炉|lú|l|u|2|
+沫|mò|m|o|4|
+浅|qiǎn|q|ian|3|jiān
+法|fǎ|f|a|3|
+泄|xiè|x|ie|4|yì
+沽|gū|g|u|1|gǔ
+河|hé|h|e|2|
+沾|zhān|zh|an|1|tiān/diàn/chān
+泪|lèi|l|ei|4|
+沮|jǔ|j|ü|3|jū/jù/jiān
+油|yóu||iu|2|yòu
+泊|pō|p|o|1|bó/pò
+沿|yán||ian|2|yǎn/yàn
+泡|pào|p|ao|4|pāo/páo
+注|zhù|zh|u|4|zhòu
+泣|qì|q|i|4|lì/sè
+泞|nìng|n|ing|4|zhù
+泻|xiè|x|ie|4|
+泌|mì|m|i|4|bì
+泳|yǒng||iong|3|
+泥|ní|n|i|2|nì/nǐ/niè
+沸|fèi|f|ei|4|fú
+沼|zhǎo|zh|ao|3|
+波|bō|b|o|1|bēi/bì
+泼|pō|p|o|1|
+泽|zé|z|e|2|
+治|zhì|zh|i|4|chí
+怔|zhēng|zh|eng|1|zhèng
+怯|qiè|q|ie|4|
+怖|bù|b|u|4|
+性|xìng|x|ing|4|
+怕|pà|p|a|4|bó
+怜|lián|l|ian|2|líng/lǐng
+怪|guài|g|uai|4|
+怡|yí||i|2|
+学|xué|x|üe|2|
+宝|bǎo|b|ao|3|
+宗|zōng|z|ong|1|
+定|dìng|d|ing|4|
+宠|chǒng|ch|ong|3|
+宜|yí||i|2|
+审|shěn|sh|en|3|
+宙|zhòu|zh|ou|4|
+官|guān|g|uan|1|
+空|kōng|k|ong|1|kòng/kǒng
+帘|lián|l|ian|2|chén
+宛|wǎn||uan|3|yuān/yǔn/yù
+实|shí|sh|i|2|
+试|shì|sh|i|4|
+郎|láng|l|ang|2|làng
+诗|shī|sh|i|1|
+肩|jiān|j|ian|1|xián
+房|fáng|f|ang|2|páng
+诚|chéng|ch|eng|2|
+衬|chèn|ch|en|4|
+衫|shān|sh|an|1|
+视|shì|sh|i|4|
+祈|qí|q|i|2|guǐ
+话|huà|h|ua|4|
+诞|dàn|d|an|4|
+诡|guǐ|g|ui|3|
+询|xún|x|ün|2|
+该|gāi|g|ai|1|
+详|xiáng|x|iang|2|
+建|jiàn|j|ian|4|
+肃|sù|s|u|4|
+录|lù|l|u|4|
+隶|lì|l|i|4|dài/yì/dì
+帚|zhǒu|zh|ou|3|
+屉|tì|t|i|4|
+居|jū|j|ü|1|jī
+届|jiè|j|ie|4|
+刷|shuā|sh|ua|1|shuà
+屈|qū|q|ü|1|jué/què/jú
+弧|hú|h|u|2|
+弥|mí|m|i|2|
+弦|xián|x|ian|2|
+承|chéng|ch|eng|2|zhěng/zhèng
+孟|mèng|m|eng|4|
+陋|lòu|l|ou|4|
+陌|mò|m|o|4|
+孤|gū|g|u|1|
+陕|shǎn|sh|an|3|
+降|jiàng|j|iang|4|xiáng/xiàng
+函|hán|h|an|2|
+限|xiàn|x|ian|4|wěn
+妹|mèi|m|ei|4|
+姑|gū|g|u|1|
+姐|jiě|j|ie|3|jù/xù/zū
+姓|xìng|x|ing|4|shēng
+妮|nī|n|i|1|ní
+始|shǐ|sh|i|3|
+姆|mǔ|m|u|3|
+迢|tiáo|t|iao|2|
+驾|jià|j|ia|4|
+叁|sān|s|an|1|
+参|cān|c|an|1|cēn/shēn
+艰|jiān|j|ian|1|
+线|xiàn|x|ian|4|
+练|liàn|l|ian|4|
+组|zǔ|z|u|3|
+绅|shēn|sh|en|1|
+细|xì|x|i|4|
+驶|shǐ|sh|i|3|
+织|zhī|zh|i|1|
+驹|jū|j|ü|1|
+终|zhōng|zh|ong|1|
+驻|zhù|zh|u|4|
+绊|bàn|b|an|4|
+驼|tuó|t|uo|2|
+绍|shào|sh|ao|4|
+绎|yì||i|4|
+经|jīng|j|ing|1|jìng
+贯|guàn|g|uan|4|
+契|qì|q|i|4|xiè/qiè/jié
+贰|èr||er|4|
+奏|zòu|z|ou|4|còu
+春|chūn|ch|un|1|chǔn
+帮|bāng|b|ang|1|
+玷|diàn|d|ian|4|diān
+珍|zhēn|zh|en|1|
+玲|líng|l|ing|2|
+珊|shān|sh|an|1|
+玻|bō|b|o|1|
+毒|dú|d|u|2|dài
+型|xíng|x|ing|2|
+拭|shì|sh|i|4|
+挂|guà|g|ua|4|
+封|fēng|f|eng|1|biǎn
+持|chí|ch|i|2|
+拷|kǎo|k|ao|3|
+拱|gǒng|g|ong|3|jú
+项|xiàng|x|iang|4|
+垮|kuǎ|k|ua|3|
+挎|kuà|k|ua|4|kū/kōu
+城|chéng|ch|eng|2|
+挟|xié|x|ie|2|jiā
+挠|náo|n|ao|2|
+政|zhèng|zh|eng|4|zhēng
+赴|fù|f|u|4|
+赵|zhào|zh|ao|4|
+挡|dǎng|d|ang|3|dàng
+拽|zhuāi|zh|uai|1|zhuài/yè
+哉|zāi|z|ai|1|
+挺|tǐng|t|ing|3|tíng
+括|kuò|k|uo|4|guā
+垢|gòu|g|ou|4|
+拴|shuān|sh|uan|1|quán
+拾|shí|sh|i|2|shè/jiè
+挑|tiāo|t|iao|1|tiǎo/táo/diào
+垛|duǒ|d|uo|3|duò
+指|zhǐ|zh|i|3|zhī/zhí
+垫|diàn|d|ian|4|
+挣|zhēng|zh|eng|1|zhèng
+挤|jǐ|j|i|3|
+拼|pīn|p|in|1|bìng
+挖|wā||ua|1|
+按|àn||an|4|
+挥|huī|h|ui|1|
+挪|nuó|n|uo|2|
+拯|zhěng|zh|eng|3|
+某|mǒu|m|ou|3|méi
+甚|shèn|sh|en|4|shén
+荆|jīng|j|ing|1|
+茸|rōng|r|ong|1|róng/rǒng
+革|gé|g|e|2|jí
+茬|chá|ch|a|2|chí
+荐|jiàn|j|ian|4|
+巷|xiàng|x|iang|4|hàng
+带|dài|d|ai|4|
+草|cǎo|c|ao|3|zào
+茧|jiǎn|j|ian|3|chóng
+茵|yīn||in|1|
+茶|chá|ch|a|2|
+荒|huāng|h|uang|1|huǎng/kāng/huáng
+茫|máng|m|ang|2|huǎng
+荡|dàng|d|ang|4|
+荣|róng|r|ong|2|
+荤|hūn|h|un|1|xūn
+荧|yíng||ing|2|
+故|gù|g|u|4|
+胡|hú|h|u|2|
+荫|yīn||in|1|yìn
+荔|lì|l|i|4|
+南|nán|n|an|2|nā
+药|yào||iao|4|
+标|biāo|b|iao|1|
+栈|zhàn|zh|an|4|
+柑|gān|g|an|1|qián
+枯|kū|k|u|1|gū
+柄|bǐng|b|ing|3|
+栋|dòng|d|ong|4|
+相|xiāng|x|iang|1|xiàng
+查|chá|ch|a|2|zhā/chái
+柏|bǎi|b|ai|3|bó/bò
+栅|zhà|zh|a|4|shān/cè
+柳|liǔ|l|iu|3|
+柱|zhù|zh|u|4|zhǔ
+柿|shì|sh|i|4|
+栏|lán|l|an|2|
+柠|níng|n|ing|2|chǔ/zhù
+树|shù|sh|u|4|
+勃|bó|b|o|2|
+要|yào||iao|4|yāo/yǎo
+柬|jiǎn|j|ian|3|
+咸|xián|x|ian|2|jiǎn/jiān
+威|wēi||ui|1|
+歪|wāi||uai|1|wǎi
+研|yán||ian|2|yàn/xíng
+砖|zhuān|zh|uan|1|
+厘|lí|l|i|2|chán
+厚|hòu|h|ou|4|
+砌|qì|q|i|4|qiè
+砂|shā|sh|a|1|
+泵|bèng|b|eng|4|pìn/liú
+砚|yàn||ian|4|
+砍|kǎn|k|an|3|
+面|miàn|m|ian|4|
+耐|nài|n|ai|4|néng
+耍|shuǎ|sh|ua|3|
+牵|qiān|q|ian|1|
+鸥|ōu||ou|1|
+残|cán|c|an|2|
+殃|yāng||iang|1|
+轴|zhóu|zh|ou|2|zhòu
+轻|qīng|q|ing|1|
+鸦|yā||ia|1|
+皆|jiē|j|ie|1|
+韭|jiǔ|j|iu|3|
+背|bèi|b|ei|4|bēi
+战|zhàn|zh|an|4|
+点|diǎn|d|ian|3|
+虐|nüè|n|üe|4|
+临|lín|l|in|2|
+览|lǎn|l|an|3|
+竖|shù|sh|u|4|
+省|shěng|sh|eng|3|xǐng/xiǎn
+削|xuē|x|üe|1|xiāo/qiào/shào
+尝|cháng|ch|ang|2|
+昧|mèi|m|ei|4|wěn/mò
+盹|dǔn|d|un|3|zhūn
+是|shì|sh|i|4|tí
+盼|pàn|p|an|4|fén
+眨|zhǎ|zh|a|3|
+哇|wa||ua|5|wā/guī/huá
+哄|hǒng|h|ong|3|hōng/hòng
+哑|yǎ||ia|3|yā
+显|xiǎn|x|ian|3|
+冒|mào|m|ao|4|mò
+映|yìng||ing|4|yǎng
+星|xīng|x|ing|1|
+昨|zuó|z|uo|2|
+咧|liě|l|ie|3|liē/liè/lié
+昭|zhāo|zh|ao|1|zhào
+畏|wèi||ui|4|wēi/wěi
+趴|pā|p|a|1|
+胃|wèi||ui|4|
+贵|guì|g|ui|4|
+界|jiè|j|ie|4|
+虹|hóng|h|ong|2|jiàng/hòng/gòng
+虾|xiā|x|ia|1|há
+蚁|yǐ||i|3|
+思|sī|s|i|1|sāi
+蚂|mǎ|m|a|3|mà/mā
+虽|suī|s|ui|1|
+品|pǐn|p|in|3|
+咽|yàn||ian|4|yān/yè/yuān
+骂|mà|m|a|4|
+勋|xūn|x|ün|1|
+哗|huā|h|ua|1|huá
+咱|zán|z|an|2|zá/zǎ/zan
+响|xiǎng|x|iang|3|
+哈|hā|h|a|1|hǎ/hà/hē
+哆|duō|d|uo|1|chǐ/zhà/chì
+咬|yǎo||iao|3|jiāo/yāo/jiǎo
+咳|ké|k|e|2|hāi/hái/gāi
+咪|mī|m|i|1|mǐ/miē/mǎi
+哪|nǎ|n|a|3|na/né/nuó
+哟|yō||o|1|yo
+炭|tàn|t|an|4|
+峡|xiá|x|ia|2|
+罚|fá|f|a|2|
+贱|jiàn|j|ian|4|
+贴|tiē|t|ie|1|
+贻|yí||i|2|
+骨|gǔ|g|u|3|gū/gú
+幽|yōu||iu|1|
+钙|gài|g|ai|4|
+钝|dùn|d|un|4|
+钞|chāo|ch|ao|1|
+钟|zhōng|zh|ong|1|
+钢|gāng|g|ang|1|gàng
+钠|nà|n|a|4|
+钥|yào||iao|4|yuè
+钦|qīn|q|in|1|
+钧|jūn|j|ün|1|
+钩|gōu|g|ou|1|
+钮|niǔ|n|iu|3|
+卸|xiè|x|ie|4|
+缸|gāng|g|ang|1|
+拜|bài|b|ai|4|bái
+看|kàn|k|an|4|kān
+矩|jǔ|j|ü|3|
+毡|zhān|zh|an|1|
+氢|qīng|q|ing|1|
+怎|zěn|z|en|3|
+牲|shēng|sh|eng|1|
+选|xuǎn|x|üan|3|
+适|shì|sh|i|4|kuò
+秒|miǎo|m|iao|3|
+香|xiāng|x|iang|1|
+种|zhǒng|zh|ong|3|chóng/zhòng
+秋|qiū|q|iu|1|
+科|kē|k|e|1|kè
+重|zhòng|zh|ong|4|chóng/tóng
+复|fù|f|u|4|
+竿|gān|g|an|1|gàn/gǎn
+段|duàn|d|uan|4|
+便|biàn|b|ian|4|pián/biān
+俩|liǎ|l|ia|3|liǎng
+贷|dài|d|ai|4|
+顺|shùn|sh|un|4|
+修|xiū|x|iu|1|
+俏|qiào|q|iao|4|xiào/xiāo
+保|bǎo|b|ao|3|
+促|cù|c|u|4|chuò
+俄|é||e|2|
+俐|lì|l|i|4|
+侮|wǔ||u|3|
+俭|jiǎn|j|ian|3|
+俗|sú|s|u|2|
+俘|fú|f|u|2|
+信|xìn|x|in|4|shēn
+皇|huáng|h|uang|2|wǎng
+泉|quán|q|üan|2|
+鬼|guǐ|g|ui|3|
+侵|qīn|q|in|1|qǐn
+禹|yǔ||ü|3|
+侯|hóu|h|ou|2|hòu
+追|zhuī|zh|ui|1|duī/tuī
+俊|jùn|j|ün|4|shùn/dūn
+盾|dùn|d|un|4|shǔn/yǔn
+待|dài|d|ai|4|dāi
+徊|huái|h|uai|2|huí
+衍|yǎn||ian|3|yán
+律|lǜ|l|ü|4|
+很|hěn|h|en|3|
+须|xū|x|ü|1|
+叙|xù|x|ü|4|
+剑|jiàn|j|ian|4|
+逃|táo|t|ao|2|
+食|shí|sh|i|2|sì/yì
+盆|pén|p|en|2|
+胚|pēi|p|ei|1|
+胧|lóng|l|ong|2|
+胆|dǎn|d|an|3|tán/tǎn/dá
+胜|shèng|sh|eng|4|xīng/qìng/shēng
+胞|bāo|b|ao|1|páo/pào
+胖|pàng|p|ang|4|pán/pàn
+脉|mài|m|ai|4|mò
+胎|tāi|t|ai|1|
+勉|miǎn|m|ian|3|
+狭|xiá|x|ia|2|
+狮|shī|sh|i|1|
+独|dú|d|u|2|
+狰|zhēng|zh|eng|1|
+狡|jiǎo|j|iao|3|xiào
+狱|yù||ü|4|
+狠|hěn|h|en|3|yán/kěn/hǎng
+贸|mào|m|ao|4|
+怨|yuàn||üan|4|yùn
+急|jí|j|i|2|
+饵|ěr||er|3|
+饶|ráo|r|ao|2|
+蚀|shí|sh|i|2|
+饺|jiǎo|j|iao|3|
+饼|bǐng|b|ing|3|
+峦|luán|l|uan|2|
+弯|wān||uan|1|
+将|jiāng|j|iang|1|jiàng/qiāng
+奖|jiǎng|j|iang|3|
+哀|āi||ai|1|
+亭|tíng|t|ing|2|
+亮|liàng|l|iang|4|liáng
+度|dù|d|u|4|duó/zhái
+迹|jì|j|i|4|jī
+庭|tíng|t|ing|2|
+疮|chuāng|ch|uang|1|
+疯|fēng|f|eng|1|
+疫|yì||i|4|
+疤|bā|b|a|1|
+咨|zī|z|i|1|
+姿|zī|z|i|1|zì
+亲|qīn|q|in|1|qìng
+音|yīn||in|1|
+帝|dì|d|i|4|
+施|shī|sh|i|1|yì/shǐ
+闺|guī|g|ui|1|
+闻|wén||un|2|
+闽|mǐn|m|in|3|
+阀|fá|f|a|2|
+阁|gé|g|e|2|
+差|chà|ch|a|4|chā/chāi/cī
+养|yǎng||iang|3|
+美|měi|m|ei|3|
+姜|jiāng|j|iang|1|
+叛|pàn|p|an|4|
+送|sòng|s|ong|4|
+类|lèi|l|ei|4|
+迷|mí|m|i|2|mì
+籽|zǐ|z|i|3|
+娄|lóu|l|ou|2|
+前|qián|q|ian|2|jiǎn
+首|shǒu|sh|ou|3|
+逆|nì|n|i|4|
+兹|zī|z|i|1|cí
+总|zǒng|z|ong|3|
+炼|liàn|l|ian|4|
+炸|zhà|zh|a|4|zhá
+烁|shuò|sh|uo|4|
+炮|pào|p|ao|4|bāo/páo
+炫|xuàn|x|üan|4|
+烂|làn|l|an|4|
+剃|tì|t|i|4|
+洼|wā||ua|1|guī
+洁|jié|j|ie|2|jí
+洪|hóng|h|ong|2|
+洒|sǎ|s|a|3|xǐ/xiǎn/sěn
+柒|qī|q|i|1|
+浇|jiāo|j|iao|1|
+浊|zhuó|zh|uo|2|
+洞|dòng|d|ong|4|tóng
+测|cè|c|e|4|
+洗|xǐ|x|i|3|xiǎn
+活|huó|h|uo|2|guō
+派|pài|p|ai|4|mài/bài/pā
+洽|qià|q|ia|4|hé
+染|rǎn|r|an|3|
+洛|luò|l|uo|4|
+浏|liú|l|iu|2|
+济|jì|j|i|4|jǐ
+洋|yáng||iang|2|xiáng/yǎng
+洲|zhōu|zh|ou|1|
+浑|hún|h|un|2|
+浓|nóng|n|ong|2|
+津|jīn|j|in|1|
+恃|shì|sh|i|4|zhì
+恒|héng|h|eng|2|
+恢|huī|h|ui|1|
+恍|huǎng|h|uang|3|guāng
+恬|tián|t|ian|2|
+恤|xù|x|ü|4|
+恰|qià|q|ia|4|
+恼|nǎo|n|ao|3|
+恨|hèn|h|en|4|
+举|jǔ|j|ü|3|
+觉|jué|j|üe|2|jiào
+宣|xuān|x|üan|1|
+宦|huàn|h|uan|4|
+室|shì|sh|i|4|
+宫|gōng|g|ong|1|
+宪|xiàn|x|ian|4|xiòng
+突|tū|t|u|1|
+穿|chuān|ch|uan|1|chuàn/yuān
+窃|qiè|q|ie|4|
+客|kè|k|e|4|qià
+诫|jiè|j|ie|4|
+冠|guān|g|uan|1|guàn
+诬|wū||u|1|
+语|yǔ||ü|3|yù
+扁|biǎn|b|ian|3|piān/biān/pián
+袄|ǎo||ao|3|
+祖|zǔ|z|u|3|jiē
+神|shén|sh|en|2|shēn
+祝|zhù|zh|u|4|zhòu/chù
+祠|cí|c|i|2|sì
+误|wù||u|4|
+诱|yòu||iu|4|
+诲|huì|h|ui|4|
+说|shuō|sh|uo|1|shuì/yuè
+诵|sòng|s|ong|4|
+垦|kěn|k|en|3|yín
+退|tuì|t|ui|4|
+既|jì|j|i|4|xì
+屋|wū||u|1|
+昼|zhòu|zh|ou|4|
+屏|píng|p|ing|2|bǐng/bìng/bīng
+屎|shǐ|sh|i|3|xī
+费|fèi|f|ei|4|
+陡|dǒu|d|ou|3|
+逊|xùn|x|ün|4|
+眉|méi|m|ei|2|
+孩|hái|h|ai|2|
+陨|yǔn||ün|3|
+除|chú|ch|u|2|zhù/shū
+险|xiǎn|x|ian|3|
+院|yuàn||üan|4|
+娃|wá||ua|2|wā/guì
+姥|lǎo|l|ao|3|mǔ
+姨|yí||i|2|
+姻|yīn||in|1|
+娇|jiāo|j|iao|1|
+姚|yáo||iao|2|tiào/táo/yào
+娜|nà|n|a|4|nuó
+怒|nù|n|u|4|
+架|jià|j|ia|4|
+贺|hè|h|e|4|
+盈|yíng||ing|2|
+勇|yǒng||iong|3|
+怠|dài|d|ai|4|yí
+癸|guǐ|g|ui|3|
+蚤|zǎo|z|ao|3|zhǎo
+柔|róu|r|ou|2|
+垒|lěi|l|ei|3|
+绑|bǎng|b|ang|3|
+绒|róng|r|ong|2|
+结|jié|j|ie|2|jiē
+绕|rào|r|ao|4|rǎo
+骄|jiāo|j|iao|1|
+绘|huì|h|ui|4|
+给|gěi|g|ei|3|jǐ
+绚|xuàn|x|üan|4|
+骆|luò|l|uo|4|
+络|luò|l|uo|4|lào
+绝|jué|j|üe|2|
+绞|jiǎo|j|iao|3|
+骇|hài|h|ai|4|
+统|tǒng|t|ong|3|
+耕|gēng|g|eng|1|
+耘|yún||ün|2|
+耗|hào|h|ao|4|máo/mào
+耙|bà|b|a|4|pá
+艳|yàn||ian|4|
+泰|tài|t|ai|4|
+秦|qín|q|in|2|
+珠|zhū|zh|u|1|
+班|bān|b|an|1|
+素|sù|s|u|4|
+匿|nì|n|i|4|tè
+蚕|cán|c|an|2|tiǎn
+顽|wán||uan|2|
+盏|zhǎn|zh|an|3|
+匪|fěi|f|ei|3|fēi/fēn
+捞|lāo|l|ao|1|
+栽|zāi|z|ai|1|zài
+捕|bǔ|b|u|3|
+埂|gěng|g|eng|3|
+捂|wǔ||u|3|wú
+振|zhèn|zh|en|4|zhēn/zhěn
+载|zài|z|ai|4|zǎi
+赶|gǎn|g|an|3|qián
+起|qǐ|q|i|3|
+盐|yán||ian|2|
+捎|shāo|sh|ao|1|shào/shǎo/xiāo
+捍|hàn|h|an|4|xiàn/gǎn
+捏|niē|n|ie|1|
+埋|mái|m|ai|2|mán
+捉|zhuō|zh|uo|1|
+捆|kǔn|k|un|3|hún
+捐|juān|j|üan|1|yuán
+损|sǔn|s|un|3|
+袁|yuán||üan|2|
+捌|bā|b|a|1|bié
+都|dōu|d|ou|1|dū
+哲|zhé|zh|e|2|
+逝|shì|sh|i|4|
+捡|jiǎn|j|ian|3|
+挫|cuò|c|uo|4|zuò
+换|huàn|h|uan|4|
+挽|wǎn||uan|3|
+挚|zhì|zh|i|4|
+热|rè|r|e|4|
+恐|kǒng|k|ong|3|
+捣|dǎo|d|ao|3|
+壶|hú|h|u|2|
+捅|tǒng|t|ong|3|
+埃|āi||ai|1|zhì
+挨|āi||ai|1|ái
+耻|chǐ|ch|i|3|
+耿|gěng|g|eng|3|
+耽|dān|d|an|1|
+聂|niè|n|ie|4|
+恭|gōng|g|ong|1|
+莽|mǎng|m|ang|3|máng
+莱|lái|l|ai|2|
+莲|lián|l|ian|2|
+莫|mò|m|o|4|mù
+莉|lì|l|i|4|lí/chí
+荷|hé|h|e|2|hè/hē
+获|huò|h|uo|4|
+晋|jìn|j|in|4|
+恶|è||e|4|ě/wù/wū
+莹|yíng||ing|2|
+莺|yīng||ing|1|
+真|zhēn|zh|en|1|
+框|kuāng|k|uang|1|kuàng/kuáng
+梆|bāng|b|ang|1|
+桂|guì|g|ui|4|
+桔|jú|j|ü|2|jié/xié
+栖|qī|q|i|1|xī
+档|dàng|d|ang|4|
+桐|tóng|t|ong|2|tōng/dòng
+株|zhū|zh|u|1|
+桥|qiáo|q|iao|2|
+桦|huà|h|ua|4|
+栓|shuān|sh|uan|1|shuàn/quán
+桃|táo|t|ao|2|tiāo/zhào
+格|gé|g|e|2|luò/hè/gē
+桩|zhuāng|zh|uang|1|
+校|xiào|x|iao|4|jiào/jiǎo/qiāo
+核|hé|h|e|2|hú/gāi/kài
+样|yàng||iang|4|yáng
+根|gēn|g|en|1|
+索|suǒ|s|uo|3|
+哥|gē|g|e|1|
+速|sù|s|u|4|
+逗|dòu|d|ou|4|zhù/tóu/qí
+栗|lì|l|i|4|liè
+贾|jiǎ|j|ia|3|gǔ
+酌|zhuó|zh|uo|2|
+配|pèi|p|ei|4|
+翅|chì|ch|i|4|
+辱|rǔ|r|u|3|
+唇|chún|ch|un|2|zhēn/zhèn
+夏|xià|x|ia|4|jiǎ
+砸|zá|z|a|2|
+砰|pēng|p|eng|1|pīng/pèng
+砾|lì|l|i|4|
+础|chǔ|ch|u|3|
+破|pò|p|o|4|
+原|yuán||üan|2|
+套|tào|t|ao|4|tǎo
+逐|zhú|zh|u|2|dí/zhòu/tún
+烈|liè|l|ie|4|
+殊|shū|sh|u|1|
+殉|xùn|x|ün|4|
+顾|gù|g|u|4|
+轿|jiào|j|iao|4|
+较|jiào|j|iao|4|
+顿|dùn|d|un|4|dú
+毙|bì|b|i|4|
+致|zhì|zh|i|4|zhuì
+柴|chái|ch|ai|2|cī/zhài/zì
+桌|zhuō|zh|uo|1|
+虑|lǜ|l|ü|4|bì
+监|jiān|j|ian|1|jiàn
+紧|jǐn|j|in|3|
+党|dǎng|d|ang|3|
+逞|chěng|ch|eng|3|yíng
+晒|shài|sh|ai|4|
+眠|mián|m|ian|2|miǎn/mǐn
+晓|xiǎo|x|iao|3|
+哮|xiāo|x|iao|1|xiào/xuē
+唠|láo|l|ao|2|lào
+鸭|yā||ia|1|
+晃|huǎng|h|uang|3|huàng
+哺|bǔ|b|u|3|bū/fǔ
+晌|shǎng|sh|ang|3|
+剔|tī|t|i|1|tì
+晕|yūn||ün|1|yùn
+蚌|bàng|b|ang|4|bèng/pí/fēng
+畔|pàn|p|an|4|
+蚣|gōng|g|ong|1|zhōng
+蚊|wén||un|2|
+蚪|dǒu|d|ou|3|
+蚓|yǐn||in|3|
+哨|shào|sh|ao|4|sāo/xiāo/xiào
+哩|lī|l|i|1|li/lì/lǐ
+圃|pǔ|p|u|3|
+哭|kū|k|u|1|
+哦|ó||o|2|é/ò
+恩|ēn||en|1|
+鸯|yāng||iang|1|
+唤|huàn|h|uan|4|
+唁|yàn||ian|4|
+哼|hēng|h|eng|1|hng
+唧|jī|j|i|1|jié
+啊|a||a|5|ā/á/ǎ
+唉|āi||ai|1|ài/ǎi
+唆|suō|s|uo|1|shuà
+罢|bà|b|a|4|ba
+峭|qiào|q|iao|4|
+峨|é||e|2|
+峰|fēng|f|eng|1|
+圆|yuán||üan|2|
+峻|jùn|j|ün|4|
+贼|zéi|z|ei|2|
+贿|huì|h|ui|4|
+赂|lù|l|u|4|
+赃|zāng|z|ang|1|
+钱|qián|q|ian|2|
+钳|qián|q|ian|2|
+钻|zuān|z|uan|1|zuàn
+钾|jiǎ|j|ia|3|
+铁|tiě|t|ie|3|
+铃|líng|l|ing|2|
+铅|qiān|q|ian|1|yán
+缺|quē|q|üe|1|kuǐ
+氧|yǎng||iang|3|
+氨|ān||an|1|
+特|tè|t|e|4|
+牺|xī|x|i|1|
+造|zào|z|ao|4|cào/cāo
+乘|chéng|ch|eng|2|shèng
+敌|dí|d|i|2|huá
+秤|chèng|ch|eng|4|chēng/píng
+租|zū|z|u|1|jū
+积|jī|j|i|1|zhǐ
+秧|yāng||iang|1|
+秩|zhì|zh|i|4|
+称|chēng|ch|eng|1|chèn/chèng
+秘|mì|m|i|4|bì/bié
+透|tòu|t|ou|4|shū
+笔|bǐ|b|i|3|
+笑|xiào|x|iao|4|
+笋|sǔn|s|un|3|
+债|zhài|zh|ai|4|
+借|jiè|j|ie|4|
+值|zhí|zh|i|2|
+倚|yǐ||i|3|jī/yī
+俺|ǎn||an|3|yàn
+倾|qīng|q|ing|1|
+倒|dào|d|ao|4|dǎo
+倘|tǎng|t|ang|3|cháng
+俱|jù|j|ü|4|jū
+倡|chàng|ch|ang|4|chāng
+候|hòu|h|ou|4|
+赁|lìn|l|in|4|
+俯|fǔ|f|u|3|
+倍|bèi|b|ei|4|péi
+倦|juàn|j|üan|4|
+健|jiàn|j|ian|4|
+臭|chòu|ch|ou|4|xiù
+射|shè|sh|e|4|yè/yì
+躬|gōng|g|ong|1|
+息|xī|x|i|1|
+倔|jué|j|üe|2|juè
+徒|tú|t|u|2|
+徐|xú|x|ü|2|
+殷|yīn||in|1|yān/yǐn
+舰|jiàn|j|ian|4|
+舱|cāng|c|ang|1|
+般|bān|b|an|1|pán/bǎn/bō
+航|háng|h|ang|2|
+途|tú|t|u|2|
+拿|ná|n|a|2|
+耸|sǒng|s|ong|3|
+爹|diē|d|ie|1|
+舀|yǎo||iao|3|
+爱|ài||ai|4|
+豺|chái|ch|ai|2|
+豹|bào|b|ao|4|
+颁|bān|b|an|1|
+颂|sòng|s|ong|4|
+翁|wēng||ung|1|wěng
+胰|yí||i|2|
+脆|cuì|c|ui|4|
+脂|zhī|zh|i|1|zhǐ
+胸|xiōng|x|iong|1|
+胳|gē|g|e|1|gé/gā
+脏|zàng|z|ang|4|zāng
+脐|qí|q|i|2|
+胶|jiāo|j|iao|1|xiáo
+脑|nǎo|n|ao|3|
+脓|nóng|n|ong|2|
+逛|guàng|g|uang|4|kuáng
+狸|lí|l|i|2|
+狼|láng|l|ang|2|lǎng/làng/hǎng
+卿|qīng|q|ing|1|
+逢|féng|f|eng|2|péng/páng
+鸵|tuó|t|uo|2|
+留|liú|l|iu|2|liù/liǔ
+鸳|yuān||üan|1|
+皱|zhòu|zh|ou|4|
+饿|è||e|4|
+馁|něi|n|ei|3|
+凌|líng|l|ing|2|lìng
+凄|qī|q|i|1|
+恋|liàn|l|ian|4|
+桨|jiǎng|j|iang|3|
+浆|jiāng|j|iang|1|jiàng
+衰|shuāi|sh|uai|1|suō/cuī
+衷|zhōng|zh|ong|1|zhòng
+高|gāo|g|ao|1|gào
+郭|guō|g|uo|1|guó
+席|xí|x|i|2|
+准|zhǔn|zh|un|3|
+座|zuò|z|uo|4|
+症|zhèng|zh|eng|4|zhēng
+病|bìng|b|ing|4|
+疾|jí|j|i|2|
+斋|zhāi|zh|ai|1|
+疹|zhěn|zh|en|3|chèn
+疼|téng|t|eng|2|
+疲|pí|p|i|2|
+脊|jí|j|i|2|jǐ
+效|xiào|x|iao|4|
+离|lí|l|i|2|chī
+紊|wěn||un|3|wèn
+唐|táng|t|ang|2|
+瓷|cí|c|i|2|
+资|zī|z|i|1|
+凉|liáng|l|iang|2|liàng
+站|zhàn|zh|an|4|zhān
+剖|pōu|p|ou|1|pǒ
+竞|jìng|j|ing|4|
+部|bù|b|u|4|pǒu
+旁|páng|p|ang|2|pēng/bēng/bàng
+旅|lǚ|l|ü|3|
+畜|chù|ch|u|4|xù
+阅|yuè||üe|4|
+羞|xiū|x|iu|1|
+羔|gāo|g|ao|1|
+瓶|píng|p|ing|2|
+拳|quán|q|üan|2|
+粉|fěn|f|en|3|
+料|liào|l|iao|4|liáo
+益|yì||i|4|
+兼|jiān|j|ian|1|
+烤|kǎo|k|ao|3|
+烘|hōng|h|ong|1|
+烦|fán|f|an|2|
+烧|shāo|sh|ao|1|
+烛|zhú|zh|u|2|chóng
+烟|yān||ian|1|yīn
+烙|lào|l|ao|4|luò
+递|dì|d|i|4|
+涛|tāo|t|ao|1|
+浙|zhè|zh|e|4|
+涝|lào|l|ao|4|
+浦|pǔ|p|u|3|
+酒|jiǔ|j|iu|3|
+涉|shè|sh|e|4|dié
+消|xiāo|x|iao|1|
+涡|wō||uo|1|guō
+浩|hào|h|ao|4|gǎo/gé
+海|hǎi|h|ai|3|
+涂|tú|t|u|2|chú/yé
+浴|yù||ü|4|
+浮|fú|f|u|2|
+涣|huàn|h|uan|4|huì
+涤|dí|d|i|2|
+流|liú|l|iu|2|
+润|rùn|r|un|4|
+涧|jiàn|j|ian|4|
+涕|tì|t|i|4|
+浪|làng|l|ang|4|láng
+浸|jìn|j|in|4|qīn
+涨|zhǎng|zh|ang|3|zhàng
+烫|tàng|t|ang|4|
+涩|sè|s|e|4|
+涌|yǒng||iong|3|chōng
+悖|bèi|b|ei|4|běi
+悟|wù||u|4|
+悄|qiāo|q|iao|1|qiǎo/qiào
+悍|hàn|h|an|4|
+悔|huǐ|h|ui|3|
+悯|mǐn|m|in|3|
+悦|yuè||üe|4|
+害|hài|h|ai|4|hé
+宽|kuān|k|uan|1|
+家|jiā|j|ia|1|jia/jià/jie
+宵|xiāo|x|iao|1|
+宴|yàn||ian|4|
+宾|bīn|b|in|1|
+窍|qiào|q|iao|4|
+窄|zhǎi|zh|ai|3|
+容|róng|r|ong|2|yǒng
+宰|zǎi|z|ai|3|
+案|àn||an|4|
+请|qǐng|q|ing|3|
+朗|lǎng|l|ang|3|
+诸|zhū|zh|u|1|
+诺|nuò|n|uo|4|
+读|dú|d|u|2|dòu
+扇|shàn|sh|an|4|shān
+诽|fěi|f|ei|3|
+袜|wà||ua|4|mò
+袖|xiù|x|iu|4|
+袍|páo|p|ao|2|bào
+被|bèi|b|ei|4|bì/pī/pì
+祥|xiáng|x|iang|2|
+课|kè|k|e|4|
+冥|míng|m|ing|2|mián/miàn
+谁|shuí|sh|ui|2|shéi
+调|diào|d|iao|4|tiáo
+冤|yuān||üan|1|
+谅|liàng|l|iang|4|
+谆|zhūn|zh|un|1|
+谈|tán|t|an|2|
+谊|yì||i|4|
+剥|bō|b|o|1|bāo/pū
+恳|kěn|k|en|3|
+展|zhǎn|zh|an|3|
+剧|jù|j|ü|4|
+屑|xiè|x|ie|4|
+弱|ruò|r|uo|4|
+陵|líng|l|ing|2|
+祟|suì|s|ui|4|
+陶|táo|t|ao|2|yáo/dào
+陷|xiàn|x|ian|4|
+陪|péi|p|ei|2|
+娱|yú||ü|2|
+娟|juān|j|üan|1|
+恕|shù|sh|u|4|
+娥|é||e|2|
+娘|niáng|n|iang|2|
+通|tōng|t|ong|1|tòng
+能|néng|n|eng|2|tái/nái/nài
+难|nán|n|an|2|nàn
+预|yù||ü|4|
+桑|sāng|s|ang|1|
+绢|juàn|j|üan|4|
+绣|xiù|x|iu|4|
+验|yàn||ian|4|
+继|jì|j|i|4|
+骏|jùn|j|ün|4|
+球|qiú|q|iu|2|
+琐|suǒ|s|uo|3|
+理|lǐ|l|i|3|
+琉|liú|l|iu|2|
+琅|láng|l|ang|2|làng
+捧|pěng|p|eng|3|fèng
+堵|dǔ|d|u|3|zhě/dū
+措|cuò|c|uo|4|zé/cì
+描|miáo|m|iao|2|mào
+域|yù||ü|4|
+捺|nà|n|a|4|
+掩|yǎn||ian|3|yàn
+捷|jié|j|ie|2|qiè/chā
+排|pái|p|ai|2|pǎi/bài
+焉|yān||ian|1|yí
+掉|diào|d|iao|4|nuó
+捶|chuí|ch|ui|2|duǒ
+赦|shè|sh|e|4|cè
+堆|duī|d|ui|1|zuī
+推|tuī|t|ui|1|
+埠|bù|b|u|4|
+掀|xiān|x|ian|1|hén
+授|shòu|sh|ou|4|
+捻|niǎn|n|ian|3|niē/niān
+教|jiào|j|iao|4|jiāo
+掏|tāo|t|ao|1|táo
+掐|qiā|q|ia|1|
+掠|lüè|l|üe|4|lüě
+掂|diān|d|ian|1|
+培|péi|p|ei|2|pǒu/pī
+接|jiē|j|ie|1|xié/shà/chā
+掷|zhì|zh|i|4|zhī
+控|kòng|k|ong|4|kōng/qiāng
+探|tàn|t|an|4|xián
+据|jù|j|ü|4|jū
+掘|jué|j|üe|2|kū
+掺|càn|c|an|4|chān/shǎn
+职|zhí|zh|i|2|
+基|jī|j|i|1|
+聆|líng|l|ing|2|
+勘|kān|k|an|1|
+聊|liáo|l|iao|2|liú
+娶|qǔ|q|ü|3|jū/shū
+著|zhù|zh|u|4|zhuó/chú/zhāo
+菱|líng|l|ing|2|
+勒|lēi|l|ei|1|lè/lei
+黄|huáng|h|uang|2|
+菲|fēi|f|ei|1|fěi/fèi
+萌|méng|m|eng|2|míng
+萝|luó|l|uo|2|
+菌|jūn|j|ün|1|jùn
+萎|wēi||ui|1|wěi/wèi
+菜|cài|c|ai|4|
+萄|táo|t|ao|2|
+菊|jú|j|ü|2|
+菩|pú|p|u|2|bèi/bó
+萍|píng|p|ing|2|
+菠|bō|b|o|1|
+萤|yíng||ing|2|
+营|yíng||ing|2|
+乾|qián|q|ian|2|gān
+萧|xiāo|x|iao|1|
+萨|sà|s|a|4|
+菇|gū|g|u|1|
+械|xiè|x|ie|4|
+彬|bīn|b|in|1|bān
+梦|mèng|m|eng|4|
+婪|lán|l|an|2|lǎn
+梗|gěng|g|eng|3|
+梧|wú||u|2|wù/yǔ
+梢|shāo|sh|ao|1|shào/xiāo/sào
+梅|méi|m|ei|2|
+检|jiǎn|j|ian|3|
+梳|shū|sh|u|1|
+梯|tī|t|i|1|tí
+桶|tǒng|t|ong|3|
+梭|suō|s|uo|1|xùn
+救|jiù|j|iu|4|jiū
+曹|cáo|c|ao|2|
+副|fù|f|u|4|pì
+票|piào|p|iao|4|piāo
+酝|yùn||ün|4|
+酗|xù|x|ü|4|
+厢|xiāng|x|iang|1|
+戚|qī|q|i|1|cù
+硅|guī|g|ui|1|hè
+硕|shuò|sh|uo|4|
+奢|shē|sh|e|1|
+盔|kuī|k|ui|1|
+爽|shuǎng|sh|uang|3|shuāng
+聋|lóng|l|ong|2|
+袭|xí|x|i|2|
+盛|shèng|sh|eng|4|chéng
+匾|biǎn|b|ian|3|
+雪|xuě|x|üe|3|
+辅|fǔ|f|u|3|
+辆|liàng|l|iang|4|
+颅|lú|l|u|2|
+虚|xū|x|ü|1|
+彪|biāo|b|iao|1|
+雀|què|q|üe|4|qiāo/qiǎo
+堂|táng|t|ang|2|
+常|cháng|ch|ang|2|
+眶|kuàng|k|uang|4|
+匙|shi|sh|i|5|chí
+晨|chén|ch|en|2|
+睁|zhēng|zh|eng|1|
+眯|mī|m|i|1|mí/mǐ/mì
+眼|yǎn||ian|3|wěn
+悬|xuán|x|üan|2|
+野|yě||ie|3|shù
+啪|pā|p|a|1|
+啦|la|l|a|5|lā
+曼|màn|m|an|4|
+晦|huì|h|ui|4|
+晚|wǎn||uan|3|
+啄|zhuó|zh|uo|2|zhòu
+啡|fēi|f|ei|1|pèi/pái/pēi
+距|jù|j|ü|4|
+趾|zhǐ|zh|i|3|
+啃|kěn|k|en|3|
+跃|yuè||üe|4|
+略|lüè|l|üe|4|
+蚯|qiū|q|iu|1|
+蛀|zhù|zh|u|4|
+蛇|shé|sh|e|2|yí/tuó/chí
+唬|hǔ|h|u|3|xiāo/guó/xià
+累|lèi|l|ei|4|léi/lěi/lǜ
+鄂|è||e|4|
+唱|chàng|ch|ang|4|
+患|huàn|h|uan|4|
+啰|luō|l|uo|1|luó/luo
+唾|tuò|t|uo|4|
+唯|wéi||ui|2|wěi
+啤|pí|p|i|2|
+啥|shá|sh|a|2|shà
+啸|xiào|x|iao|4|
+崖|yá||ia|2|
+崎|qí|q|i|2|qǐ/yī
+崭|zhǎn|zh|an|3|
+逻|luó|l|uo|2|
+崔|cuī|c|ui|1|
+帷|wéi||ui|2|
+崩|bēng|b|eng|1|
+崇|chóng|ch|ong|2|
+崛|jué|j|üe|2|yù
+婴|yīng||ing|1|
+圈|quān|q|üan|1|juān/juàn/quán
+铐|kào|k|ao|4|
+铛|dāng|d|ang|1|chēng
+铝|lǚ|l|ü|3|
+铜|tóng|t|ong|2|
+铭|míng|m|ing|2|
+铲|chǎn|ch|an|3|
+银|yín||in|2|
+矫|jiǎo|j|iao|3|jiáo
+甜|tián|t|ian|2|
+秸|jiē|j|ie|1|jí
+梨|lí|l|i|2|
+犁|lí|l|i|2|
+秽|huì|h|ui|4|
+移|yí||i|2|chǐ/yì
+笨|bèn|b|en|4|
+笼|lóng|l|ong|2|lǒng
+笛|dí|d|i|2|
+笙|shēng|sh|eng|1|
+符|fú|f|u|2|
+第|dì|d|i|4|
+敏|mǐn|m|in|3|
+做|zuò|z|uo|4|
+袋|dài|d|ai|4|
+悠|yōu||iu|1|
+偿|cháng|ch|ang|2|
+偶|ǒu||ou|3|
+偎|wēi||ui|1|
+偷|tōu|t|ou|1|
+您|nín|n|in|2|
+售|shòu|sh|ou|4|shú
+停|tíng|t|ing|2|
+偏|piān|p|ian|1|
+躯|qū|q|ü|1|
+兜|dōu|d|ou|1|
+假|jiǎ|j|ia|3|jià/jie/xià
+衅|xìn|x|in|4|
+徘|pái|p|ai|2|
+徙|xǐ|x|i|3|sī
+得|dé|d|e|2|de/děi
+衔|xián|x|ian|2|
+盘|pán|p|an|2|
+舶|bó|b|o|2|
+船|chuán|ch|uan|2|
+舵|duò|d|uo|4|
+斜|xié|x|ie|2|xiá/chá/yé
+盒|hé|h|e|2|ān
+鸽|gē|g|e|1|
+敛|liǎn|l|ian|3|
+悉|xī|x|i|1|
+欲|yù||ü|4|
+彩|cǎi|c|ai|3|
+领|lǐng|l|ing|3|
+脚|jiǎo|j|iao|3|jué
+脖|bó|b|o|2|bō
+脯|pú|p|u|2|fǔ
+豚|tún|t|un|2|dūn/dùn
+脸|liǎn|l|ian|3|
+脱|tuō|t|uo|1|tuì
+象|xiàng|x|iang|4|
+够|gòu|g|ou|4|
+逸|yì||i|4|
+猜|cāi|c|ai|1|
+猪|zhū|zh|u|1|
+猎|liè|l|ie|4|xī/què
+猫|māo|m|ao|1|miáo/máo
+凰|huáng|h|uang|2|
+猖|chāng|ch|ang|1|
+猛|měng|m|eng|3|
+祭|jì|j|i|4|zhài
+馅|xiàn|x|ian|4|
+馆|guǎn|g|uan|3|
+凑|còu|c|ou|4|
+减|jiǎn|j|ian|3|
+毫|háo|h|ao|2|
+烹|pēng|p|eng|1|
+庶|shù|sh|u|4|zhù/zhē
+麻|má|m|a|2|mā
+庵|ān||an|1|yǎn/è
+痊|quán|q|üan|2|
+痒|yǎng||iang|3|yáng
+痕|hén|h|en|2|gèn
+廊|láng|l|ang|2|
+康|kāng|k|ang|1|kàng
+庸|yōng||iong|1|yóng
+鹿|lù|l|u|4|lǘ
+盗|dào|d|ao|4|
+章|zhāng|zh|ang|1|zhàng
+竟|jìng|j|ing|4|
+商|shāng|sh|ang|1|
+族|zú|z|u|2|sǒu/còu/zòu
+旋|xuán|x|üan|2|xuàn
+望|wàng||uang|4|
+率|lǜ|l|ü|4|shuài/lüè
+阎|yán||ian|2|
+阐|chǎn|ch|an|3|
+着|zhe|zh|e|5|zhāo/zháo/zhuó
+羚|líng|l|ing|2|
+盖|gài|g|ai|4|gě
+眷|juàn|j|üan|4|
+粘|zhān|zh|an|1|nián
+粗|cū|c|u|1|
+粒|lì|l|i|4|
+断|duàn|d|uan|4|
+剪|jiǎn|j|ian|3|
+兽|shòu|sh|ou|4|
+焊|hàn|h|an|4|
+焕|huàn|h|uan|4|
+清|qīng|q|ing|1|qìng
+添|tiān|t|ian|1|tiàn
+鸿|hóng|h|ong|2|
+淋|lín|l|in|2|lìn
+涯|yá||ia|2|
+淹|yān||ian|1|yǎn
+渠|qú|q|ü|2|jù
+渐|jiàn|j|ian|4|jiān
+淑|shū|sh|u|1|chù
+淌|tǎng|t|ang|3|chàng/chǎng
+混|hùn|h|un|4|gǔn/hún/kūn
+淮|huái|h|uai|2|
+淆|xiáo|x|iao|2|
+渊|yuān||üan|1|
+淫|yín||in|2|yàn/yáo
+渔|yú||ü|2|
+淘|táo|t|ao|2|
+淳|chún|ch|un|2|zhūn/zhǔn
+液|yè||ie|4|shì
+淤|yū||ü|1|
+淡|dàn|d|an|4|yàn/tán
+淀|diàn|d|ian|4|
+深|shēn|sh|en|1|
+涮|shuàn|sh|uan|4|shuā
+涵|hán|h|an|2|hàn
+婆|pó|p|o|2|
+梁|liáng|l|iang|2|
+渗|shèn|sh|en|4|
+情|qíng|q|ing|2|
+惜|xī|x|i|1|
+惭|cán|c|an|2|
+悼|dào|d|ao|4|
+惧|jù|j|ü|4|
+惕|tì|t|i|4|
+惟|wéi||ui|2|wěi
+惊|jīng|j|ing|1|liáng
+惦|diàn|d|ian|4|
+悴|cuì|c|ui|4|
+惋|wǎn||uan|3|
+惨|cǎn|c|an|3|
+惯|guàn|g|uan|4|
+寇|kòu|k|ou|4|
+寅|yín||in|2|
+寄|jì|j|i|4|
+寂|jì|j|i|4|
+宿|sù|s|u|4|xiǔ/xiù/qī
+窒|zhì|zh|i|4|dié
+窑|yáo||iao|2|
+密|mì|m|i|4|
+谋|móu|m|ou|2|
+谍|dié|d|ie|2|
+谎|huǎng|h|uang|3|
+谐|xié|x|ie|2|
+袱|fú|f|u|2|
+祷|dǎo|d|ao|3|
+祸|huò|h|uo|4|
+谓|wèi||ui|4|
+谚|yàn||ian|4|
+谜|mí|m|i|2|mèi
+逮|dǎi|d|ai|3|dài/dì
+敢|gǎn|g|an|3|
+尉|wèi||ui|4|yù/yùn
+屠|tú|t|u|2|
+弹|dàn|d|an|4|tán
+隋|suí|s|ui|2|duò/tuǒ/tuō
+堕|duò|d|uo|4|huī
+随|suí|s|ui|2|
+蛋|dàn|d|an|4|
+隅|yú||ü|2|
+隆|lóng|l|ong|2|lōng
+隐|yǐn||in|3|
+婚|hūn|h|un|1|
+婶|shěn|sh|en|3|
+婉|wǎn||uan|3|
+颇|pǒ|p|o|3|pō
+颈|jǐng|j|ing|3|gěng
+绩|jì|j|i|4|jī
+绪|xù|x|ü|4|
+续|xù|x|ü|4|
+骑|qí|q|i|2|
+绰|chuò|ch|uo|4|chāo
+绳|shéng|sh|eng|2|
+维|wéi||ui|2|
+绵|mián|m|ian|2|
+绷|bēng|b|eng|1|běng/bèng
+绸|chóu|ch|ou|2|
+综|zōng|z|ong|1|zèng
+绽|zhàn|zh|an|4|
+绿|lǜ|l|ü|4|lù
+缀|zhuì|zh|ui|4|
+巢|cháo|ch|ao|2|chào
+琴|qín|q|in|2|
+琳|lín|l|in|2|
+琢|zuó|z|uo|2|zhuó
+琼|qióng|q|iong|2|
+斑|bān|b|an|1|
+替|tì|t|i|4|
+揍|zòu|z|ou|4|còu
+款|kuǎn|k|uan|3|xīn
+堪|kān|k|an|1|chěn
+塔|tǎ|t|a|3|dā/da
+搭|dā|d|a|1|tà
+堰|yàn||ian|4|
+揩|kāi|k|ai|1|jiá
+越|yuè||üe|4|huó
+趁|chèn|ch|en|4|zhēn/chén/niǎn
+趋|qū|q|ü|1|
+超|chāo|ch|ao|1|chǎo/chào/tiào
+揽|lǎn|l|an|3|
+堤|dī|d|i|1|tí/dǐ/shí
+提|tí|t|i|2|dī/chí/shí
+博|bó|b|o|2|
+揭|jiē|j|ie|1|qì/hé
+喜|xǐ|x|i|3|xī/chì
+彭|péng|p|eng|2|páng/bāng/pēng
+揣|chuāi|ch|uai|1|chuǎi/chuài/duǒ
+插|chā|ch|a|1|zhǎ
+揪|jiū|j|iu|1|
+搜|sōu|s|ou|1|xiāo/sòu/shǎo
+煮|zhǔ|zh|u|3|
+援|yuán||üan|2|huàn
+搀|chān|ch|an|1|
+裁|cái|c|ai|2|
+搁|gē|g|e|1|gé
+搓|cuō|c|uo|1|cuǒ/chāi
+搂|lǒu|l|ou|3|lōu
+搅|jiǎo|j|iao|3|
+壹|yī||i|1|yīn
+握|wò||uo|4|òu
+搔|sāo|s|ao|1|sào
+揉|róu|r|ou|2|
+斯|sī|s|i|1|shǐ
+期|qī|q|i|1|jī
+欺|qī|q|i|1|
+联|lián|l|ian|2|
+葫|hú|h|u|2|
+散|sàn|s|an|4|sǎn/sān
+惹|rě|r|e|3|ruò
+葬|zàng|z|ang|4|
+募|mù|m|u|4|bó
+葛|gé|g|e|2|gě
+董|dǒng|d|ong|3|zhǒng
+葡|pú|p|u|2|bèi
+敬|jìng|j|ing|4|
+葱|cōng|c|ong|1|chuāng
+蒋|jiǎng|j|iang|3|
+蒂|dì|d|i|4|
+落|luò|l|uo|4|là/lào/luō
+韩|hán|h|an|2|
+朝|cháo|ch|ao|2|zhāo/zhū
+辜|gū|g|u|1|
+葵|kuí|k|ui|2|
+棒|bàng|b|ang|4|
+棱|léng|l|eng|2|lēng/líng/lèng
+棋|qí|q|i|2|jī
+椰|yē||ie|1|
+植|zhí|zh|i|2|
+森|sēn|s|en|1|
+焚|fén|f|en|2|fèn
+椅|yǐ||i|3|yī
+椒|jiāo|j|iao|1|
+棵|kē|k|e|1|kuǎn/kě
+棍|gùn|g|un|4|hùn/āo/gǔn
+椎|chuí|ch|ui|2|zhuī
+棉|mián|m|ian|2|
+棚|péng|p|eng|2|
+棕|zōng|z|ong|1|
+棺|guān|g|uan|1|guàn
+榔|láng|l|ang|2|lǎng
+椭|tuǒ|t|uo|3|
+惠|huì|h|ui|4|
+惑|huò|h|uo|4|
+逼|bī|b|i|1|
+粟|sù|s|u|4|
+棘|jí|j|i|2|
+酣|hān|h|an|1|hàn
+酥|sū|s|u|1|
+厨|chú|ch|u|2|
+厦|shà|sh|a|4|xià
+硬|yìng||ing|4|gěng
+硝|xiāo|x|iao|1|qiào
+确|què|q|üe|4|
+硫|liú|l|iu|2|chù
+雁|yàn||ian|4|
+殖|zhí|zh|i|2|shi/shì
+裂|liè|l|ie|4|liě
+雄|xióng|x|iong|2|
+颊|jiá|j|ia|2|
+雳|lì|l|i|4|
+暂|zàn|z|an|4|
+雅|yǎ||ia|3|yā/yá
+翘|qiào|q|iao|4|qiáo
+辈|bèi|b|ei|4|
+悲|bēi|b|ei|1|
+紫|zǐ|z|i|3|
+凿|záo|z|ao|2|zuò
+辉|huī|h|ui|1|
+敞|chǎng|ch|ang|3|chèng/zhèng
+棠|táng|t|ang|2|
+赏|shǎng|sh|ang|3|
+掌|zhǎng|zh|ang|3|
+晴|qíng|q|ing|2|
+睐|lài|l|ai|4|
+暑|shǔ|sh|u|3|
+最|zuì|z|ui|4|cuō
+晰|xī|x|i|1|
+量|liàng|l|iang|4|liáng
+鼎|dǐng|d|ing|3|zhēn
+喷|pēn|p|en|1|pèn
+喳|zhā|zh|a|1|chā/zha
+晶|jīng|j|ing|1|
+喇|lǎ|l|a|3|lá/lā/la
+遇|yù||ü|4|yóng/ǒu
+喊|hǎn|h|an|3|kàn/jiān
+遏|è||e|4|
+晾|liàng|l|iang|4|
+景|jǐng|j|ing|3|yǐng
+畴|chóu|ch|ou|2|
+践|jiàn|j|ian|4|
+跋|bá|b|a|2|bèi
+跌|diē|d|ie|1|dié/tú
+跑|pǎo|p|ao|3|páo/bó
+跛|bǒ|b|o|3|bì/pō
+遗|yí||i|2|wèi
+蛙|wā||ua|1|jué
+蛛|zhū|zh|u|1|
+蜓|tíng|t|ing|2|diàn
+蜒|yán||ian|2|yàn/dàn
+蛤|há|h|a|2|gé/hā/é
+喝|hē|h|e|1|hè/yè/kài
+鹃|juān|j|üan|1|
+喂|wèi||ui|4|
+喘|chuǎn|ch|uan|3|
+喉|hóu|h|ou|2|
+喻|yù||ü|4|yú
+啼|tí|t|i|2|
+喧|xuān|x|üan|1|xuǎn
+嵌|qiàn|q|ian|4|hǎn/kàn
+幅|fú|f|u|2|bī
+帽|mào|m|ao|4|
+赋|fù|f|u|4|
+赌|dǔ|d|u|3|
+赎|shú|sh|u|2|
+赐|cì|c|i|4|
+赔|péi|p|ei|2|
+黑|hēi|h|ei|1|
+铸|zhù|zh|u|4|
+铺|pù|p|u|4|pū
+链|liàn|l|ian|4|
+销|xiāo|x|iao|1|
+锁|suǒ|s|uo|3|
+锄|chú|ch|u|2|
+锅|guō|g|uo|1|
+锈|xiù|x|iu|4|
+锋|fēng|f|eng|1|
+锌|xīn|x|in|1|
+锐|ruì|r|ui|4|
+甥|shēng|sh|eng|1|
+掰|bāi|b|ai|1|
+短|duǎn|d|uan|3|
+智|zhì|zh|i|4|zhī
+氮|dàn|d|an|4|
+毯|tǎn|t|an|3|
+氯|lǜ|l|ü|4|
+鹅|é||e|2|
+剩|shèng|sh|eng|4|
+稍|shāo|sh|ao|1|shào
+程|chéng|ch|eng|2|
+稀|xī|x|i|1|
+税|shuì|sh|ui|4|tuō/tuì/tuàn
+筐|kuāng|k|uang|1|
+等|děng|d|eng|3|
+筑|zhù|zh|u|4|zhú
+策|cè|c|e|4|
+筛|shāi|sh|ai|1|
+筒|tǒng|t|ong|3|dòng/tóng
+筏|fá|f|a|2|
+答|dá|d|a|2|dā
+筋|jīn|j|in|1|qián
+筝|zhēng|zh|eng|1|
+傲|ào||ao|4|áo
+傅|fù|f|u|4|fū
+牌|pái|p|ai|2|
+堡|bǎo|b|ao|3|bǔ/pù
+集|jí|j|i|2|
+焦|jiāo|j|iao|1|qiáo
+傍|bàng|b|ang|4|páng/bēng/péng
+储|chǔ|ch|u|3|
+皓|hào|h|ao|4|huī
+皖|wǎn||uan|3|huàn
+粤|yuè||üe|4|
+奥|ào||ao|4|yù/yōu
+街|jiē|j|ie|1|
+惩|chéng|ch|eng|2|
+御|yù||ü|4|yà
+循|xún|x|ün|2|
+艇|tǐng|t|ing|3|
+舒|shū|sh|u|1|yù
+逾|yú||ü|2|dòu
+番|fān|f|an|1|pān/fán/bō
+释|shì|sh|i|4|
+禽|qín|q|in|2|
+腊|là|l|a|4|xī
+脾|pí|p|i|2|pái/bì/pì
+腋|yè||ie|4|
+腔|qiāng|q|iang|1|kòng
+腕|wàn||uan|4|
+鲁|lǔ|l|u|3|
+猩|xīng|x|ing|1|
+猬|wèi||ui|4|
+猾|huá|h|ua|2|
+猴|hóu|h|ou|2|
+惫|bèi|b|ei|4|
+然|rán|r|an|2|
+馈|kuì|k|ui|4|
+馋|chán|ch|an|2|
+装|zhuāng|zh|uang|1|
+蛮|mán|m|an|2|
+就|jiù|j|iu|4|
+敦|dūn|d|un|1|duī/tuán/diāo
+斌|bīn|b|in|1|
+痘|dòu|d|ou|4|
+痢|lì|l|i|4|
+痪|huàn|h|uan|4|tuǎn
+痛|tòng|t|ong|4|
+童|tóng|t|ong|2|zhōng
+竣|jùn|j|ün|4|
+阔|kuò|k|uo|4|
+善|shàn|sh|an|4|
+翔|xiáng|x|iang|2|
+羡|xiàn|x|ian|4|yán/yí
+普|pǔ|p|u|3|
+粪|fèn|f|en|4|
+尊|zūn|z|un|1|
+奠|diàn|d|ian|4|tíng/dìng/zhèng
+道|dào|d|ao|4|dǎo
+遂|suì|s|ui|4|suí
+曾|céng|c|eng|2|zēng
+焰|yàn||ian|4|
+港|gǎng|g|ang|3|hòng
+滞|zhì|zh|i|4|
+湖|hú|h|u|2|
+湘|xiāng|x|iang|1|
+渣|zhā|zh|a|1|
+渤|bó|b|o|2|
+渺|miǎo|m|iao|3|
+湿|shī|sh|i|1|
+温|wēn||un|1|yùn
+渴|kě|k|e|3|jié/kài/hé
+溃|kuì|k|ui|4|huì
+溅|jiàn|j|ian|4|jiān
+滑|huá|h|ua|2|gǔ
+湃|pài|p|ai|4|bá
+渝|yú||ü|2|yū
+湾|wān||uan|1|
+渡|dù|d|u|4|
+游|yóu||iu|2|liú
+滋|zī|z|i|1|cí/xuán
+渲|xuàn|x|üan|4|
+溉|gài|g|ai|4|xiè
+愤|fèn|f|en|4|
+慌|huāng|h|uang|1|huǎng/huang
+惰|duò|d|uo|4|tuó
+愕|è||e|4|
+愣|lèng|l|eng|4|
+惶|huáng|h|uang|2|
+愧|kuì|k|ui|4|
+愉|yú||ü|2|tōu/yǔ
+慨|kǎi|k|ai|3|
+割|gē|g|e|1|
+寒|hán|h|an|2|
+富|fù|f|u|4|
+寓|yù||ü|4|
+窜|cuàn|c|uan|4|
+窝|wō||uo|1|
+窖|jiào|j|iao|4|zào
+窗|chuāng|ch|uang|1|cōng
+窘|jiǒng|j|iong|3|
+遍|biàn|b|ian|4|
+雇|gù|g|u|4|hù
+裕|yù||ü|4|
+裤|kù|k|u|4|
+裙|qún|q|ün|2|
+禅|chán|ch|an|2|shàn
+禄|lù|l|u|4|
+谢|xiè|x|ie|4|
+谣|yáo||iao|2|
+谤|bàng|b|ang|4|
+谦|qiān|q|ian|1|
+犀|xī|x|i|1|
+属|shǔ|sh|u|3|zhǔ
+屡|lǚ|l|ü|3|
+强|qiáng|q|iang|2|jiàng/qiǎng
+粥|zhōu|zh|ou|1|yù
+疏|shū|sh|u|1|
+隔|gé|g|e|2|rǒng/jī
+隙|xì|x|i|4|
+隘|ài||ai|4|è
+媒|méi|m|ei|2|mèi
+絮|xù|x|ü|4|chù/nǜ/nà
+嫂|sǎo|s|ao|3|
+媚|mèi|m|ei|4|
+婿|xù|x|ü|4|
+登|dēng|d|eng|1|dé
+缅|miǎn|m|ian|3|
+缆|lǎn|l|an|3|
+缉|jī|j|i|1|qī
+缎|duàn|d|uan|4|
+缓|huǎn|h|uan|3|
+缔|dì|d|i|4|
+缕|lǚ|l|ü|3|
+骗|piàn|p|ian|4|
+编|biān|b|ian|1|
+骚|sāo|s|ao|1|
+缘|yuán||üan|2|
+瑟|sè|s|e|4|
+鹉|wǔ||u|3|
+瑞|ruì|r|ui|4|
+瑰|guī|g|ui|1|
+瑙|nǎo|n|ao|3|
+魂|hún|h|un|2|
+肆|sì|s|i|4|tì
+摄|shè|sh|e|4|
+摸|mō|m|o|1|mó
+填|tián|t|ian|2|tiǎn/chén/zhèn
+搏|bó|b|o|2|
+塌|tā|t|a|1|dā
+鼓|gǔ|g|u|3|
+摆|bǎi|b|ai|3|
+携|xié|x|ie|2|
+搬|bān|b|an|1|sù
+摇|yáo||iao|2|
+搞|gǎo|g|ao|3|qiāo/kào
+塘|táng|t|ang|2|
+摊|tān|t|an|1|
+聘|pìn|p|in|4|pìng
+斟|zhēn|zh|en|1|
+蒜|suàn|s|uan|4|
+勤|qín|q|in|2|qí
+靴|xuē|x|üe|1|
+靶|bǎ|b|a|3|bà
+鹊|què|q|üe|4|
+蓝|lán|l|an|2|la
+墓|mù|m|u|4|
+幕|mù|m|u|4|màn
+蓬|péng|p|eng|2|pèng
+蓄|xù|x|ü|4|
+蒲|pú|p|u|2|bó
+蓉|róng|r|ong|2|
+蒙|méng|m|eng|2|mēng/měng
+蒸|zhēng|zh|eng|1|
+献|xiàn|x|ian|4|
+椿|chūn|ch|un|1|
+禁|jìn|j|in|4|jīn
+楚|chǔ|ch|u|3|
+楷|kǎi|k|ai|3|jiē/jiè
+榄|lǎn|l|an|3|
+想|xiǎng|x|iang|3|
+槐|huái|h|uai|2|
+榆|yú||ü|2|
+楼|lóu|l|ou|2|
+概|gài|g|ai|4|guì/jié
+赖|lài|l|ai|4|
+酪|lào|l|ao|4|luò/lù
+酬|chóu|ch|ou|2|
+感|gǎn|g|an|3|hàn
+碍|ài||ai|4|
+碘|diǎn|d|ian|3|
+碑|bēi|b|ei|1|
+碎|suì|s|ui|4|
+碰|pèng|p|eng|4|
+碗|wǎn||uan|3|
+碌|lù|l|u|4|liù/luò
+尴|gān|g|an|1|
+雷|léi|l|ei|2|lèi
+零|líng|l|ing|2|lián
+雾|wù||u|4|
+雹|báo|b|ao|2|
+辐|fú|f|u|2|
+辑|jí|j|i|2|
+输|shū|sh|u|1|
+督|dū|d|u|1|
+频|pín|p|in|2|
+龄|líng|l|ing|2|
+鉴|jiàn|j|ian|4|
+睛|jīng|j|ing|1|jǐng
+睹|dǔ|d|u|3|
+睦|mù|m|u|4|
+瞄|miáo|m|iao|2|
+睫|jié|j|ie|2|shè
+睡|shuì|sh|ui|4|
+睬|cǎi|c|ai|3|
+嗜|shì|sh|i|4|
+鄙|bǐ|b|i|3|
+嗦|suo|s|uo|5|suō
+愚|yú||ü|2|
+暖|nuǎn|n|uan|3|xuān
+盟|méng|m|eng|2|mèng/míng
+歇|xiē|x|ie|1|yà
+暗|àn||an|4|
+暇|xiá|x|ia|2|xià/jiǎ
+照|zhào|zh|ao|4|
+畸|jī|j|i|1|qí
+跨|kuà|k|ua|4|kù/kuā/kuǎ
+跷|qiāo|q|iao|1|
+跳|tiào|t|iao|4|diào/táo
+跺|duò|d|uo|4|
+跪|guì|g|ui|4|
+路|lù|l|u|4|luò
+跤|jiāo|j|iao|1|qiāo
+跟|gēn|g|en|1|
+遣|qiǎn|q|ian|3|qiàn
+蜈|wú||u|2|
+蜗|wō||uo|1|
+蛾|é||e|2|yǐ
+蜂|fēng|f|eng|1|
+蜕|tuì|t|ui|4|yuè
+嗅|xiù|x|iu|4|
+嗡|wēng||ung|1|wěng
+嗓|sǎng|s|ang|3|
+署|shǔ|sh|u|3|
+置|zhì|zh|i|4|
+罪|zuì|z|ui|4|
+罩|zhào|zh|ao|4|
+蜀|shǔ|sh|u|3|
+幌|huǎng|h|uang|3|
+错|cuò|c|uo|4|
+锚|máo|m|ao|2|
+锡|xī|x|i|1|
+锣|luó|l|uo|2|
+锤|chuí|ch|ui|2|
+锥|zhuī|zh|ui|1|
+锦|jǐn|j|in|3|
+键|jiàn|j|ian|4|
+锯|jù|j|ü|4|jū
+锰|měng|m|eng|3|
+矮|ǎi||ai|3|
+辞|cí|c|i|2|
+稚|zhì|zh|i|4|
+稠|chóu|ch|ou|2|tiáo/diào
+颓|tuí|t|ui|2|
+愁|chóu|ch|ou|2|qiǎo/jiū
+筹|chóu|ch|ou|2|
+签|qiān|q|ian|1|
+简|jiǎn|j|ian|3|
+筷|kuài|k|uai|4|
+毁|huǐ|h|ui|3|huì
+舅|jiù|j|iu|4|
+鼠|shǔ|sh|u|3|
+催|cuī|c|ui|1|
+傻|shǎ|sh|a|3|
+像|xiàng|x|iang|4|
+躲|duǒ|d|uo|3|
+魁|kuí|k|ui|2|kuǐ/kuài
+衙|yá||ia|2|yú/yù
+微|wēi||ui|1|
+愈|yù||ü|4|
+遥|yáo||iao|2|
+腻|nì|n|i|4|
+腰|yāo||iao|1|
+腥|xīng|x|ing|1|
+腮|sāi|s|ai|1|
+腹|fù|f|u|4|
+腺|xiàn|x|ian|4|
+鹏|péng|p|eng|2|
+腾|téng|t|eng|2|
+腿|tuǐ|t|ui|3|
+鲍|bào|b|ao|4|
+猿|yuán||üan|2|
+颖|yǐng||ing|3|
+触|chù|ch|u|4|
+解|jiě|j|ie|3|jiè/xiè
+煞|shā|sh|a|1|shà
+雏|chú|ch|u|2|
+馍|mó|m|o|2|
+馏|liú|l|iu|2|liù
+酱|jiàng|j|iang|4|
+禀|bǐng|b|ing|3|
+痹|bì|b|i|4|
+廓|kuò|k|uo|4|
+痴|chī|ch|i|1|
+痰|tán|t|an|2|
+廉|lián|l|ian|2|
+靖|jìng|j|ing|4|
+新|xīn|x|in|1|
+韵|yùn||ün|4|
+意|yì||i|4|yī
+誊|téng|t|eng|2|
+粮|liáng|l|iang|2|
+数|shù|sh|u|4|shǔ/shuò
+煎|jiān|j|ian|1|jiàn/jiǎn
+塑|sù|s|u|4|
+慈|cí|c|i|2|
+煤|méi|m|ei|2|
+煌|huáng|h|uang|2|
+满|mǎn|m|an|3|
+漠|mò|m|o|4|
+滇|diān|d|ian|1|tián/zhēn
+源|yuán||üan|2|
+滤|lǜ|l|ü|4|
+滥|làn|l|an|4|
+滔|tāo|t|ao|1|
+溪|xī|x|i|1|qī
+溜|liū|l|iu|1|liù/liú
+漓|lí|l|i|2|
+滚|gǔn|g|un|3|
+溢|yì||i|4|
+溯|sù|s|u|4|shuò
+滨|bīn|b|in|1|
+溶|róng|r|ong|2|
+溺|nì|n|i|4|ruò/niào
+粱|liáng|l|iang|2|
+滩|tān|t|an|1|
+慎|shèn|sh|en|4|zhèn
+誉|yù||ü|4|
+塞|sāi|s|ai|1|sài/sè
+寞|mò|m|o|4|
+窥|kuī|k|ui|1|
+窟|kū|k|u|1|
+寝|qǐn|q|in|3|
+谨|jǐn|j|in|3|
+褂|guà|g|ua|4|
+裸|luǒ|l|uo|3|
+福|fú|f|u|2|fù
+谬|miù|m|iu|4|
+群|qún|q|ün|2|
+殿|diàn|d|ian|4|
+辟|pì|p|i|4|bì/mǐ/pī
+障|zhàng|zh|ang|4|zhāng
+媳|xí|x|i|2|
+嫉|jí|j|i|2|
+嫌|xián|x|ian|2|
+嫁|jià|j|ia|4|
+叠|dié|d|ie|2|
+缚|fù|f|u|4|
+缝|fèng|f|eng|4|féng
+缠|chán|ch|an|2|
+缤|bīn|b|in|1|
+剿|jiǎo|j|iao|3|chāo
+静|jìng|j|ing|4|
+碧|bì|b|i|4|
+璃|lí|l|i|2|
+赘|zhuì|zh|ui|4|
+熬|áo||ao|2|āo
+墙|qiáng|q|iang|2|
+墟|xū|x|ü|1|
+嘉|jiā|j|ia|1|
+摧|cuī|c|ui|1|zuì/cuò
+赫|hè|h|e|4|shì
+截|jié|j|ie|2|
+誓|shì|sh|i|4|
+境|jìng|j|ing|4|
+摘|zhāi|zh|ai|1|
+摔|shuāi|sh|uai|1|
+撇|piē|p|ie|1|piě/biē
+聚|jù|j|ü|4|
+慕|mù|m|u|4|
+暮|mù|m|u|4|
+摹|mó|m|o|2|mō
+蔓|màn|m|an|4|mán/wàn
+蔑|miè|m|ie|4|
+蔡|cài|c|ai|4|sà/cā
+蔗|zhè|zh|e|4|
+蔽|bì|b|i|4|biē/piē
+蔼|ǎi||ai|3|
+熙|xī|x|i|1|yí
+蔚|wèi||ui|4|yù
+兢|jīng|j|ing|1|
+模|mó|m|o|2|mú
+槛|kǎn|k|an|3|jiàn
+榴|liú|l|iu|2|
+榜|bǎng|b|ang|3|bēng/bàng/páng
+榨|zhà|zh|a|4|
+榕|róng|r|ong|2|
+歌|gē|g|e|1|
+遭|zāo|z|ao|1|
+酵|jiào|j|iao|4|
+酷|kù|k|u|4|
+酿|niàng|n|iang|4|niáng
+酸|suān|s|uan|1|
+碟|dié|d|ie|2|shé
+碱|jiǎn|j|ian|3|xián
+碳|tàn|t|an|4|
+磁|cí|c|i|2|
+愿|yuàn||üan|4|
+需|xū|x|ü|1|nuò/rú/ruǎn
+辖|xiá|x|ia|2|
+辗|niǎn|n|ian|3|zhǎn
+雌|cí|c|i|2|
+裳|shang|sh|ang|5|cháng
+颗|kē|k|e|1|
+瞅|chǒu|ch|ou|3|
+墅|shù|sh|u|4|yě
+嗽|sòu|s|ou|4|shuò/shù
+踊|yǒng||iong|3|
+蜻|qīng|q|ing|1|jīng
+蜡|là|l|a|4|qù/zhà/jí
+蝇|yíng||ing|2|
+蜘|zhī|zh|i|1|
+蝉|chán|ch|an|2|
+嘛|ma|m|a|5|má
+嘀|dí|d|i|2|zhé/dī
+赚|zhuàn|zh|uan|4|zuàn
+锹|qiāo|q|iao|1|
+锻|duàn|d|uan|4|
+镀|dù|d|u|4|
+舞|wǔ||u|3|
+舔|tiǎn|t|ian|3|tān
+稳|wěn||un|3|
+熏|xūn|x|ün|1|xùn
+箕|jī|j|i|1|
+算|suàn|s|uan|4|
+箩|luó|l|uo|2|
+管|guǎn|g|uan|3|
+箫|xiāo|x|iao|1|
+舆|yú||ü|2|
+僚|liáo|l|iao|2|liǎo/lǎo
+僧|sēng|s|eng|1|céng
+鼻|bí|b|i|2|
+魄|pò|p|o|4|bó/tuò
+魅|mèi|m|ei|4|
+貌|mào|m|ao|4|mò
+膜|mó|m|o|2|
+膊|bó|b|o|2|pò/liè
+膀|bǎng|b|ang|3|pāng/páng/bàng
+鲜|xiān|x|ian|1|xiǎn
+疑|yí||i|2|níng
+孵|fū|f|u|1|
+馒|mán|m|an|2|
+裹|guǒ|g|uo|3|
+敲|qiāo|q|iao|1|
+豪|háo|h|ao|2|
+膏|gāo|g|ao|1|gào
+遮|zhē|zh|e|1|
+腐|fǔ|f|u|3|
+瘩|dā|d|a|1|da/dá
+瘟|wēn||un|1|wò/yūn
+瘦|shòu|sh|ou|4|
+辣|là|l|a|4|
+彰|zhāng|zh|ang|1|
+竭|jié|j|ie|2|
+端|duān|d|uan|1|
+旗|qí|q|i|2|
+精|jīng|j|ing|1|qíng/jìng
+粹|cuì|c|ui|4|suì
+歉|qiàn|q|ian|4|
+弊|bì|b|i|4|
+熄|xī|x|i|1|
+熔|róng|r|ong|2|
+煽|shān|sh|an|1|
+潇|xiāo|x|iao|1|
+漆|qī|q|i|1|qiè
+漱|shù|sh|u|4|
+漂|piāo|p|iao|1|piào/piǎo/biāo
+漫|màn|m|an|4|
+滴|dī|d|i|1|
+漾|yàng||iang|4|
+演|yǎn||ian|3|yàn
+漏|lòu|l|ou|4|lóu
+慢|màn|m|an|4|mán
+慷|kāng|k|ang|1|
+寨|zhài|zh|ai|4|sè/qiān
+赛|sài|s|ai|4|
+寡|guǎ|g|ua|3|
+察|chá|ch|a|2|cuì
+蜜|mì|m|i|4|
+寥|liáo|l|iao|2|
+谭|tán|t|an|2|
+肇|zhào|zh|ao|4|
+褐|hè|h|e|4|
+褪|tuì|t|ui|4|tùn
+谱|pǔ|p|u|3|
+隧|suì|s|ui|4|zhuì
+嫩|nèn|n|en|4|
+翠|cuì|c|ui|4|
+熊|xióng|x|iong|2|
+凳|dèng|d|eng|4|
+骡|luó|l|uo|2|
+缩|suō|s|uo|1|sù
+慧|huì|h|ui|4|
+撵|niǎn|n|ian|3|
+撕|sī|s|i|1|xī
+撒|sā|s|a|1|sǎ
+撩|liāo|l|iao|1|liáo/liǎo/lào
+趣|qù|q|ü|4|cù/qū/cǒu
+趟|tàng|t|ang|4|zhēng/zhèng/chéng
+撑|chēng|ch|eng|1|
+撮|cuō|c|uo|1|zuǒ/zuì/zuān
+撬|qiào|q|iao|4|
+播|bō|b|o|1|bǒ
+擒|qín|q|in|2|
+墩|dūn|d|un|1|
+撞|zhuàng|zh|uang|4|
+撤|chè|ch|e|4|
+增|zēng|z|eng|1|zèng/céng
+撰|zhuàn|zh|uan|4|xuǎn/suàn
+聪|cōng|c|ong|1|
+鞋|xié|x|ie|2|wā
+鞍|ān||an|1|
+蕉|jiāo|j|iao|1|qiáo/qiāo
+蕊|ruǐ|r|ui|3|juǎn
+蔬|shū|sh|u|1|shǔ
+蕴|yùn||ün|4|
+横|héng|h|eng|2|hèng/guāng/guàng
+槽|cáo|c|ao|2|zāo
+樱|yīng||ing|1|
+橡|xiàng|x|iang|4|
+樟|zhāng|zh|ang|1|
+橄|gǎn|g|an|3|
+敷|fū|f|u|1|
+豌|wān||uan|1|
+飘|piāo|p|iao|1|
+醋|cù|c|u|4|zuò
+醇|chún|ch|un|2|
+醉|zuì|z|ui|4|
+磕|kē|k|e|1|kě
+磊|lěi|l|ei|3|
+磅|bàng|b|ang|4|páng/pāng
+碾|niǎn|n|ian|3|
+震|zhèn|zh|en|4|shēn
+霄|xiāo|x|iao|1|xiào
+霉|méi|m|ei|2|
+瞒|mán|m|an|2|
+题|tí|t|i|2|
+暴|bào|b|ao|4|pù/bó
+瞎|xiā|x|ia|1|
+嘻|xī|x|i|1|
+嘶|sī|s|i|1|
+嘲|cháo|ch|ao|2|zhāo
+嘹|liáo|l|iao|2|liào
+影|yǐng||ing|3|
+踢|tī|t|i|1|dié
+踏|tà|t|a|4|tā
+踩|cǎi|c|ai|3|kuí
+踪|zōng|z|ong|1|
+蝶|dié|d|ie|2|tiē
+蝴|hú|h|u|2|
+蝠|fú|f|u|2|
+蝎|xiē|x|ie|1|hé
+蝌|kē|k|e|1|
+蝗|huáng|h|uang|2|
+蝙|biān|b|ian|1|pián
+嘿|hēi|h|ei|1|mò/mù
+嘱|zhǔ|zh|u|3|
+幢|chuáng|ch|uang|2|zhuàng
+墨|mò|m|o|4|mèi
+镇|zhèn|zh|en|4|
+镐|gǎo|g|ao|3|hào
+镑|bàng|b|ang|4|
+靠|kào|k|ao|4|
+稽|jī|j|i|1|qǐ
+稻|dào|d|ao|4|
+黎|lí|l|i|2|
+稿|gǎo|g|ao|3|
+稼|jià|j|ia|4|
+箱|xiāng|x|iang|1|
+篓|lǒu|l|ou|3|
+箭|jiàn|j|ian|4|
+篇|piān|p|ian|1|
+僵|jiāng|j|iang|1|
+躺|tǎng|t|ang|3|tàng
+僻|pì|p|i|4|
+德|dé|d|e|2|
+艘|sōu|s|ou|1|
+膝|xī|x|i|1|
+膛|táng|t|ang|2|tāng
+鲤|lǐ|l|i|3|
+鲫|jì|j|i|4|
+熟|shú|sh|u|2|shóu
+摩|mó|m|o|2|mā/mí
+褒|bāo|b|ao|1|
+瘪|biě|b|ie|3|biē
+瘤|liú|l|iu|2|
+瘫|tān|t|an|1|
+凛|lǐn|l|in|3|
+颜|yán||ian|2|
+毅|yì||i|4|
+糊|hú|h|u|2|hū/hù
+遵|zūn|z|un|1|
+憋|biē|b|ie|1|
+潜|qián|q|ian|2|
+澎|pēng|p|eng|1|péng
+潮|cháo|ch|ao|2|
+潭|tán|t|an|2|xún/yǐn/dàn
+鲨|shā|sh|a|1|
+澳|ào||ao|4|yù
+潘|pān|p|an|1|pàn/bō/pán
+澈|chè|ch|e|4|
+澜|lán|l|an|2|
+澄|chéng|ch|eng|2|dèng
+懂|dǒng|d|ong|3|
+憔|qiáo|q|iao|2|
+懊|ào||ao|4|yù
+憎|zēng|z|eng|1|
+额|é||e|2|
+翩|piān|p|ian|1|
+褥|rù|r|u|4|nù
+谴|qiǎn|q|ian|3|
+鹤|hè|h|e|4|
+憨|hān|h|an|1|
+慰|wèi||ui|4|
+劈|pī|p|i|1|pǐ
+履|lǚ|l|ü|3|
+豫|yù||ü|4|xiè/shū
+缭|liáo|l|iao|2|
+撼|hàn|h|an|4|
+擂|léi|l|ei|2|lèi/lēi
+操|cāo|c|ao|1|
+擅|shàn|sh|an|4|
+燕|yàn||ian|4|yān
+蕾|lěi|l|ei|3|
+薯|shǔ|sh|u|3|
+薛|xuē|x|üe|1|
+薇|wēi||ui|1|
+擎|qíng|q|ing|2|
+薪|xīn|x|in|1|
+薄|báo|b|ao|2|bó/bò/bù
+颠|diān|d|ian|1|
+翰|hàn|h|an|4|
+噩|è||e|4|
+橱|chú|ch|u|2|
+橙|chéng|ch|eng|2|dèng/chén
+橘|jú|j|ü|2|
+整|zhěng|zh|eng|3|
+融|róng|r|ong|2|
+瓢|piáo|p|iao|2|
+醒|xǐng|x|ing|3|chéng/jīng
+霍|huò|h|uo|4|hè/suǒ
+霎|shà|sh|a|4|
+辙|zhé|zh|e|2|
+冀|jì|j|i|4|
+餐|cān|c|an|1|sūn
+嘴|zuǐ|z|ui|3|
+踱|duó|d|uo|2|chuò
+蹄|tí|t|i|2|dì
+蹂|róu|r|ou|2|rǒu
+蟆|má|m|a|2|mò
+螃|páng|p|ang|2|bǎng
+器|qì|q|i|4|
+噪|zào|z|ao|4|
+鹦|yīng||ing|1|
+赠|zèng|z|eng|4|
+默|mò|m|o|4|
+黔|qián|q|ian|2|
+镜|jìng|j|ing|4|
+赞|zàn|z|an|4|
+穆|mù|m|u|4|
+篮|lán|l|an|2|
+篡|cuàn|c|uan|4|
+篷|péng|p|eng|2|
+篱|lí|l|i|2|
+儒|rú|r|u|2|
+邀|yāo||iao|1|
+衡|héng|h|eng|2|
+膨|péng|p|eng|2|pèng
+雕|diāo|d|iao|1|
+鲸|jīng|j|ing|1|
+磨|mó|m|o|2|mò
+瘾|yǐn||in|3|
+瘸|qué|q|üe|2|
+凝|níng|n|ing|2|
+辨|biàn|b|ian|4|biǎn/bàn/piàn
+辩|biàn|b|ian|4|
+糙|cāo|c|ao|1|
+糖|táng|t|ang|2|
+糕|gāo|g|ao|1|
+燃|rán|r|an|2|
+濒|bīn|b|in|1|
+澡|zǎo|z|ao|3|cāo
+激|jī|j|i|1|jiào/jiāo
+懒|lǎn|l|an|3|
+憾|hàn|h|an|4|dàn
+懈|xiè|x|ie|4|
+窿|lóng|l|ong|2|
+壁|bì|b|i|4|
+避|bì|b|i|4|
+缰|jiāng|j|iang|1|
+缴|jiǎo|j|iao|3|zhuó
+戴|dài|d|ai|4|
+擦|cā|c|a|1|
+藉|jí|j|i|2|jiè
+鞠|jū|j|ü|1|qū/qiōng
+藏|cáng|c|ang|2|zàng/zāng
+藐|miǎo|m|iao|3|mò
+檬|méng|m|eng|2|
+檐|yán||ian|2|dān
+檀|tán|t|an|2|shàn
+礁|jiāo|j|iao|1|
+磷|lín|l|in|2|lìn/lǐn/líng
+霜|shuāng|sh|uang|1|
+霞|xiá|x|ia|2|
+瞭|liǎo|l|iao|3|liào
+瞧|qiáo|q|iao|2|
+瞬|shùn|sh|un|4|
+瞳|tóng|t|ong|2|
+瞩|zhǔ|zh|u|3|
+瞪|dèng|d|eng|4|
+曙|shǔ|sh|u|3|
+蹋|tà|t|a|4|
+蹈|dǎo|d|ao|3|
+螺|luó|l|uo|2|
+蟋|xī|x|i|1|
+蟀|shuài|sh|uai|4|
+嚎|háo|h|ao|2|
+赡|shàn|sh|an|4|
+穗|suì|s|ui|4|
+魏|wèi||ui|4|wéi/wēi
+簧|huáng|h|uang|2|
+簇|cù|c|u|4|chuò/còu
+繁|fán|f|an|2|pó/pán
+徽|huī|h|ui|1|
+爵|jué|j|üe|2|
+朦|méng|m|eng|2|mǎng
+臊|sāo|s|ao|1|sào
+鳄|è||e|4|
+癌|ái||ai|2|yán
+辫|biàn|b|ian|4|
+赢|yíng||ing|2|
+糟|zāo|z|ao|1|
+糠|kāng|k|ang|1|
+燥|zào|z|ao|4|sào
+懦|nuò|n|uo|4|
+豁|huō|h|uo|1|huò/huá
+臀|tún|t|un|2|
+臂|bì|b|i|4|bei
+翼|yì||i|4|
+骤|zhòu|zh|ou|4|
+藕|ǒu||ou|3|
+鞭|biān|b|ian|1|
+藤|téng|t|eng|2|
+覆|fù|f|u|4|
+瞻|zhān|zh|an|1|
+蹦|bèng|b|eng|4|
+嚣|xiāo|x|iao|1|áo
+镰|lián|l|ian|2|
+翻|fān|f|an|1|
+鳍|qí|q|i|2|
+鹰|yīng||ing|1|
+瀑|pù|p|u|4|bào/bó
+襟|jīn|j|in|1|
+璧|bì|b|i|4|
+戳|chuō|ch|uo|1|
+孽|niè|n|ie|4|
+警|jǐng|j|ing|3|
+蘑|mó|m|o|2|
+藻|zǎo|z|ao|3|
+攀|pān|p|an|1|
+曝|pù|p|u|4|bào
+蹲|dūn|d|un|1|zún/cún/zūn
+蹭|cèng|c|eng|4|céng
+蹬|dēng|d|eng|1|dèng
+巅|diān|d|ian|1|
+簸|bǒ|b|o|3|bò
+簿|bù|b|u|4|bó
+蟹|xiè|x|ie|4|
+颤|chàn|ch|an|4|zhàn
+靡|mí|m|i|2|mǐ/má
+癣|xuǎn|x|üan|3|
+瓣|bàn|b|an|4|
+羹|gēng|g|eng|1|láng
+鳖|biē|b|ie|1|
+爆|bào|b|ao|4|bó
+疆|jiāng|j|iang|1|jiàng
+鬓|bìn|b|in|4|
+壤|rǎng|r|ang|3|
+馨|xīn|x|in|1|
+耀|yào||iao|4|
+躁|zào|z|ao|4|
+蠕|rú|r|u|2|
+嚼|jué|j|üe|2|jiáo/jiào
+嚷|rǎng|r|ang|3|rāng
+巍|wēi||ui|1|
+籍|jí|j|i|2|jiè
+鳞|lín|l|in|2|
+魔|mó|m|o|2|
+糯|nuò|n|uo|4|
+灌|guàn|g|uan|4|huàn
+譬|pì|p|i|4|
+蠢|chǔn|ch|un|3|
+霸|bà|b|a|4|pò
+露|lù|l|u|4|lòu
+霹|pī|p|i|1|
+躏|lìn|l|in|4|
+黯|àn||an|4|ān
+髓|suǐ|s|ui|3|
+赣|gàn|g|an|4|
+囊|náng|n|ang|2|nāng
+镶|xiāng|x|iang|1|
+瓤|ráng|r|ang|2|
+罐|guàn|g|uan|4|
+矗|chù|ch|u|4|
+乂|yì||i|4|ài
+乜|miē|m|ie|1|niè
+兀|wù||u|4|wū
+弋|yì||i|4|
+孑|jié|j|ie|2|
+孓|jué|j|üe|2|
+幺|yāo||iao|1|mì
+亓|qí|q|i|2|
+韦|wéi||ui|2|
+廿|niàn|n|ian|4|
+丏|miǎn|m|ian|3|
+卅|sà|s|a|4|
+仄|zè|z|e|4|
+厄|è||e|4|ě
+仃|dīng|d|ing|1|dǐng
+仉|zhǎng|zh|ang|3|
+仂|lè|l|e|4|lì
+兮|xī|x|i|1|
+刈|yì||i|4|
+爻|yáo||iao|2|xiào
+卞|biàn|b|ian|4|pán
+闩|shuān|sh|uan|1|
+讣|fù|f|u|4|
+尹|yǐn||in|3|yún
+夬|guài|g|uai|4|jué
+爿|pán|p|an|2|qiáng
+毋|wú||u|2|móu
+邗|hán|h|an|2|
+邛|qióng|q|iong|2|
+艽|jiāo|j|iao|1|qiú
+艿|nǎi|n|ai|3|réng/rèng
+札|zhá|zh|a|2|yà
+叵|pǒ|p|o|3|
+匝|zā|z|a|1|
+丕|pī|p|i|1|
+匜|yí||i|2|
+劢|mài|m|ai|4|
+卟|bǔ|b|u|3|jī
+叱|chì|ch|i|4|huà/é
+叻|lè|l|e|4|lì
+仨|sā|s|a|1|
+仕|shì|sh|i|4|
+仟|qiān|q|ian|1|
+仡|gē|g|e|1|yì/wù
+仫|mù|m|u|4|
+仞|rèn|r|en|4|
+卮|zhī|zh|i|1|
+氐|dī|d|i|1|dǐ/zhī
+犰|qiú|q|iu|2|
+刍|chú|ch|u|2|
+邝|kuàng|k|uang|4|
+邙|máng|m|ang|2|
+汀|tīng|t|ing|1|tìng/dìng
+讦|jié|j|ie|2|
+讧|hòng|h|ong|4|
+讪|shàn|sh|an|4|
+讫|qì|q|i|4|
+尻|kāo|k|ao|1|
+阡|qiān|q|ian|1|
+尕|gǎ|g|a|3|
+弁|biàn|b|ian|4|pán
+驭|yù||ü|4|
+匡|kuāng|k|uang|1|wāng
+耒|lěi|l|ei|3|
+玎|dīng|d|ing|1|
+玑|jī|j|i|1|
+邢|xíng|x|ing|2|gěng
+圩|wéi||ui|2|xū/yú
+圬|wū||u|1|
+圭|guī|g|ui|1|
+扦|qiān|q|ian|1|
+圪|gē|g|e|1|yì
+圳|zhèn|zh|en|4|quǎn/chóu/huái
+圹|kuàng|k|uang|4|
+扪|mén|m|en|2|
+圮|pǐ|p|i|3|
+圯|yí||i|2|
+芊|qiān|q|ian|1|qiàn
+芍|sháo|sh|ao|2|xiào/què/dì
+芄|wán||uan|2|
+芨|jī|j|i|1|
+芑|qǐ|q|i|3|
+芎|qiōng|q|iong|1|xiōng
+芗|xiāng|x|iang|1|
+亘|gèn|g|en|4|xuān/gèng
+厍|shè|sh|e|4|
+夼|kuǎng|k|uang|3|
+戍|shù|sh|u|4|
+尥|liào|l|iao|4|niǎo
+乩|jī|j|i|1|
+旯|lá|l|a|2|
+曳|yè||ie|4|
+岌|jí|j|i|2|
+屺|qǐ|q|i|3|
+凼|dàng|d|ang|4|
+囡|nān|n|an|1|niè
+钇|yǐ||i|3|
+缶|fǒu|f|ou|3|
+氘|dāo|d|ao|1|
+氖|nǎi|n|ai|3|
+牝|pìn|p|in|4|
+伎|jì|j|i|4|zhì/qí/qì
+伛|yǔ||ü|3|
+伢|yá||ia|2|
+佤|wǎ||ua|3|
+仵|wǔ||u|3|
+伥|chāng|ch|ang|1|
+伧|cāng|c|ang|1|chen
+伉|kàng|k|ang|4|gāng/kǎng
+伫|zhù|zh|u|4|
+囟|xìn|x|in|4|
+汆|cuān|c|uan|1|
+刖|yuè||üe|4|
+夙|sù|s|u|4|
+旮|gā|g|a|1|xù
+刎|wěn||un|3|
+犷|guǎng|g|uang|3|
+犸|mà|m|a|4|mǎ
+舛|chuǎn|ch|uan|3|
+凫|fú|f|u|2|
+邬|wū||u|1|
+饧|táng|t|ang|2|xíng
+汕|shàn|sh|an|4|shuàn
+汔|qì|q|i|4|
+汐|xī|x|i|1|
+汲|jí|j|i|2|jī
+汜|sì|s|i|4|
+汊|chà|ch|a|4|
+忖|cǔn|c|un|3|
+忏|chàn|ch|an|4|qiǎn/qiān
+讴|ōu||ou|1|
+讵|jù|j|ü|4|
+祁|qí|q|i|2|zhǐ
+讷|nè|n|e|4|
+聿|yù||ü|4|
+艮|gěn|g|en|3|gèn/hén
+厾|dū|d|u|1|dǔ
+阱|jǐng|j|ing|3|
+阮|ruǎn|r|uan|3|yuán
+阪|bǎn|b|an|3|
+丞|chéng|ch|eng|2|shèng/zhēng/zhěng
+妁|shuò|sh|uo|4|yuē
+牟|móu|m|ou|2|mù/mào
+纡|yū||ü|1|
+纣|zhòu|zh|ou|4|
+纥|gē|g|e|1|hé
+纨|wán||uan|2|
+玕|gān|g|an|1|
+玙|yú||ü|2|
+抟|tuán|t|uan|2|
+抔|póu|p|ou|2|
+圻|qí|q|i|2|yín
+坂|bǎn|b|an|3|
+坍|tān|t|an|1|
+坞|wù||u|4|
+抃|biàn|b|ian|4|
+抉|jué|j|üe|2|
+㧐|sǒng|s|ong|3|
+芫|yán||ian|2|yuán
+邯|hán|h|an|2|hàn
+芸|yún||ün|2|yùn
+芾|fèi|f|ei|4|fú
+苈|lì|l|i|4|
+苣|jù|j|ü|4|qǔ
+芷|zhǐ|zh|i|3|
+芮|ruì|r|ui|4|ruò
+苋|xiàn|x|ian|4|
+芼|mào|m|ao|4|
+苌|cháng|ch|ang|2|
+苁|cōng|c|ong|1|
+芩|qín|q|in|2|yín
+芪|qí|q|i|2|chí
+芡|qiàn|q|ian|4|
+芟|shān|sh|an|1|wěi
+苄|biàn|b|ian|4|
+苎|zhù|zh|u|4|
+苡|yǐ||i|3|
+杌|wù||u|4|wò
+杓|biāo|b|iao|1|sháo/shuó/dí
+杞|qǐ|q|i|3|
+杈|chā|ch|a|1|chà
+忑|tè|t|e|4|dǎo
+孛|bèi|b|ei|4|bó
+邴|bǐng|b|ing|3|
+邳|pī|p|i|1|
+矶|jī|j|i|1|
+奁|lián|l|ian|2|
+豕|shǐ|sh|i|3|
+忒|tè|t|e|4|tuī/tēi
+欤|yú||ü|2|
+轫|rèn|r|en|4|
+迓|yà||ia|4|
+邶|bèi|b|ei|4|
+忐|tǎn|t|an|3|kěng
+卣|yǒu||iu|3|
+邺|yè||ie|4|qiū
+旰|gàn|g|an|4|hàn
+呋|fū|f|u|1|
+呒|wǔ||u|3|ḿ
+呓|yì||i|4|
+呔|dāi|d|ai|1|tǎi
+呖|lì|l|i|4|
+呃|è||e|4|e/ài
+旸|yáng||iang|2|
+吡|bǐ|b|i|3|bì/pǐ
+町|tīng|t|ing|1|tǐng/dīng/zhèng
+虬|qiú|q|iu|2|
+呗|bei|b|ei|5|bài
+吽|hōng|h|ong|1|ōu/hǒu
+吣|qìn|q|in|4|
+吲|yǐn||in|3|shěn
+帏|wéi||ui|2|
+岐|qí|q|i|2|
+岈|yá||ia|2|xiā
+岘|xiàn|x|ian|4|
+岑|cén|c|en|2|
+岚|lán|l|an|2|
+兕|sì|s|i|4|
+囵|lún|l|un|2|
+囫|hú|h|u|2|
+钊|zhāo|zh|ao|1|
+钋|pō|p|o|1|
+钌|liǎo|l|iao|3|liào
+迕|wù||u|4|wǔ
+氙|xiān|x|ian|1|
+氚|chuān|ch|uan|1|
+牤|māng|m|ang|1|
+佞|nìng|n|ing|4|
+邱|qiū|q|iu|1|
+攸|yōu||iu|1|
+佚|yì||i|4|dié
+佝|gōu|g|ou|1|kòu/jū
+佟|tóng|t|ong|2|
+佗|tuó|t|uo|2|tuō/tuò/yí
+伽|gā|g|a|1|jiā/qié
+彷|páng|p|ang|2|fǎng/fáng
+佘|shé|sh|e|2|
+佥|qiān|q|ian|1|
+孚|fú|f|u|2|
+豸|zhì|zh|i|4|zhài
+坌|bèn|b|en|4|
+肟|wò||uo|4|
+邸|dǐ|d|i|3|
+奂|huàn|h|uan|4|
+劬|qú|q|ü|2|
+狄|dí|d|i|2|tì
+狁|yǔn||ün|3|
+鸠|jiū|j|iu|1|
+邹|zōu|z|ou|1|
+饨|tún|t|un|2|
+饩|xì|x|i|4|
+饪|rèn|r|en|4|
+饫|yù||ü|4|
+饬|chì|ch|i|4|
+亨|hēng|h|eng|1|xiǎng/pēng
+庑|wǔ||u|3|
+庋|guǐ|g|ui|3|guì
+疔|dīng|d|ing|1|nè
+疖|jiē|j|ie|1|
+肓|huāng|h|uang|1|
+闱|wéi||ui|2|
+闳|hóng|h|ong|2|
+闵|mǐn|m|in|3|
+羌|qiāng|q|iang|1|
+炀|yáng||iang|2|
+沣|fēng|f|eng|1|
+沅|yuán||üan|2|
+沔|miǎn|m|ian|3|
+沤|ōu||ou|1|òu
+沌|dùn|d|un|4|zhuàn/tún/chún
+沏|qī|q|i|1|qiè
+沚|zhǐ|zh|i|3|
+汩|gǔ|g|u|3|yù/hú
+汨|mì|m|i|4|
+沂|yí||i|2|yín
+汾|fén|f|en|2|pén/fēn
+沨|fēng|f|eng|1|
+汴|biàn|b|ian|4|
+汶|wèn||un|4|wén/mín/mén
+沆|hàng|h|ang|4|háng/kàng
+沩|wéi||ui|2|
+泐|lè|l|e|4|
+怃|wǔ||u|3|
+怄|òu||ou|4|
+忡|chōng|ch|ong|1|
+忤|wǔ||u|3|wù
+忾|kài|k|ai|4|qì
+怅|chàng|ch|ang|4|
+忻|xīn|x|in|1|
+忪|sōng|s|ong|1|zhōng
+怆|chuàng|ch|uang|4|
+忭|biàn|b|ian|4|
+忸|niǔ|n|iu|3|
+诂|gǔ|g|u|3|
+诃|hē|h|e|1|
+诅|zǔ|z|u|3|
+诋|dǐ|d|i|3|
+诌|zhōu|zh|ou|1|
+诏|zhào|zh|ao|4|
+诒|yí||i|2|
+孜|zī|z|i|1|
+陇|lǒng|l|ong|3|
+陀|tuó|t|uo|2|duò
+陂|bēi|b|ei|1|pí/bì/pō
+陉|xíng|x|ing|2|
+妍|yán||ian|2|
+妩|wǔ||u|3|
+妪|yù||ü|4|
+妣|bǐ|b|i|3|
+妊|rèn|r|en|4|rén
+妗|jìn|j|in|4|xiān
+妫|guī|g|ui|1|
+妞|niū|n|iu|1|hào
+姒|sì|s|i|4|
+妤|yú||ü|2|
+邵|shào|sh|ao|4|
+劭|shào|sh|ao|4|
+刭|jǐng|j|ing|3|
+甬|yǒng||iong|3|dòng
+邰|tái|t|ai|2|
+纭|yún||ün|2|
+纰|pī|p|i|1|
+纴|rèn|r|en|4|
+纶|lún|l|un|2|guān
+纾|shū|sh|u|1|
+玮|wěi||ui|3|
+玡|yá||ia|2|yà
+玭|pín|p|in|2|
+玠|jiè|j|ie|4|
+玢|bīn|b|in|1|fēn
+玥|yuè||üe|4|
+玦|jué|j|üe|2|
+盂|yú||ü|2|
+忝|tiǎn|t|ian|3|
+匦|guǐ|g|ui|3|
+坩|gān|g|an|1|
+抨|pēng|p|eng|1|bēng
+拤|qiá|q|ia|2|
+坫|diàn|d|ian|4|zhēn
+拈|niān|n|ian|1|niǎn/diān
+垆|lú|l|u|2|
+抻|chēn|ch|en|1|shēn
+劼|jié|j|ie|2|
+拃|zhǎ|zh|a|3|zhǎn/zhà/zhá
+拊|fǔ|f|u|3|fū/bǔ
+坼|chè|ch|e|4|
+坻|chí|ch|i|2|dǐ
+㧟|kuǎi|k|uai|3|
+坨|tuó|t|uo|2|yí
+坭|ní|n|i|2|
+抿|mǐn|m|in|3|
+坳|ào||ao|4|āo/yǒu
+耶|yé||ie|2|yē/xié
+苷|gān|g|an|1|
+苯|běn|b|en|3|
+苤|piě|p|ie|3|pī
+茏|lóng|l|ong|2|
+苫|shān|sh|an|1|shàn/tiān/chān
+苜|mù|m|u|4|
+苴|jū|j|ü|1|chá/zhǎ/zū
+苒|rǎn|r|an|3|
+苘|qǐng|q|ing|3|
+茌|chí|ch|i|2|
+苻|fú|f|u|2|pú
+苓|líng|l|ing|2|lián
+茚|yìn||in|4|
+茆|máo|m|ao|2|mǎo
+茑|niǎo|n|iao|3|
+茓|xué|x|üe|2|
+茔|yíng||ing|2|
+茕|qióng|q|iong|2|
+茀|fú|f|u|2|bó/fèi/bèi
+苕|sháo|sh|ao|2|tiáo
+枥|lì|l|i|4|
+枇|pí|p|i|2|bǐ/bì/pī
+杪|miǎo|m|iao|3|
+杳|yǎo||iao|3|
+枧|jiǎn|j|ian|3|
+杵|chǔ|ch|u|3|
+枨|chéng|ch|eng|2|
+枞|cōng|c|ong|1|zōng
+枋|fāng|f|ang|1|fǎng/bǐng
+杻|chǒu|ch|ou|3|niǔ
+杷|pá|p|a|2|bà
+杼|zhù|zh|u|4|shù
+矸|gān|g|an|1|gàn/gǎn/hàn
+砀|dàng|d|ang|4|
+刳|kū|k|u|1|kōu
+奄|yǎn||ian|3|yān
+瓯|ōu||ou|1|
+殁|mò|m|o|4|wěn
+郏|jiá|j|ia|2|
+轭|è||e|4|
+郅|zhì|zh|i|4|jí
+鸢|yuān||üan|1|
+盱|xū|x|ü|1|
+昊|hào|h|ao|4|
+昙|tán|t|an|2|yù
+杲|gǎo|g|ao|3|
+昃|zè|z|e|4|
+咂|zā|z|a|1|
+呸|pēi|p|ei|1|
+昕|xīn|x|in|1|xuān
+昀|yún||ün|2|
+旻|mín|m|in|2|
+昉|fǎng|f|ang|3|
+炅|jiǒng|j|iong|3|guì
+咔|kā|k|a|1|kǎ/nòng
+畀|bì|b|i|4|
+虮|jǐ|j|i|3|jī
+咀|jǔ|j|ü|3|zuǐ
+呷|gā|g|a|1|xiā/xiá/jiǎ
+黾|mǐn|m|in|3|miǎn/měng
+呱|gū|g|u|1|guā/guǎ
+呤|lìng|l|ing|4|líng
+咚|dōng|d|ong|1|
+咆|páo|p|ao|2|
+咛|níng|n|ing|2|
+呶|náo|n|ao|2|ná/nǔ
+呣|ḿ|||2|m̀/móu
+呦|yōu||iu|1|
+咝|sī|s|i|1|
+岢|kě|k|e|3|
+岿|kuī|k|ui|1|
+岬|jiǎ|j|ia|3|jiá
+岫|xiù|x|iu|4|
+帙|zhì|zh|i|4|
+岣|gǒu|g|ou|3|
+峁|mǎo|m|ao|3|
+刿|guì|g|ui|4|
+迥|jiǒng|j|iong|3|
+岷|mín|m|in|2|
+剀|kǎi|k|ai|3|
+帔|pèi|p|ei|4|pī
+峄|yì||i|4|
+沓|dá|d|a|2|tà
+囹|líng|l|ing|2|
+罔|wǎng||uang|3|wáng
+钍|tǔ|t|u|3|
+钎|qiān|q|ian|1|
+钏|chuàn|ch|uan|4|
+钒|fán|f|an|2|
+钕|nǚ|n|ü|3|
+钗|chāi|ch|ai|1|
+邾|zhū|zh|u|1|
+迮|zé|z|e|2|zuò
+牦|máo|m|ao|2|
+竺|zhú|zh|u|2|dǔ
+迤|yí||i|2|yǐ/tuó
+佶|jí|j|i|2|
+佬|lǎo|l|ao|3|liáo
+佰|bǎi|b|ai|3|mò
+侑|yòu||iu|4|
+侉|kuǎ|k|ua|3|huá/è/wú
+臾|yú||ü|2|yǔ/yǒng/kuì
+岱|dài|d|ai|4|
+侗|dòng|d|ong|4|tōng/tóng/tǒng
+侃|kǎn|k|an|3|
+侏|zhū|zh|u|1|zhōu
+侩|kuài|k|uai|4|
+佻|tiāo|t|iao|1|tiáo/tiào/diǎo
+佾|yì||i|4|
+侪|chái|ch|ai|2|
+佼|jiǎo|j|iao|3|jiāo/xiáo
+佯|yáng||iang|2|
+侬|nóng|n|ong|2|
+帛|bó|b|o|2|
+阜|fù|f|u|4|
+侔|móu|m|ou|2|máo
+徂|cú|c|u|2|
+刽|guì|g|ui|4|
+郄|qiè|q|ie|4|xì
+怂|sǒng|s|ong|3|
+籴|dí|d|i|2|zá
+瓮|wèng||ung|4|
+戗|qiāng|q|iang|1|qiàng
+肼|jǐng|j|ing|3|
+䏝|zhuān|zh|uan|1|
+肽|tài|t|ai|4|
+肱|gōng|g|ong|1|
+肫|zhūn|zh|un|1|chún/tún/zhuō
+剁|duò|d|uo|4|
+迩|ěr||er|3|
+郇|huán|h|uan|2|xún
+狙|jū|j|ü|1|
+狎|xiá|x|ia|2|
+狍|páo|p|ao|2|
+狒|fèi|f|ei|4|
+咎|jiù|j|iu|4|gāo
+炙|zhì|zh|i|4|
+枭|xiāo|x|iao|1|
+饯|jiàn|j|ian|4|
+饴|yí||i|2|
+冽|liè|l|ie|4|
+冼|xiǎn|x|ian|3|shěng
+庖|páo|p|ao|2|
+疠|lì|l|i|4|
+疝|shàn|sh|an|4|
+疡|yáng||iang|2|
+兖|yǎn||ian|3|
+妾|qiè|q|ie|4|
+劾|hé|h|e|2|kài
+炜|wěi||ui|3|
+炖|dùn|d|un|4|tún
+炘|xīn|x|in|1|
+炝|qiàng|q|iang|4|
+炔|guì|g|ui|4|quē/xuè
+泔|gān|g|an|1|hàn
+沭|shù|sh|u|4|
+泷|lóng|l|ong|2|shuāng
+泸|lú|l|u|2|
+泱|yāng||iang|1|
+泅|qiú|q|iu|2|yōu
+泗|sì|s|i|4|
+泠|líng|l|ing|2|lǐng
+泺|luò|l|uo|4|pō
+泖|mǎo|m|ao|3|liǔ
+泫|xuàn|x|üan|4|xuán/juān
+泮|pàn|p|an|4|
+沱|tuó|t|uo|2|duò/chí
+泯|mǐn|m|in|3|miàn
+泓|hóng|h|ong|2|
+泾|jīng|j|ing|1|
+怙|hù|h|u|4|tiē
+怵|chù|ch|u|4|xù
+怦|pēng|p|eng|1|
+怛|dá|d|a|2|dàn
+怏|yàng||iang|4|yāng
+怍|zuò|z|uo|4|zhà
+㤘|zhòu|zh|ou|4|
+怩|ní|n|i|2|
+怫|fú|f|u|2|fèi/bèi
+怿|yì||i|4|
+宕|dàng|d|ang|4|
+穹|qióng|q|iong|2|qiōng/kōng
+宓|mì|m|i|4|fú
+诓|kuāng|k|uang|1|
+诔|lěi|l|ei|3|
+诖|guà|g|ua|4|
+诘|jí|j|i|2|jié
+戾|lì|l|i|4|
+诙|huī|h|ui|1|
+戽|hù|h|u|4|
+郓|yùn||ün|4|
+衩|chǎ|ch|a|3|chà
+祆|xiān|x|ian|1|
+祎|yī||i|1|
+祉|zhǐ|zh|i|3|
+祇|qí|q|i|2|chí/zhī/zhǐ
+诛|zhū|zh|u|1|
+诜|shēn|sh|en|1|
+诟|gòu|g|ou|4|
+诠|quán|q|üan|2|
+诣|yì||i|4|
+诤|zhèng|zh|eng|4|
+诧|chà|ch|a|4|
+诨|hùn|h|un|4|
+诩|xǔ|x|ü|3|
+戕|qiāng|q|iang|1|zāng
+孢|bāo|b|ao|1|
+亟|jí|j|i|2|qì
+陔|gāi|g|ai|1|
+妲|dá|d|a|2|
+妯|zhóu|zh|ou|2|chōu
+姗|shān|sh|an|1|
+帑|tǎng|t|ang|3|nú
+弩|nǔ|n|u|3|
+孥|nú|n|u|2|
+驽|nú|n|u|2|
+虱|shī|sh|i|1|
+迦|jiā|j|ia|1|xiè
+迨|dài|d|ai|4|
+绀|gàn|g|an|4|
+绁|xiè|x|ie|4|
+绂|fú|f|u|2|
+驷|sì|s|i|4|
+驸|fù|f|u|4|
+绉|zhòu|zh|ou|4|
+绌|chù|ch|u|4|
+驿|yì||i|4|
+骀|dài|d|ai|4|tái
+甾|zāi|z|ai|1|zī
+珏|jué|j|üe|2|
+珐|fà|f|a|4|
+珂|kē|k|e|1|
+珑|lóng|l|ong|2|
+玳|dài|d|ai|4|
+珀|pò|p|o|4|
+顸|hān|h|an|1|
+珉|mín|m|in|2|
+珈|jiā|j|ia|1|
+拮|jié|j|ie|2|jiá
+垭|yā||ia|1|
+挝|wō||uo|1|zhuā
+垣|yuán||üan|2|
+挞|tà|t|a|4|
+垤|dié|d|ie|2|
+赳|jiū|j|iu|1|jiù
+贲|bēn|b|en|1|bì
+垱|dàng|d|ang|4|
+垌|dòng|d|ong|4|tóng/tǒng
+郝|hǎo|h|ao|3|shì
+垧|shǎng|sh|ang|3|jiōng
+垓|gāi|g|ai|1|
+挦|xián|x|ian|2|
+垠|yín||in|2|kèn
+茜|qiàn|q|ian|4|xī
+荚|jiá|j|ia|2|
+荑|tí|t|i|2|yí
+贳|shì|sh|i|4|
+荜|bì|b|i|4|
+莒|jǔ|j|ü|3|
+茼|tóng|t|ong|2|
+茴|huí|h|ui|2|
+茱|zhū|zh|u|1|
+莛|tíng|t|ing|2|tǐng
+荞|qiáo|q|iao|2|
+茯|fú|f|u|2|
+荏|rěn|r|en|3|
+荇|xìng|x|ing|4|
+荃|quán|q|üan|2|chuò
+荟|huì|h|ui|4|
+荀|xún|x|ün|2|
+茗|míng|m|ing|2|
+荠|jì|j|i|4|qí
+茭|jiāo|j|iao|1|xiào/qiào
+茨|cí|c|i|2|
+垩|è||e|4|shèng
+荥|xíng|x|ing|2|yíng
+荦|luò|l|uo|4|
+荨|xún|x|ün|2|qián
+荩|jìn|j|in|4|
+剋|kè|k|e|4|kēi
+荪|sūn|s|un|1|
+茹|rú|r|u|2|
+荬|mǎi|m|ai|3|
+荮|zhòu|zh|ou|4|
+柰|nài|n|ai|4|
+栉|zhì|zh|i|4|
+柯|kē|k|e|1|
+柘|zhè|zh|e|4|
+栊|lóng|l|ong|2|
+柩|jiù|j|iu|4|
+枰|píng|p|ing|2|
+栌|lú|l|u|2|
+柙|xiá|x|ia|2|jiǎ
+枵|xiāo|x|iao|1|
+柚|yòu||iu|4|yóu/zhóu
+枳|zhǐ|zh|i|3|zhī
+柞|zhà|zh|a|4|zuò/zé
+柝|tuò|t|uo|4|
+栀|zhī|zh|i|1|
+柢|dǐ|d|i|3|dì/chí
+栎|lì|l|i|4|yuè
+枸|gǒu|g|ou|3|gōu/jǔ/qú
+柈|bàn|b|an|4|pán/pàn
+柁|duò|d|uo|4|tuó/tuǒ
+枷|jiā|j|ia|1|jià
+柽|chēng|ch|eng|1|jué
+剌|lá|l|a|2|là
+酊|dīng|d|ing|1|dǐng
+郦|lì|l|i|4|
+甭|béng|b|eng|2|qì
+砗|chē|ch|e|1|
+砘|dùn|d|un|4|
+砒|pī|p|i|1|
+斫|zhuó|zh|uo|2|chuò
+砭|biān|b|ian|1|
+砜|fēng|f|eng|1|
+奎|kuí|k|ui|2|kuǐ
+耷|dā|d|a|1|zhé
+虺|huī|h|ui|1|huǐ
+殂|cú|c|u|2|
+殇|shāng|sh|ang|1|
+殄|tiǎn|t|ian|3|
+殆|dài|d|ai|4|
+轱|gū|g|u|1|
+轲|kē|k|e|1|kě
+轳|lú|l|u|2|
+轶|yì||i|4|
+轸|zhěn|zh|en|3|
+虿|chài|ch|ai|4|
+毖|bì|b|i|4|
+觇|chān|ch|an|1|
+尜|gá|g|a|2|
+哐|kuāng|k|uang|1|qiāng
+眄|miǎn|m|ian|3|miàn
+眍|kōu|k|ou|1|
+郢|yǐng||ing|3|chéng
+眇|miǎo|m|iao|3|miào
+眊|mào|m|ao|4|mèi
+眈|dān|d|an|1|chěn
+禺|yú||ü|2|yù
+哂|shěn|sh|en|3|
+咴|huī|h|ui|1|hái
+曷|hé|h|e|2|è/hè
+昴|mǎo|m|ao|3|
+昱|yù||ü|4|
+昵|nì|n|i|4|nǐ/zhì
+咦|yí||i|2|xī
+哓|xiāo|x|iao|1|
+哔|bì|b|i|4|
+畎|quǎn|q|üan|3|
+毗|pí|p|i|2|
+呲|cī|c|i|1|cí/zī
+胄|zhòu|zh|ou|4|
+畋|tián|t|ian|2|
+畈|fàn|f|an|4|
+虼|gè|g|e|4|
+虻|méng|m|eng|2|
+盅|zhōng|zh|ong|1|chōng
+咣|guāng|g|uang|1|gōng
+哕|huì|h|ui|4|yuě
+剐|guǎ|g|ua|3|
+郧|yún||ün|2|
+咻|xiū|x|iu|1|xǔ/xiāo/xù
+囿|yòu||iu|4|
+咿|yī||i|1|
+哌|pài|p|ai|4|gū
+哙|kuài|k|uai|4|
+哚|duǒ|d|uo|3|
+咯|gē|g|e|1|kǎ/lo/luò
+咩|miē|m|ie|1|mie
+咤|zhà|zh|a|4|
+哝|nóng|n|ong|2|
+哏|gén|g|en|2|hěn/ǹ
+哞|mōu|m|ou|1|
+峙|zhì|zh|i|4|shì
+峣|yáo||iao|2|
+罘|fú|f|u|2|
+帧|zhēn|zh|en|1|zhèng
+峒|dòng|d|ong|4|tóng
+峤|jiào|j|iao|4|qiáo
+峋|xún|x|ün|2|
+峥|zhēng|zh|eng|1|
+贶|kuàng|k|uang|4|
+钚|bù|b|u|4|
+钛|tài|t|ai|4|
+钡|bèi|b|ei|4|
+钣|bǎn|b|an|3|
+钤|qián|q|ian|2|
+钨|wū||u|1|
+钫|fāng|f|ang|1|
+钯|bǎ|b|a|3|pá
+氡|dōng|d|ong|1|
+氟|fú|f|u|2|
+牯|gǔ|g|u|3|
+郜|gào|g|ao|4|
+秕|bǐ|b|i|3|
+秭|zǐ|z|i|3|
+竽|yú||ü|2|
+笈|jí|j|i|2|
+笃|dǔ|d|u|3|
+俦|chóu|ch|ou|2|
+俨|yǎn||ian|3|
+俅|qiú|q|iu|2|
+俪|lì|l|i|4|
+叟|sǒu|s|ou|3|sōu/xiāo
+垡|fá|f|a|2|
+牮|jiàn|j|ian|4|
+俣|yǔ||ü|3|
+俚|lǐ|l|i|3|lì
+皈|guī|g|ui|1|
+俑|yǒng||iong|3|
+俟|qí|q|i|2|sì
+逅|hòu|h|ou|4|
+徇|xùn|x|ün|4|
+徉|yáng||iang|2|
+舢|shān|sh|an|1|
+俞|yú||ü|2|shù
+郗|xī|x|i|1|chī
+俎|zǔ|z|u|3|
+郤|xì|x|i|4|
+爰|yuán||üan|2|
+郛|fú|f|u|2|
+瓴|líng|l|ing|2|
+胨|dòng|d|ong|4|
+胪|lú|l|u|2|
+胛|jiǎ|j|ia|3|
+胂|shèn|sh|en|4|shēn/chēn
+胙|zuò|z|uo|4|
+胍|guā|g|ua|1|gū/hù
+胗|zhēn|zh|en|1|zhěn/zhūn
+胝|zhī|zh|i|1|chī/dì
+朐|qú|q|ü|2|xū/xù/chǔn
+胫|jìng|j|ing|4|
+鸨|bǎo|b|ao|3|
+匍|pú|p|u|2|
+狨|róng|r|ong|2|
+狯|kuài|k|uai|4|
+飑|biāo|b|iao|1|
+狩|shòu|sh|ou|4|
+狲|sūn|s|un|1|
+訇|hōng|h|ong|1|jùn/hēng
+逄|páng|p|ang|2|féng
+昝|zǎn|z|an|3|
+饷|xiǎng|x|iang|3|
+饸|hé|h|e|2|
+饹|le|l|e|5|gē
+胤|yìn||in|4|
+孪|luán|l|uan|2|
+娈|luán|l|uan|2|
+弈|yì||i|4|
+奕|yì||i|4|
+庥|xiū|x|iu|1|
+疬|lì|l|i|4|
+疣|yóu||iu|2|yòu
+疥|jiè|j|ie|4|
+疭|zòng|z|ong|4|
+庠|xiáng|x|iang|2|
+竑|hóng|h|ong|2|
+彦|yàn||ian|4|pán
+飒|sà|s|a|4|
+闼|tà|t|a|4|
+闾|lǘ|l|ü|2|
+闿|kǎi|k|ai|3|
+阂|hé|h|e|2|
+羑|yǒu||iu|3|
+迸|bèng|b|eng|4|
+籼|xiān|x|ian|1|
+酋|qiú|q|iu|2|
+炳|bǐng|b|ing|3|
+炻|shí|sh|i|2|
+炽|chì|ch|i|4|
+炯|jiǒng|j|iong|3|
+烀|hū|h|u|1|
+炷|zhù|zh|u|4|
+烃|tīng|t|ing|1|
+洱|ěr||er|3|
+洹|huán|h|uan|2|
+洧|wěi||ui|3|
+洌|liè|l|ie|4|
+浃|jiā|j|ia|1|
+洇|yīn||in|1|yān/yē
+洄|huí|h|ui|2|huì
+洙|zhū|zh|u|1|
+涎|xián|x|ian|2|yàn/diàn
+洎|jì|j|i|4|
+洫|xù|x|ü|4|yì
+浍|huì|h|ui|4|kuài
+洮|táo|t|ao|2|yáo/dào
+洵|xún|x|ün|2|xuàn
+浒|hǔ|h|u|3|xǔ
+浔|xún|x|ün|2|
+浕|jìn|j|in|4|
+洳|rù|r|u|4|rú
+恸|tòng|t|ong|4|
+恓|xī|x|i|1|qī/xù
+恹|yān||ian|1|
+恫|dòng|d|ong|4|tōng
+恺|kǎi|k|ai|3|
+恻|cè|c|e|4|
+恂|xún|x|ün|2|shùn
+恪|kè|k|e|4|
+恽|yùn||ün|4|
+宥|yòu||iu|4|
+扃|jiōng|j|iong|1|jiǒng
+衲|nà|n|a|4|
+衽|rèn|r|en|4|
+衿|jīn|j|in|1|qìn
+袂|mèi|m|ei|4|yì
+祛|qū|q|ü|1|
+祜|hù|h|u|4|
+祓|fú|f|u|2|fèi
+祚|zuò|z|uo|4|
+诮|qiào|q|iao|4|
+祗|zhī|zh|i|1|
+祢|mí|m|i|2|nǐ
+诰|gào|g|ao|4|
+诳|kuáng|k|uang|2|
+鸩|zhèn|zh|en|4|
+昶|chǎng|ch|ang|3|
+郡|jùn|j|ün|4|
+咫|zhǐ|zh|i|3|
+弭|mǐ|m|i|3|
+牁|kē|k|e|1|
+胥|xū|x|ü|1|xǔ
+陛|bì|b|i|4|
+陟|zhì|zh|i|4|dé
+娅|yà||ia|4|
+姮|héng|h|eng|2|
+娆|ráo|r|ao|2|rǎo
+姝|shū|sh|u|1|
+姣|jiāo|j|iao|1|jiǎo/xiáo
+姘|pīn|p|in|1|pín
+姹|chà|ch|a|4|
+怼|duì|d|ui|4|
+羿|yì||i|4|
+炱|tái|t|ai|2|
+矜|jīn|j|in|1|qín/guān
+绔|kù|k|u|4|
+骁|xiāo|x|iao|1|
+骅|huá|h|ua|2|
+绗|háng|h|ang|2|
+绛|jiàng|j|iang|4|
+骈|pián|p|ian|2|
+耖|chào|ch|ao|4|
+挈|qiè|q|ie|4|qì/jiá/qià
+珥|ěr||er|3|
+珙|gǒng|g|ong|3|
+顼|xū|x|ü|1|
+珰|dāng|d|ang|1|
+珩|háng|h|ang|2|héng
+珧|yáo||iao|2|
+珣|xún|x|ün|2|
+珞|luò|l|uo|4|lì
+琤|chēng|ch|eng|1|
+珲|huī|h|ui|1|hún
+敖|áo||ao|2|ào
+恚|huì|h|ui|4|
+埔|pǔ|p|u|3|bù
+埕|chéng|ch|eng|2|
+埘|shí|sh|i|2|
+埙|xūn|x|ün|1|
+埚|guō|g|uo|1|
+挹|yì||i|4|
+耆|qí|q|i|2|zhǐ/shì
+耄|mào|m|ao|4|
+埒|liè|l|ie|4|
+捋|lǚ|l|ü|3|luō
+贽|zhì|zh|i|4|
+垸|yuàn||üan|4|huán
+捃|jùn|j|ün|4|
+盍|hé|h|e|2|kě
+荸|bí|b|i|2|
+莆|pú|p|u|2|fǔ
+莳|shí|sh|i|2|shì
+莴|wō||uo|1|
+莪|é||e|2|
+莠|yǒu||iu|3|xiù
+莓|méi|m|ei|2|
+莜|yóu||iu|2|diào/dí
+莅|lì|l|i|4|
+荼|tú|t|u|2|chá/yé/shū
+莩|fú|f|u|2|piǎo
+荽|suī|s|ui|1|wěi
+莸|yóu||iu|2|
+荻|dí|d|i|2|
+莘|shēn|sh|en|1|xīn
+莎|shā|sh|a|1|suō/suī
+莞|guǎn|g|uan|3|wǎn/guān
+莨|làng|l|ang|4|liáng/láng
+鸪|gū|g|u|1|
+莼|chún|ch|un|2|
+栲|kǎo|k|ao|3|
+栳|lǎo|l|ao|3|
+郴|chēn|ch|en|1|lán
+桓|huán|h|uan|2|
+桡|ráo|r|ao|2|
+桎|zhì|zh|i|4|
+桢|zhēn|zh|en|1|
+桤|qī|q|i|1|
+梃|tǐng|t|ing|3|tìng
+栝|guā|g|ua|1|tiǎn/kuò
+桕|jiù|j|iu|4|
+桁|héng|h|eng|2|háng/hàng
+桧|guì|g|ui|4|huì
+桅|wéi||ui|2|guǐ
+栟|bēn|b|en|1|bīng
+桉|ān||an|1|àn
+栩|xǔ|x|ü|3|yǔ
+逑|qiú|q|iu|2|
+逋|bū|b|u|1|
+彧|yù||ü|4|
+鬲|gé|g|e|2|lì/è
+豇|jiāng|j|iang|1|
+酐|gān|g|an|1|hàng
+逦|lǐ|l|i|3|
+厝|cuò|c|uo|4|jí
+孬|nāo|n|ao|1|
+砝|fá|f|a|2|fǎ/jié/gé
+砹|ài||ai|4|
+砺|lì|l|i|4|
+砧|zhēn|zh|en|1|
+砷|shēn|sh|en|1|
+砟|zhǎ|zh|a|3|zhà/zuó
+砼|tóng|t|ong|2|
+砥|dǐ|d|i|3|zhǐ
+砣|tuó|t|uo|2|
+剞|jī|j|i|1|
+砻|lóng|l|ong|2|
+轼|shì|sh|i|4|
+轾|zhì|zh|i|4|
+辂|lù|l|u|4|
+鸫|dōng|d|ong|1|
+趸|dǔn|d|un|3|
+龀|chèn|ch|en|4|
+鸬|lú|l|u|2|
+虔|qián|q|ian|2|
+逍|xiāo|x|iao|1|
+眬|lóng|l|ong|2|
+唛|mà|m|a|4|mài
+晟|chéng|ch|eng|2|shèng/jīng
+眩|xuàn|x|üan|4|huàn/juàn
+眙|yí||i|2|chì
+哧|chī|ch|i|1|xià/hè
+哽|gěng|g|eng|3|yǐng/yìng/ńg
+唔|wú||u|2|wù/ńg/ḿ
+晁|cháo|ch|ao|2|zhāo/chào
+晏|yàn||ian|4|
+鸮|xiāo|x|iao|1|
+趵|bào|b|ao|4|bō/zhuó/chuò
+趿|tā|t|a|1|sà/qì
+畛|zhěn|zh|en|3|
+蚨|fú|f|u|2|
+蚜|yá||ia|2|
+蚍|pí|p|i|2|
+蚋|ruì|r|ui|4|
+蚬|xiǎn|x|ian|3|
+蚝|háo|h|ao|2|cì
+蚧|jiè|j|ie|4|
+唢|suǒ|s|uo|3|
+圄|yǔ||ü|3|
+唣|zào|z|ao|4|
+唏|xī|x|i|1|xiè
+盎|àng||ang|4|
+唑|zuò|z|uo|4|shì
+崂|láo|l|ao|2|
+崃|lái|l|ai|2|
+罡|gāng|g|ang|1|
+罟|gǔ|g|u|3|
+峪|yù||ü|4|
+觊|jì|j|i|4|
+赅|gāi|g|ai|1|
+钰|yù||ü|4|
+钲|zhēng|zh|eng|1|
+钴|gǔ|g|u|3|
+钵|bō|b|o|1|
+钹|bó|b|o|2|
+钺|yuè||üe|4|
+钽|tǎn|t|an|3|
+钼|mù|m|u|4|
+钿|diàn|d|ian|4|tián
+铀|yóu||iu|2|
+铂|bó|b|o|2|
+铄|shuò|sh|uo|4|
+铆|mǎo|m|ao|3|
+铈|shì|sh|i|4|
+铉|xuàn|x|üan|4|
+铊|tā|t|a|1|tuó
+铋|bì|b|i|4|
+铌|ní|n|i|2|
+铍|pī|p|i|1|pí
+䥽|pō|p|o|1|
+铎|duó|d|uo|2|
+氩|yà||ia|4|
+氤|yīn||in|1|yán
+氦|hài|h|ai|4|
+毪|mú|m|u|2|
+舐|shì|sh|i|4|
+秣|mò|m|o|4|
+秫|shú|sh|u|2|
+盉|hé|h|e|2|
+笄|jī|j|i|1|
+笕|jiǎn|j|ian|3|
+笊|zhào|zh|ao|4|
+笏|hù|h|u|4|wěn/wù
+笆|bā|b|a|1|
+俸|fèng|f|eng|4|běng
+倩|qiàn|q|ian|4|qìng
+俵|biào|b|iao|4|
+偌|ruò|r|uo|4|rè
+俳|pái|p|ai|2|
+俶|chù|ch|u|4|shū/tì
+倬|zhuō|zh|uo|1|
+倏|shū|sh|u|1|
+恁|nèn|n|en|4|rèn/nín
+倭|wō||uo|1|wēi/wǒ
+倪|ní|n|i|2|nì/niè
+俾|bǐ|b|i|3|bì/bēi/pì
+倜|tì|t|i|4|diào/zhōu
+隼|sǔn|s|un|3|
+隽|juàn|j|üan|4|jùn
+倌|guān|g|uan|1|
+倥|kōng|k|ong|1|kǒng
+臬|niè|n|ie|4|
+皋|gāo|g|ao|1|háo/gū
+郫|pí|p|i|2|
+倨|jù|j|ü|4|
+衄|nǜ|n|ü|4|
+颀|qí|q|i|2|
+徕|lái|l|ai|2|lài
+舫|fǎng|f|ang|3|
+釜|fǔ|f|u|3|
+奚|xī|x|i|1|
+衾|qīn|q|in|1|
+胯|kuà|k|ua|4|kuǎ
+胱|guāng|g|uang|1|
+胴|dòng|d|ong|4|
+胭|yān||ian|1|
+脍|kuài|k|uai|4|
+胼|pián|p|ian|2|
+朕|zhèn|zh|en|4|
+脒|mǐ|m|i|3|
+胺|àn||an|4|è
+鸱|chī|ch|i|1|
+玺|xǐ|x|i|3|
+鸲|qú|q|ü|2|
+狷|juàn|j|üan|4|
+猁|lì|l|i|4|
+狳|yú||ü|2|
+猃|xiǎn|x|ian|3|
+狺|yín||in|2|
+逖|tì|t|i|4|
+桀|jié|j|ie|2|
+袅|niǎo|n|iao|3|
+饽|bō|b|o|1|
+凇|sōng|s|ong|1|
+栾|luán|l|uan|2|
+挛|luán|l|uan|2|
+亳|bó|b|o|2|
+疳|gān|g|an|1|
+疴|kē|k|e|1|ē/qià
+疸|dǎn|d|an|3|da
+疽|jū|j|ü|1|jǔ
+痈|yōng||iong|1|
+疱|pào|p|ao|4|
+痂|jiā|j|ia|1|
+痉|jìng|j|ing|4|
+衮|gǔn|g|un|3|
+凋|diāo|d|iao|1|
+颃|háng|h|ang|2|
+恣|zì|z|i|4|
+旆|pèi|p|ei|4|
+旄|máo|m|ao|2|mào/wù
+旃|zhān|zh|an|1|
+阃|kǔn|k|un|3|
+阄|jiū|j|iu|1|
+訚|yín||in|2|
+阆|láng|l|ang|2|làng
+恙|yàng||iang|4|
+粑|bā|b|a|1|
+朔|shuò|sh|uo|4|
+郸|dān|d|an|1|
+烜|xuǎn|x|üan|3|xuān/huǐ
+烨|yè||ie|4|
+烩|huì|h|ui|4|
+烊|yáng||iang|2|yàng
+剡|shàn|sh|an|4|yǎn
+郯|tán|t|an|2|
+烬|jìn|j|in|4|
+涑|sù|s|u|4|sōu/shù
+浯|wú||u|2|
+涞|lái|l|ai|2|
+涟|lián|l|ian|2|
+娑|suō|s|uo|1|suǒ/suò
+涅|niè|n|ie|4|
+涠|wéi||ui|2|
+浞|zhuó|zh|uo|2|
+涓|juān|j|üan|1|yuàn/xuàn
+浥|yì||i|4|yà
+涔|cén|c|en|2|qián/zàn
+浜|bāng|b|ang|1|bīn
+浠|xī|x|i|1|
+浣|huàn|h|uan|4|
+浚|jùn|j|ün|4|xùn/cún
+悚|sǒng|s|ong|3|
+悭|qiān|q|ian|1|
+悝|kuī|k|ui|1|lǐ
+悒|yì||i|4|
+悌|tì|t|i|4|
+悛|quān|q|üan|1|xún
+宸|chén|ch|en|2|
+窈|yǎo||iao|3|yào
+剜|wān||uan|1|
+诹|zōu|z|ou|1|
+冢|zhǒng|zh|ong|3|
+诼|zhuó|zh|uo|2|
+袒|tǎn|t|an|3|zhàn
+袢|pàn|p|an|4|fán
+祯|zhēn|zh|en|1|
+诿|wěi||ui|3|
+谀|yú||ü|2|
+谂|shěn|sh|en|3|
+谄|chǎn|ch|an|3|
+谇|suì|s|ui|4|
+屐|jī|j|i|1|
+屙|ē||e|1|
+陬|zōu|z|ou|1|zhé
+勐|měng|m|eng|3|
+奘|zàng|z|ang|4|zhuǎng
+牂|zāng|z|ang|1|
+蚩|chī|ch|i|1|
+陲|chuí|ch|ui|2|
+姬|jī|j|i|1|yí
+娠|shēn|sh|en|1|
+娌|lǐ|l|i|3|
+娉|pīng|p|ing|1|pìn
+娲|wā||ua|1|
+娩|miǎn|m|ian|3|wǎn/wèn
+娴|xián|x|ian|2|
+娣|dì|d|i|4|
+娓|wěi||ui|3|
+婀|ē||e|1|ě
+畚|běn|b|en|3|
+逡|qūn|q|ün|1|xùn/suō
+绠|gěng|g|eng|3|
+骊|lí|l|i|2|
+绡|xiāo|x|iao|1|
+骋|chěng|ch|eng|3|
+绥|suí|s|ui|2|
+绦|tāo|t|ao|1|
+绨|tí|t|i|2|tì
+骎|qīn|q|in|1|
+邕|yōng||iong|1|yǒng
+鸶|sī|s|i|1|
+彗|huì|h|ui|4|suì
+耜|sì|s|i|4|
+焘|dào|d|ao|4|tāo
+舂|chōng|ch|ong|1|chuāng/zhōng
+琏|liǎn|l|ian|3|
+琇|xiù|x|iu|4|
+麸|fū|f|u|1|
+揶|yé||ie|2|
+埴|zhí|zh|i|2|
+埯|ǎn||an|3|yǎn
+捯|dáo|d|ao|2|dǎo
+掳|lǔ|l|u|3|
+掴|guāi|g|uai|1|guó
+埸|yì||i|4|
+埵|duǒ|d|uo|3|
+赧|nǎn|n|an|3|
+埤|pí|p|i|2|pì/bì/bēi
+捭|bǎi|b|ai|3|bā/bǐ
+逵|kuí|k|ui|2|kuǐ
+埝|niàn|n|ian|4|diàn/niè
+堋|péng|p|eng|2|bèng/pēng/pīng
+堍|tù|t|u|4|
+掬|jū|j|ü|1|
+鸷|zhì|zh|i|4|
+掖|yē||ie|1|yè
+捽|zuó|z|uo|2|cù/sū/zùn
+掊|póu|p|ou|2|pǒu/fù/péi
+堉|yù||ü|4|
+掸|dǎn|d|an|3|shàn
+捩|liè|l|ie|4|lì
+掮|qián|q|ian|2|
+悫|què|q|üe|4|
+埭|dài|d|ai|4|
+埽|sào|s|ao|4|sǎo
+掇|duō|d|uo|1|duó/zhuō
+掼|guàn|g|uan|4|
+聃|dān|d|an|1|
+菁|jīng|j|ing|1|
+萁|qí|q|i|2|jī
+菘|sōng|s|ong|1|
+堇|jǐn|j|in|3|qín/jìn
+萘|nài|n|ai|4|
+萋|qī|q|i|1|
+菽|shū|sh|u|1|jiāo
+菖|chāng|ch|ang|1|
+萜|tiē|t|ie|1|
+萸|yú||ü|2|
+萑|huán|h|uan|2|zhuī
+棻|fēn|f|en|1|
+菔|fú|f|u|2|
+菟|tú|t|u|2|tù
+萏|dàn|d|an|4|
+萃|cuì|c|ui|4|
+菏|hé|h|e|2|gē
+菹|jū|j|ü|1|zū/jù
+菪|dàng|d|ang|4|
+菅|jiān|j|ian|1|guān
+菀|wǎn||uan|3|yù/yùn
+萦|yíng||ing|2|
+菰|gū|g|u|1|
+菡|hàn|h|an|4|
+梵|fàn|f|an|4|
+梿|lián|l|ian|2|
+梏|gù|g|u|4|jué
+觋|xí|x|i|2|
+桴|fú|f|u|2|
+桷|jué|j|üe|2|
+梓|zǐ|z|i|3|
+棁|zhuō|zh|uo|1|tuō/ruì
+桫|suō|s|uo|1|
+棂|líng|l|ing|2|
+啬|sè|s|e|4|
+郾|yǎn||ian|3|yān
+匮|kuì|k|ui|4|guì
+敕|chì|ch|i|4|sōu
+豉|shì|sh|i|4|chǐ
+鄄|juàn|j|üan|4|
+酞|tài|t|ai|4|
+酚|fēn|f|en|1|
+戛|jiá|j|ia|2|gā
+硎|xíng|x|ing|2|kēng
+硭|máng|m|ang|2|
+硒|xī|x|i|1|
+硖|xiá|x|ia|2|
+硗|qiāo|q|iao|1|
+硐|dòng|d|ong|4|tóng/liú
+硇|náo|n|ao|2|
+硌|gè|g|e|4|luò/lì
+鸸|ér||er|2|
+瓠|hù|h|u|4|hú/huò/gū
+匏|páo|p|ao|2|
+厩|jiù|j|iu|4|
+龚|gōng|g|ong|1|
+殒|yǔn||ün|3|
+殓|liàn|l|ian|4|
+殍|piǎo|p|iao|3|bì
+赉|lài|l|ai|4|
+雩|yú||ü|2|yù/xū
+辄|zhé|zh|e|2|
+堑|qiàn|q|ian|4|
+眭|suī|s|ui|1|huī/xié/wèi
+眦|zì|z|i|4|
+啧|zé|z|e|2|
+晡|bū|b|u|1|
+晤|wù||u|4|
+眺|tiào|t|iao|4|
+眵|chī|ch|i|1|
+眸|móu|m|ou|2|
+圊|qīng|q|ing|1|
+喏|nuò|n|uo|4|rě
+喵|miāo|m|iao|1|
+啉|lín|l|in|2|lán/lèn
+勖|xù|x|ü|4|mào
+晞|xī|x|i|1|
+唵|ǎn||an|3|ng/n
+晗|hán|h|an|2|
+冕|miǎn|m|ian|3|
+啭|zhuàn|zh|uan|4|
+畦|qí|q|i|2|
+趺|fū|f|u|1|
+啮|niè|n|ie|4|
+跄|qiāng|q|iang|1|qiàng
+蚶|hān|h|an|1|hán
+蛄|gū|g|u|1|gǔ
+蛎|lì|l|i|4|
+蛆|qū|q|ü|1|jū
+蚰|yóu||iu|2|zhú
+蛊|gǔ|g|u|3|
+圉|yǔ||ü|3|
+蚱|zhà|zh|a|4|
+蛉|líng|l|ing|2|
+蛏|chēng|ch|eng|1|
+蚴|yòu||iu|4|yǒu/niù
+啁|zhāo|zh|ao|1|zhōu/dāo/tiáo
+啕|táo|t|ao|2|
+唿|hū|h|u|1|
+啐|cuì|c|ui|4|zú/zá/è
+唼|shà|sh|a|4|qiè
+唷|yō||o|1|yù
+啖|dàn|d|an|4|
+啵|bō|b|o|1|bo
+啶|dìng|d|ing|4|
+啷|lāng|l|ang|1|
+唳|lì|l|i|4|
+唰|shuā|sh|ua|1|
+啜|chuài|ch|uai|4|chuò/zhuó
+帻|zé|z|e|2|
+崚|léng|l|eng|2|líng
+崦|yān||ian|1|
+帼|guó|g|uo|2|
+崮|gù|g|u|4|
+崤|xiáo|x|iao|2|yáo
+崆|kōng|k|ong|1|
+赇|qiú|q|iu|2|
+赈|zhèn|zh|en|4|
+赊|shē|sh|e|1|
+铑|lǎo|l|ao|3|
+铒|ěr||er|3|
+铗|jiá|j|ia|2|
+铙|náo|n|ao|2|
+铟|yīn||in|1|
+铠|kǎi|k|ai|3|
+铡|zhá|zh|a|2|
+铢|zhū|zh|u|1|
+铣|xǐ|x|i|3|xiǎn
+铤|dìng|d|ing|4|tǐng
+铧|huá|h|ua|2|
+铨|quán|q|üan|2|
+铩|shā|sh|a|1|
+铪|hā|h|a|1|
+铫|diào|d|iao|4|yáo
+铬|gè|g|e|4|
+铮|zhēng|zh|eng|1|zhèng
+铯|sè|s|e|4|
+铰|jiǎo|j|iao|3|
+铱|yī||i|1|
+铳|chòng|ch|ong|4|
+铵|ǎn||an|3|
+铷|rú|r|u|2|
+氪|kè|k|e|4|
+牾|wǔ||u|3|wú
+鸹|guā|g|ua|1|
+秾|nóng|n|ong|2|
+逶|wēi||ui|1|
+笺|jiān|j|ian|1|
+筇|qióng|q|iong|2|
+笸|pǒ|p|o|3|
+笪|dá|d|a|2|
+笮|zé|z|e|2|zuó/zhà
+笠|lì|l|i|4|
+笥|sì|s|i|4|
+笤|tiáo|t|iao|2|shào
+笳|jiā|j|ia|1|
+笾|biān|b|ian|1|
+笞|chī|ch|i|1|
+偾|fèn|f|en|4|
+偃|yǎn||ian|3|
+偕|xié|x|ie|2|jiē
+偈|jì|j|i|4|jié/qì
+傀|guī|g|ui|1|kuǐ/kuài
+偬|zǒng|z|ong|3|cōng
+偻|lóu|l|ou|2|lǚ
+皑|ái||ai|2|
+皎|jiǎo|j|iao|3|
+鸻|héng|h|eng|2|
+徜|cháng|ch|ang|2|
+舸|gě|g|e|3|
+舻|lú|l|u|2|
+舴|zé|z|e|2|
+舷|xián|x|ian|2|
+龛|kān|k|an|1|
+翎|líng|l|ing|2|
+脬|pāo|p|ao|1|
+脘|wǎn||uan|3|huàn
+脲|niào|n|iao|4|
+匐|fú|f|u|2|
+猗|yī||i|1|yǐ/jì/ē
+猡|luó|l|uo|2|
+猞|shē|sh|e|1|
+猝|cù|c|u|4|
+斛|hú|h|u|2|
+猕|mí|m|i|2|
+馗|kuí|k|ui|2|qiú
+馃|guǒ|g|uo|3|
+馄|hún|h|un|2|
+鸾|luán|l|uan|2|
+孰|shú|sh|u|2|
+庹|tuǒ|t|uo|3|
+庾|yǔ||ü|3|yú
+痔|zhì|zh|i|4|
+痍|yí||i|2|
+疵|cī|c|i|1|zī/zhài/jì
+翊|yì||i|4|
+旌|jīng|j|ing|1|
+旎|nǐ|n|i|3|
+袤|mào|m|ao|4|móu
+阇|dū|d|u|1|shé
+阈|yù||ü|4|
+阉|yān||ian|1|
+阊|chāng|ch|ang|1|
+阋|xì|x|i|4|
+阍|hūn|h|un|1|
+阏|è||e|4|yān
+羟|qiǎng|q|iang|3|
+粝|lì|l|i|4|
+粕|pò|p|o|4|
+敝|bì|b|i|4|
+焐|wù||u|4|
+烯|xī|x|i|1|
+焓|hán|h|an|2|
+烽|fēng|f|eng|1|
+焖|mèn|m|en|4|
+烷|wán||uan|2|
+焗|jú|j|ü|2|
+渍|zì|z|i|4|
+渚|zhǔ|zh|u|3|
+淇|qí|q|i|2|
+淅|xī|x|i|1|
+淞|sōng|s|ong|1|
+渎|dú|d|u|2|
+涿|zhuō|zh|uo|1|zhuó
+淖|nào|n|ao|4|zhào/zhuō/chuò
+挲|sā|s|a|1|suō/shā
+淠|pì|p|i|4|pèi
+涸|hé|h|e|2|
+渑|miǎn|m|ian|3|shéng
+淦|gàn|g|an|4|hán
+淝|féi|f|ei|2|
+淬|cuì|c|ui|4|zú
+涪|fú|f|u|2|póu
+淙|cóng|c|ong|2|shuàng
+涫|guàn|g|uan|4|
+渌|lù|l|u|4|
+淄|zī|z|i|1|
+惬|qiè|q|ie|4|
+悻|xìng|x|ing|4|
+悱|fěi|f|ei|3|
+惝|chǎng|ch|ang|3|tǎng
+惘|wǎng||uang|3|
+悸|jì|j|i|4|
+惆|chóu|ch|ou|2|qiū/dāo
+惚|hū|h|u|1|
+惇|dūn|d|un|1|
+惮|dàn|d|an|4|
+窕|tiǎo|t|iao|3|tiāo
+谌|chén|ch|en|2|
+谏|jiàn|j|ian|4|
+扈|hù|h|u|4|
+皲|jūn|j|ün|1|
+谑|xuè|x|üe|4|
+裆|dāng|d|ang|1|
+袷|jiá|j|ia|2|qiā/jiā/jié
+裉|kèn|k|en|4|
+谒|yè||ie|4|</script>
+<script>
+/* ============================================================
+   通城方言字音记录表
+   - 普通话音系：pypinyin 生成（strict 模式，零声母 y/w 归一为 ∅）
+   - 通城音系：文献参考值（可编辑）
+   ============================================================ */
+
+/* ---------- 1. 字表数据 ---------- */
+const RAW = document.getElementById('rawData').textContent.trim().split('\n');
+const TONE_NAME = {1:'阴平', 2:'阳平', 3:'上声', 4:'去声', 5:'轻声'};
+/* 去调检索用：把带调拼音归一成纯字母（shuǐ → shui；lǜ → lu / lv） */
+const stripTone = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ü/g, 'u');
+const toV = s => s.replace(/[ǖǘǚǜü]/g, 'v');
+const ROWS = RAW.map((line, i) => {
+  const p = line.split('|');
+  const py = p[1] || '';
+  return { i: i, c: p[0], py: py, pyp: stripTone(py), pyv: stripTone(toV(py)),
+           sm: p[2] || '', ym: p[3] || '', sd: parseInt(p[4] || '5', 10), alt: p[5] || '' };
+});
+
+/* ---------- 2. 通城方言参考音系 ---------- */
+const TC_TONE_DEF = [
+  { v:'阴平', pitch:'312', g:'清声母' , ex:'诗 衣 乌 翻 烟' },
+  { v:'阳平', pitch:'22',  g:'浊声母' , ex:'时 移 无 凡 炎' },
+  { v:'上声', pitch:'31',  g:'清·次浊', ex:'史 以 五 反 演' },
+  { v:'阴去', pitch:'24',  g:'清声母' , ex:'四 意 库 泛 厌' },
+  { v:'阳去', pitch:'33',  g:'浊声母' , ex:'是 异 务 犯 艳' },
+  { v:'入声', pitch:'5',   g:'短促调', ex:'八 桌 熟 辣 鄂' }
+];
+const TC_TONE_ALIAS = { '阴平':'312','阳平':'22','上声':'31','阴去':'24','阳去':'33','入声':'5',
+                        '阴上':'31','全入':'55','次入':'35' };
+
+const TC_INITIALS = [
+  { v:'p',  ex:'巴 班 北', g:'塞音（全清）', n:'帮母等' },
+  { v:'b',  ex:'叭 办 别', g:'塞音（浊）',   n:'並母／滂母' },
+  { v:'m',  ex:'妈 蛮 墨', g:'鼻音',        n:'明母' },
+  { v:'f',  ex:'花 翻 法', g:'擦音',        n:'非敷奉晓' },
+  { v:'t',  ex:'打 丹 大', g:'塞音（全清）', n:'端母' },
+  { v:'d',  ex:'台 摊 塔', g:'塞音（浊）',   n:'定母／透母' },
+  { v:'l',  ex:'拉 兰 辣', g:'边音',        n:'来母' },
+  { v:'ts', ex:'渣 斩 窄', g:'塞擦音（全清）', n:'庄精母' },
+  { v:'dz', ex:'差 掺 察', g:'塞擦音（浊）',  n:'初／清母' },
+  { v:'s',  ex:'沙 山 杀', g:'擦音',        n:'生心母' },
+  { v:'z',  ex:'字 坐 曹', g:'擦音（浊）',   n:'从邪母' },
+  { v:'tɕ', ex:'基 金 菊', g:'塞擦音（全清）', n:'见母细音' },
+  { v:'dʑ', ex:'欺 亲 曲', g:'塞擦音（浊）',  n:'溪群母细音' },
+  { v:'ɕ',  ex:'西 心 虚', g:'擦音',        n:'晓心母细音' },
+  { v:'ȵ',  ex:'泥 银 捏', g:'鼻音',        n:'泥日母细音' },
+  { v:'ŋ',  ex:'鹅 安 鄂', g:'鼻音',        n:'疑母' },
+  { v:'k',  ex:'歌 甘 鸽', g:'塞音（全清）', n:'见母洪音' },
+  { v:'g',  ex:'柯 看 考', g:'塞音（浊）',   n:'溪群母洪音' },
+  { v:'h',  ex:'喝 喊 合', g:'擦音',        n:'晓匣母' },
+  { v:'∅',  ex:'衣 乌 余', g:'零声母',      n:'影喻母' }
+];
+
+const TC_FINALS = [
+  /* 阴声韵 */
+  { v:'ɿ',  ex:'资', g:'阴声韵' }, { v:'i',  ex:'衣', g:'阴声韵' },
+  { v:'u',  ex:'乌', g:'阴声韵' }, { v:'y',  ex:'余', g:'阴声韵' },
+  { v:'a',  ex:'巴', g:'阴声韵' }, { v:'ia', ex:'雅', g:'阴声韵' },
+  { v:'ua', ex:'夸', g:'阴声韵' }, { v:'ya', ex:'惹', g:'阴声韵' },
+  { v:'o',  ex:'波', g:'阴声韵' }, { v:'io', ex:'哟', g:'阴声韵' },
+  { v:'uo', ex:'棵', g:'阴声韵' }, { v:'ɛ',  ex:'奢', g:'阴声韵' },
+  { v:'iɛ', ex:'也', g:'阴声韵' }, { v:'uɛ', ex:'喂', g:'阴声韵' },
+  { v:'ai', ex:'哀', g:'阴声韵' }, { v:'uai',ex:'歪', g:'阴声韵' },
+  { v:'au', ex:'包', g:'阴声韵' }, { v:'iau',ex:'腰', g:'阴声韵' },
+  { v:'yau',ex:'绕', g:'阴声韵' }, { v:'əu', ex:'都', g:'阴声韵' },
+  { v:'iu', ex:'优', g:'阴声韵' },
+  /* 阳声韵 */
+  { v:'an', ex:'班', g:'阳声韵（鼻尾）' }, { v:'uan', ex:'弯', g:'阳声韵（鼻尾）' },
+  { v:'øn', ex:'般', g:'阳声韵（鼻尾）' }, { v:'uøn', ex:'宽', g:'阳声韵（鼻尾）' },
+  { v:'ɛn', ex:'能', g:'阳声韵（鼻尾）' }, { v:'iɛn', ex:'烟', g:'阳声韵（鼻尾）' },
+  { v:'yɛn',ex:'渊', g:'阳声韵（鼻尾）' }, { v:'ən', ex:'分', g:'阳声韵（鼻尾）' },
+  { v:'in', ex:'因', g:'阳声韵（鼻尾）' }, { v:'un', ex:'温', g:'阳声韵（鼻尾）' },
+  { v:'yn', ex:'云', g:'阳声韵（鼻尾）' }, { v:'aŋ', ex:'冷', g:'阳声韵（鼻尾）' },
+  { v:'iaŋ',ex:'影', g:'阳声韵（鼻尾）' }, { v:'uaŋ', ex:'横', g:'阳声韵（鼻尾）' },
+  { v:'ɔŋ', ex:'邦', g:'阳声韵（鼻尾）' }, { v:'iɔŋ', ex:'央', g:'阳声韵（鼻尾）' },
+  { v:'uɔŋ',ex:'汪', g:'阳声韵（鼻尾）' }, { v:'əŋ', ex:'绷', g:'阳声韵（鼻尾）' },
+  /* 入声韵（与阴声韵相配） */
+  { v:'ɿʔ', ex:'职', g:'入声韵（促声）' }, { v:'iʔ', ex:'益', g:'入声韵（促声）' },
+  { v:'uʔ', ex:'屋', g:'入声韵（促声）' }, { v:'yʔ', ex:'玉', g:'入声韵（促声）' },
+  { v:'aʔ', ex:'客', g:'入声韵（促声）' }, { v:'iaʔ',ex:'压', g:'入声韵（促声）' },
+  { v:'uaʔ',ex:'刮', g:'入声韵（促声）' }, { v:'yaʔ',ex:'曰', g:'入声韵（促声）' },
+  { v:'oʔ', ex:'博', g:'入声韵（促声）' }, { v:'ioʔ',ex:'约', g:'入声韵（促声）' },
+  { v:'uoʔ',ex:'握', g:'入声韵（促声）' }, { v:'ɛʔ', ex:'色', g:'入声韵（促声）' },
+  { v:'iɛʔ',ex:'页', g:'入声韵（促声）' }, { v:'uɛʔ',ex:'国', g:'入声韵（促声）' },
+  { v:'aiʔ',ex:'辣', g:'入声韵（促声）' }, { v:'uaiʔ',ex:'崴', g:'入声韵（促声）' },
+  { v:'əuʔ',ex:'督', g:'入声韵（促声）' }, { v:'iuʔ',ex:'育', g:'入声韵（促声）' },
+  /* 入声韵（与阳声韵相配） */
+  { v:'aʔ', ex:'拔', g:'入声韵（配阳声韵）' }, { v:'uaʔ', ex:'袜', g:'入声韵（配阳声韵）' },
+  { v:'øʔ', ex:'拨', g:'入声韵（配阳声韵）' }, { v:'uøʔ', ex:'阔', g:'入声韵（配阳声韵）' },
+  { v:'ɛʔ', ex:'月', g:'入声韵（配阳声韵）' }, { v:'iɛʔ', ex:'铁', g:'入声韵（配阳声韵）' },
+  { v:'yɛʔ',ex:'悦', g:'入声韵（配阳声韵）' }, { v:'əʔ', ex:'勿', g:'入声韵（配阳声韵）' },
+  { v:'iʔ', ex:'力', g:'入声韵（配阳声韵）' }, { v:'uʔ', ex:'物', g:'入声韵（配阳声韵）' },
+  { v:'yʔ', ex:'入', g:'入声韵（配阳声韵）' }, { v:'əʔ', ex:'喷', g:'入声韵（配阳声韵）' },
+  /* 声化韵 */
+  { v:'m̩', ex:'你', g:'声化韵' }, { v:'ŋ̍', ex:'五', g:'声化韵' }
+];
+
+/* ---------- 3. 录入数据（localStorage） ---------- */
+const LS_KEY = 'tongcheng_dialect_5000_v1';
+let STORE = {};
+try {
+  const raw = localStorage.getItem(LS_KEY);
+  if (raw) STORE = JSON.parse(raw) || {};
+} catch (e) { STORE = {}; }
+
+let saveTimer = null;
+function save(now) {
+  if (saveTimer) clearTimeout(saveTimer);
+  const run = () => {
+    try { localStorage.setItem(LS_KEY, JSON.stringify(STORE)); }
+    catch (e) { toast('本地保存失败：浏览器存储空间不足，请及时导出 JSON 备份', 'err'); }
+  };
+  now ? run() : (saveTimer = setTimeout(run, 400));
+}
+const FIELDS = ['tcsm', 'tcym', 'tcread', 'tcsd', 'tczi', 'note'];
+function getCell(ch, f) { return (STORE[ch] && STORE[ch][f]) || ''; }
+function setCell(ch, f, v) {
+  v = (v || '').trim();
+  if (!STORE[ch]) STORE[ch] = {};
+  if (v) STORE[ch][f] = v; else delete STORE[ch][f];
+  if (!Object.keys(STORE[ch]).length) delete STORE[ch];
+  save();
+}
+function isDone(ch) { return !!STORE[ch] && Object.keys(STORE[ch]).length > 0; }
+function isFull(ch) {
+  const o = STORE[ch] || {};
+  return !!(o.tcsm || o.tcym || o.tcread || o.tcsd);
+}
+
+/* ---------- 4. 通城读音合成 ---------- */
+function compose(ch) {
+  const sm = getCell(ch, 'tcsm'), ym = getCell(ch, 'tcym'), sd = getCell(ch, 'tcsd');
+  if (!sm && !ym) { toast('请先填写通城声母或韵母', 'err'); return; }
+  let pitch = '';
+  const m = (sd || '').match(/\d{1,3}/);
+  if (m) pitch = m[0];
+  else if (sd && TC_TONE_ALIAS[sd]) pitch = TC_TONE_ALIAS[sd];
+  const base = (sm === '∅' ? '' : sm) + ym;
+  setCell(ch, 'tcread', base + pitch);
+  return base + pitch;
+}
+function toSuperscript(s) {
+  const map = { '0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹' };
+  return s.replace(/\d/g, d => map[d]);
+}
+
+/* ---------- 5. 视图状态 ---------- */
+let state = { q:'', status:'all', tone:'', sort:'idx', page:1, size:50 };
+let view = ROWS.slice();
+
+function applyFilter() {
+  const q = state.q.trim().toLowerCase();
+  view = ROWS.filter(r => {
+    if (q) {
+      const hay = [r.c, r.py, r.pyp, r.pyv, r.pyp + r.sd, r.sm, r.ym, TONE_NAME[r.sd],
+                   getCell(r.c,'tcsm'), getCell(r.c,'tcym'), getCell(r.c,'tcread'),
+                   getCell(r.c,'tcsd'), getCell(r.c,'tczi'), getCell(r.c,'note')]
+                  .join(' ').toLowerCase();
+      if (hay.indexOf(q) < 0) return false;
+    }
+    if (state.status !== 'all') {
+      const any = isDone(r.c), full = isFull(r.c);
+      if (state.status === 'done' && !any) return false;
+      if (state.status === 'todo' && any) return false;
+      if (state.status === 'part' && !(any && !full)) return false;
+    }
+    if (state.tone && getCell(r.c, 'tcsd').indexOf(state.tone) < 0) return false;
+    return true;
+  });
+  const dir = { idx:(a,b)=>a.i-b.i,
+                py:(a,b)=>a.py.localeCompare(b.py,'zh'),
+                sm:(a,b)=>a.sm.localeCompare(b.sm)||a.i-b.i,
+                ym:(a,b)=>a.ym.localeCompare(b.ym)||a.i-b.i,
+                sd:(a,b)=>a.sd-b.sd||a.i-b.i,
+                tcsm:(a,b)=>getCell(a.c,'tcsm').localeCompare(getCell(b.c,'tcsm'))||a.i-b.i }[state.sort];
+  view.sort(dir);
+}
+
+/* ---------- 6. 渲染 ---------- */
+const tbody = document.getElementById('tbody');
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+function comboHtml(ch, f, ph, cls) {
+  const v = getCell(ch, f);
+  return '<div class="combo' + (cls ? ' ' + cls : '') + '">' +
+    '<input type="text" data-ch="' + ch + '" data-f="' + f + '" value="' + esc(v) + '" ' +
+    'class="' + (v ? 'filled' : '') + '" placeholder="' + ph + '" autocomplete="off" spellcheck="false" />' +
+    '<span class="caret" data-pop="' + f + '">▾</span>' +
+    (f === 'tcread' ? '<span class="mini" title="由声母＋韵母＋调值合成">⤵</span>' : '') +
+    '</div>';
+}
+
+function rowHtml(r) {
+  const done = isDone(r.c);
+  const t = r.sd, tn = TONE_NAME[t] || '轻声';
+  const tcls = t >= 1 && t <= 4 ? 't' + t : 't0';
+  const alts = r.alt ? '<div class="alt">另 ' + esc(r.alt) + '</div>' : '';
+  const tcSd = getCell(r.c, 'tcsd');
+  const tcSdCls = /入/.test(tcSd) ? 't6' : (/阴/.test(tcSd) ? 't1' : (/阳/.test(tcSd) ?
+                   (/去/.test(tcSd) ? 't5' : 't2') : (/上/.test(tcSd) ? 't3' : (/去/.test(tcSd) ? 't4' : 't0'))));
+  return '<tr class="' + (done ? 'done' : '') + '">' +
+    '<td class="idx">' + (r.i + 1) + '</td>' +
+    '<td class="zi"><div class="han">' + esc(r.c) + '</div></td>' +
+    '<td class="py"><div class="p">' + esc(r.py) + '</div>' + alts + '</td>' +
+    '<td class="sm">' + (r.sm || '<span style="color:#c3cbd9">∅</span>') + '</td>' +
+    '<td class="ym">' + esc(r.ym) + '</td>' +
+    '<td class="sd"><span class="tone-badge ' + tcls + '">' + tn + '</span><span class="tn">' + t + '</span></td>' +
+    '<td class="tcsm" style="border-left:1px solid var(--line)">' + comboHtml(r.c, 'tcsm', '声母', '') + '</td>' +
+    '<td class="tcym">' + comboHtml(r.c, 'tcym', '韵母', '') + '</td>' +
+    '<td class="tcread">' + comboHtml(r.c, 'tcread', '读音', '') + '</td>' +
+    '<td class="tcsd">' +
+      '<div class="combo">' +
+        '<input type="text" data-ch="' + r.c + '" data-f="tcsd" value="' + esc(tcSd) + '" ' +
+        'class="' + (tcSd ? 'filled' : '') + '" placeholder="调类／调值" autocomplete="off" spellcheck="false" />' +
+        '<span class="caret" data-pop="tcsd">▾</span>' +
+      '</div>' +
+    '</td>' +
+    '<td class="tczi">' + comboHtml(r.c, 'tczi', '同字／异字', '') + '</td>' +
+    '<td class="note"><input type="text" data-ch="' + r.c + '" data-f="note" value="' + esc(getCell(r.c,'note')) +
+      '" placeholder="备注…" autocomplete="off" /></td>' +
+    '</tr>';
+}
+
+function render() {
+  applyFilter();
+  const total = view.length;
+  const pages = Math.max(1, Math.ceil(total / state.size));
+  if (state.page > pages) state.page = pages;
+  const start = (state.page - 1) * state.size;
+  const slice = view.slice(start, start + state.size);
+
+  tbody.innerHTML = slice.map(rowHtml).join('');
+  document.getElementById('emptyTip').style.display = total ? 'none' : 'block';
+
+  /* 分页 */
+  document.getElementById('pgInfo').textContent =
+    total ? ('共 ' + total + ' 条 · 第 ' + state.page + '/' + pages + ' 页') : '共 0 条';
+  const nums = document.getElementById('pgNums');
+  let html = '', p = state.page;
+  const marks = new Set([1, pages, p, p - 1, p + 1, p - 2, p + 2].filter(x => x >= 1 && x <= pages));
+  let prev = 0;
+  [...marks].sort((a, b) => a - b).forEach(n => {
+    if (n - prev > 1) html += '<span class="ellipsis">…</span>';
+    html += '<button class="pgbtn' + (n === p ? ' cur' : '') + '" data-page="' + n + '">' + n + '</button>';
+    prev = n;
+  });
+  nums.innerHTML = html;
+  document.getElementById('pgFirst').disabled = p <= 1;
+  document.getElementById('pgPrev').disabled = p <= 1;
+  document.getElementById('pgNext').disabled = p >= pages;
+  document.getElementById('pgLast').disabled = p >= pages;
+
+  updateStats(total);
+}
+
+/* 只刷新统计与进度（不重建表格，避免打断正在输入的用户） */
+function updateStats(total) {
+  if (total === undefined) total = view.length;
+  const doneN = ROWS.filter(r => isDone(r.c)).length;
+  const fullN = ROWS.filter(r => isFull(r.c)).length;
+  document.getElementById('numDone').textContent = doneN;
+  document.getElementById('numTodo').textContent = ROWS.length - doneN;
+  document.getElementById('numAll').textContent = ROWS.length;
+  const pct = Math.round(doneN / ROWS.length * 100);
+  document.getElementById('pctText').textContent = pct + '%';
+  const C = 2 * Math.PI * 36;
+  const arc = document.getElementById('ringArc');
+  arc.setAttribute('stroke-dasharray', C);
+  arc.setAttribute('stroke-dashoffset', C * (1 - doneN / ROWS.length));
+  document.getElementById('filterInfo').textContent =
+    '筛选后 ' + total + ' 字 · 已录完整字音 ' + fullN + ' 字';
+}
+
+/* ---------- 7. 表格交互 ---------- */
+let lastFocus = null;
+tbody.addEventListener('focusin', e => { if (e.target.dataset && e.target.dataset.f) lastFocus = e.target; });
+tbody.addEventListener('input', e => {
+  const el = e.target;
+  if (!el.dataset || !el.dataset.f) return;
+  setCell(el.dataset.ch, el.dataset.f, el.value);
+  el.classList.toggle('filled', !!el.value.trim());
+  const tr = el.closest('tr');
+  if (tr) tr.classList.toggle('done', isDone(el.dataset.ch));
+  clearTimeout(updateStats._t);
+  updateStats._t = setTimeout(() => updateStats(), 600);
+});
+tbody.addEventListener('change', e => {
+  const el = e.target;
+  if (el.dataset && el.dataset.f) setCell(el.dataset.ch, el.dataset.f, el.value);
+});
+tbody.addEventListener('keydown', e => {
+  const el = e.target;
+  if (!el.dataset || !el.dataset.f) return;
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    const f = el.dataset.f;
+    const inputs = [...tbody.querySelectorAll('input[data-f="' + f + '"]')];
+    const k = inputs.indexOf(el);
+    const next = inputs[k + 1];
+    if (next) { next.focus(); next.select && next.select(); }
+    else { const nb = document.getElementById('pgNext'); if (!nb.disabled) { nb.click(); setTimeout(() => { const all = [...tbody.querySelectorAll('input[data-f="' + f + '"]')]; all[0] && all[0].focus(); }, 60); } }
+  }
+  if (e.key === 'ArrowDown') { e.preventDefault(); openPop(el, el.dataset.f); }
+});
+tbody.addEventListener('click', e => {
+  const caret = e.target.closest('.caret');
+  if (caret) {
+    const input = caret.parentElement.querySelector('input');
+    openPop(input, caret.dataset.pop);
+    return;
+  }
+  const mini = e.target.closest('.mini');
+  if (mini) {
+    const input = mini.parentElement.querySelector('input');
+    const v = compose(input.dataset.ch);
+    if (v !== undefined) { input.value = getCell(input.dataset.ch, 'tcread'); input.classList.toggle('filled', !!input.value); }
+  }
+});
+
+/* ---------- 8. 可输入下拉（combobox） ---------- */
+const pop = document.getElementById('pop');
+const popList = document.getElementById('popList');
+const popSearch = document.getElementById('popSearch');
+let popTarget = null, popField = null;
+
+function optionsFor(field) {
+  if (field === 'tcsm') return TC_INITIALS.map(o => ({ k:o.v, e:o.ex, n:o.n, g:o.g }));
+  if (field === 'tcym') return TC_FINALS.map(o => ({ k:o.v, e:o.ex, n:'', g:o.g }));
+  if (field === 'tcsd') return TC_TONE_DEF.map(o => ({ k:o.v, e:o.ex, n:'调值 '+o.pitch, g:'通城六调（城关／隽水）' }));
+  if (field === 'tcread') {
+    /* 读音候选：现有已填读音去重 + 声母×韵母常见组合 */
+    const set = new Set();
+    Object.keys(STORE).forEach(ch => { const v = STORE[ch].tcread; if (v) set.add(v); });
+    return [...set].sort().map(v => ({ k:v, e:'', n:'已录入', g:'已录入读音' }));
+  }
+  if (field === 'tczi') {
+    const set = new Set();
+    Object.keys(STORE).forEach(ch => { const v = STORE[ch].tczi; if (v) set.add(v); });
+    return [...set].sort().map(v => ({ k:v, e:'', n:'已录入', g:'已录入方言用字' }));
+  }
+  return [];
+}
+
+function buildPopList(filterText) {
+  const all = optionsFor(popField);
+  const q = (filterText || '').trim().toLowerCase();
+  const cur = popTarget ? popTarget.value.trim() : '';
+  if (!all.length) {
+    popList.innerHTML = '<div class="p-empty">暂无候选：直接输入即可</div>';
+    return;
+  }
+  const groups = [];
+  all.forEach(o => {
+    if (q && (o.k.toLowerCase().indexOf(q) < 0 && String(o.e).indexOf(q) < 0)) return;
+    let g = groups.find(x => x.name === o.g);
+    if (!g) { g = { name:o.g, items:[] }; groups.push(g); }
+    g.items.push(o);
+  });
+  if (!groups.length) { popList.innerHTML = '<div class="p-empty">没有匹配的候选</div>'; return; }
+  popList.innerHTML = groups.map(g =>
+    '<div class="p-group">' + esc(g.name) + '</div>' + g.items.map(o =>
+      '<div class="p-item' + (o.k === cur ? ' sel' : '') + '" data-v="' + esc(o.k) + '">' +
+        '<span class="k">' + esc(o.k) + '</span>' +
+        (o.e ? '<span class="e">' + esc(o.e) + '</span>' : '') +
+        (o.n ? '<span class="n">' + esc(o.n) + '</span>' : '') +
+      '</div>').join('')
+  ).join('');
+}
+
+function openPop(input, field) {
+  if (!input) return;
+  popTarget = input; popField = field;
+  const r = input.getBoundingClientRect();
+  const w = 298;
+  pop.style.display = 'block';
+  let left = Math.min(r.left, window.innerWidth - w - 12);
+  let top = r.bottom + 6;
+  const h = pop.offsetHeight || 340;
+  if (top + h > window.innerHeight - 10) top = Math.max(10, r.top - h - 6);
+  pop.style.left = Math.max(8, left) + 'px';
+  pop.style.top = top + 'px';
+  popSearch.value = '';
+  buildPopList('');
+  setTimeout(() => popSearch.focus(), 0);
+}
+function closePop() { pop.style.display = 'none'; popTarget = null; popField = null; }
+
+popSearch.addEventListener('input', () => buildPopList(popSearch.value));
+popSearch.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closePop();
+  if (e.key === 'Enter') {
+    const first = popList.querySelector('.p-item');
+    if (first) pick(first.dataset.v);
+  }
+});
+popList.addEventListener('click', e => {
+  const it = e.target.closest('.p-item');
+  if (it) pick(it.dataset.v);
+});
+function pick(v) {
+  if (!popTarget) return;
+  popTarget.value = v;
+  popTarget.classList.toggle('filled', !!v);
+  setCell(popTarget.dataset.ch, popTarget.dataset.f, v);
+  popTarget.dispatchEvent(new Event('input', { bubbles: true }));
+  if (popField === 'tcsd' && popTarget.dataset.ch) {
+    /* 选完调类后自动补调值提示 */
+    const ch = popTarget.dataset.ch;
+    if (!getCell(ch, 'tcread') && (getCell(ch,'tcsm') || getCell(ch,'tcym'))) compose(ch);
+  }
+  closePop();
+  render();
+}
+document.getElementById('popClose').addEventListener('click', closePop);
+document.getElementById('popClear').addEventListener('click', () => {
+  if (popTarget) { popTarget.value = ''; popTarget.classList.remove('filled'); setCell(popTarget.dataset.ch, popTarget.dataset.f, ''); }
+  closePop(); render();
+});
+document.addEventListener('mousedown', e => {
+  const inPop = pop.contains(e.target);
+  const onCaret = e.target && e.target.closest && e.target.closest('.caret');
+  if (!inPop && !onCaret) closePop();
+});
+document.getElementById('tableWrap').addEventListener('scroll', closePop);
+window.addEventListener('resize', closePop);
+
+/* ---------- 9. 工具栏 ---------- */
+const $ = id => document.getElementById(id);
+let qTimer = null;
+$('q').addEventListener('input', e => {
+  clearTimeout(qTimer);
+  qTimer = setTimeout(() => { state.q = e.target.value; state.page = 1; render(); }, 220);
+});
+$('fStatus').addEventListener('change', e => { state.status = e.target.value; state.page = 1; render(); });
+$('fTone').addEventListener('change', e => { state.tone = e.target.value; state.page = 1; render(); });
+$('fSort').addEventListener('change', e => { state.sort = e.target.value; state.page = 1; render(); });
+$('fPage').addEventListener('change', e => { state.size = parseInt(e.target.value, 10); state.page = 1; render(); });
+$('pgFirst').onclick = () => { state.page = 1; render(); };
+$('pgPrev').onclick = () => { state.page--; render(); };
+$('pgNext').onclick = () => { state.page++; render(); };
+$('pgLast').onclick = () => { state.page = 1e9; render(); };
+$('pgNums').addEventListener('click', e => { const b = e.target.closest('button[data-page]'); if (b) { state.page = parseInt(b.dataset.page, 10); render(); } });
+$('pgGo').onclick = () => { const v = parseInt($('pgJump').value, 10); if (v > 0) { state.page = v; render(); } };
+$('pgJump').addEventListener('keydown', e => { if (e.key === 'Enter') $('pgGo').click(); });
+
+$('btnFillSame').onclick = () => {
+  let n = 0;
+  ROWS.forEach(r => { if (!getCell(r.c, 'tczi')) { STORE[r.c] = STORE[r.c] || {}; STORE[r.c].tczi = r.c; n++; } });
+  save(true); render(); toast('已把 ' + n + ' 个「方言用字」填为与汉字相同', 'ok');
+};
+$('btnComposeAll').onclick = () => {
+  let n = 0;
+  ROWS.forEach(r => {
+    if (getCell(r.c, 'tcread')) return;
+    if (!getCell(r.c, 'tcsm') && !getCell(r.c, 'tcym')) return;
+    const v = compose(r.c); if (v) n++;
+  });
+  save(true); render(); toast('已合成 ' + n + ' 条通城读音', 'ok');
+};
+$('btnClear').onclick = () => {
+  if (!confirm('确定清空全部录入内容吗？此操作不可撤销，建议先导出 JSON 备份。')) return;
+  STORE = {}; save(true); render(); toast('已清空全部录入内容');
+};
+
+/* 通城声调筛选选项 */
+(() => {
+  const sel = $('fTone');
+  TC_TONE_DEF.forEach(t => {
+    const o = document.createElement('option');
+    o.value = t.v; o.textContent = t.v + ' ' + t.pitch;
+    sel.appendChild(o);
+  });
+})();
+
+/* ---------- 10. 导出 / 导入 ---------- */
+const HEADERS = ['序号','汉字','拼音','声母','韵母','声调','声调数值',
+                 '通城声母','通城韵母','通城读音','通城声调','方言用字','备注'];
+
+function exportRows() {
+  const scope = $('expScope').value;
+  let list = ROWS;
+  if (scope === 'done') list = ROWS.filter(r => isDone(r.c));
+  if (scope === 'view') { applyFilter(); list = view.slice(); }
+  const body = list.map(r => {
+    const sd = TONE_NAME[r.sd] || '轻声';
+    return [String(r.i + 1), r.c, r.py, r.sm, r.ym, sd, String(r.sd),
+            getCell(r.c,'tcsm'), getCell(r.c,'tcym'), getCell(r.c,'tcread'),
+            getCell(r.c,'tcsd'), getCell(r.c,'tczi'), getCell(r.c,'note')];
+  });
+  return [HEADERS].concat(body);
+}
+
+function stamp() {
+  const d = new Date(), p = n => String(n).padStart(2, '0');
+  return d.getFullYear() + p(d.getMonth() + 1) + p(d.getDate()) + '_' + p(d.getHours()) + p(d.getMinutes());
+}
+function download(blob, name) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+}
+
+/* --- JSON --- */
+$('btnExportJson').onclick = () => {
+  const rows = exportRows();
+  const obj = {
+    app: '通城方言字音记录表',
+    dialect: '通城方言（隽水镇 · 通城声）',
+    note: '通城方言属赣语大通片；通城声母韵母声调为文献参考值，以当地实际读音为准。',
+    charTable: '通用规范汉字表 一级字表(3500) + 二级字表(1500)',
+    columns: HEADERS,
+    total: ROWS.length,
+    filled: ROWS.filter(r => isDone(r.c)).length,
+    exportedAt: new Date().toISOString(),
+    rows: rows.slice(1).map(r => ({
+      index: Number(r[0]), char: r[1], pinyin: r[2], sm: r[3], ym: r[4], tone: r[5], toneNum: Number(r[6]),
+      tc_sm: r[7], tc_ym: r[8], tc_read: r[9], tc_tone: r[10], tc_char: r[11], note: r[12]
+    }))
+  };
+  download(new Blob([JSON.stringify(obj, null, 1)], { type:'application/json;charset=utf-8' }),
+           '通城方言字音记录_' + stamp() + '.json');
+  toast('已导出 JSON', 'ok');
+};
+
+/* --- 导入 JSON --- */
+function importJson(obj) {
+  const arr = Array.isArray(obj) ? obj : (obj.rows || obj.data || []);
+  if (!Array.isArray(arr)) throw new Error('未找到 rows 数组');
+  let n = 0;
+  arr.forEach(o => {
+    const ch = o.char || o['汉字'] || o.c || o.hanzi || '';
+    let target = ch;
+    if (!target && typeof o.index === 'number') target = (ROWS[o.index - 1] || {}).c;
+    if (!target) return;
+    const rec = {
+      tcsm: o.tc_sm || o.tcSm || o['通城声母'] || '',
+      tcym: o.tc_ym || o.tcYm || o['通城韵母'] || '',
+      tcread: o.tc_read || o.tcRead || o['通城读音'] || '',
+      tcsd: o.tc_tone || o.tcTone || o['通城声调'] || '',
+      tczi: o.tc_char || o.tcChar || o['方言用字'] || '',
+      note: o.note || o['备注'] || ''
+    };
+    const keep = {};
+    for (const k in rec) if (String(rec[k]).trim()) keep[k] = String(rec[k]).trim();
+    if (Object.keys(keep).length) { STORE[target] = Object.assign({}, STORE[target] || {}, keep); n++; }
+  });
+  save(true); render();
+  return n;
+}
+$('btnImportJson').onclick = () => $('fileInput').click();
+$('fileInput').addEventListener('change', e => {
+  const f = e.target.files && e.target.files[0];
+  if (!f) return;
+  const fr = new FileReader();
+  fr.onload = () => {
+    try {
+      const n = importJson(JSON.parse(fr.result));
+      toast('导入完成：恢复 ' + n + ' 个字的录入内容', 'ok');
+    } catch (err) {
+      toast('导入失败：' + err.message, 'err');
+    }
+    e.target.value = '';
+  };
+  fr.readAsText(f, 'utf-8');
+});
+
+/* --- Excel（纯前端生成 xlsx，无需任何外部库） --- */
+const CRC_TABLE = (() => {
+  const t = new Uint32Array(256);
+  for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1); t[n] = c >>> 0; }
+  return t;
+})();
+function crc32(u8) {
+  let c = 0xFFFFFFFF;
+  for (let i = 0; i < u8.length; i++) c = CRC_TABLE[(c ^ u8[i]) & 0xFF] ^ (c >>> 8);
+  return (c ^ 0xFFFFFFFF) >>> 0;
+}
+const enc = s => new TextEncoder().encode(s);
+
+function zipStore(files) {
+  const parts = [], central = [];
+  let offset = 0;
+  const d = new Date();
+  const dosTime = ((d.getHours() << 11) | (d.getMinutes() << 5) | (d.getSeconds() >> 1)) & 0xFFFF;
+  const dosDate = ((((d.getFullYear() - 1980) & 0x7F) << 9) | ((d.getMonth() + 1) << 5) | d.getDate()) & 0xFFFF;
+  files.forEach(f => {
+    const nameB = enc(f.name), data = f.data, crc = crc32(data), size = data.length;
+    const lh = new Uint8Array(30 + nameB.length), dv = new DataView(lh.buffer);
+    dv.setUint32(0, 0x04034b50, true); dv.setUint16(4, 20, true); dv.setUint16(6, 0x0800, true);
+    dv.setUint16(8, 0, true); dv.setUint16(10, dosTime, true); dv.setUint16(12, dosDate, true);
+    dv.setUint32(14, crc, true); dv.setUint32(18, size, true); dv.setUint32(22, size, true);
+    dv.setUint16(26, nameB.length, true); dv.setUint16(28, 0, true);
+    lh.set(nameB, 30);
+    parts.push(lh, data);
+    const ch = new Uint8Array(46 + nameB.length), dv2 = new DataView(ch.buffer);
+    dv2.setUint32(0, 0x02014b50, true); dv2.setUint16(4, 20, true); dv2.setUint16(6, 20, true);
+    dv2.setUint16(8, 0x0800, true); dv2.setUint16(10, 0, true);
+    dv2.setUint16(12, dosTime, true); dv2.setUint16(14, dosDate, true);
+    dv2.setUint32(16, crc, true); dv2.setUint32(20, size, true); dv2.setUint32(24, size, true);
+    dv2.setUint16(28, nameB.length, true); dv2.setUint16(30, 0, true); dv2.setUint16(32, 0, true);
+    dv2.setUint16(34, 0, true); dv2.setUint16(36, 0, true); dv2.setUint32(38, 0, true); dv2.setUint32(42, offset, true);
+    ch.set(nameB, 46);
+    central.push(ch);
+    offset += lh.length + size;
+  });
+  const cdSize = central.reduce((a, b) => a + b.length, 0);
+  const eocd = new Uint8Array(22), dv3 = new DataView(eocd.buffer);
+  dv3.setUint32(0, 0x06054b50, true); dv3.setUint16(8, files.length, true); dv3.setUint16(10, files.length, true);
+  dv3.setUint32(12, cdSize, true); dv3.setUint32(16, offset, true);
+  return new Blob(parts.concat(central, [eocd]),
+    { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+}
+const xesc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+function colName(i) { let s = ''; i++; while (i > 0) { const m = (i - 1) % 26; s = String.fromCharCode(65 + m) + s; i = Math.floor((i - 1) / 26); } return s; }
+
+function buildXlsx(rows) {
+  const W = [7, 7, 11, 8, 8, 9, 9, 12, 12, 14, 14, 11, 22];
+  let sd = '';
+  rows.forEach((r, ri) => {
+    sd += '<row r="' + (ri + 1) + '"' + (ri === 0 ? ' ht="22" customHeight="1"' : '') + '>';
+    r.forEach((v, ci) => {
+      const ref = colName(ci) + (ri + 1);
+      const st = ri === 0 ? ' s="1"' : '';
+      if (v === '' || v === undefined || v === null) { sd += '<c r="' + ref + '"' + st + '/>'; return; }
+      if (ci === 0 && /^\d+$/.test(v)) { sd += '<c r="' + ref + '"' + st + '><v>' + v + '</v></c>'; return; }
+      sd += '<c r="' + ref + '" t="inlineStr"' + st + '><is><t xml:space="preserve">' + xesc(v) + '</t></is></c>';
+    });
+    sd += '</row>';
+  });
+  const sheet =
+    '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">' +
+    '<sheetViews><sheetView tabSelected="1" workbookViewId="0">' +
+    '<pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/>' +
+    '<selection pane="bottomLeft" activeCell="A2" sqref="A2"/></sheetView></sheetViews>' +
+    '<sheetFormatPr defaultRowHeight="16"/>' +
+    '<cols>' + W.map((w, i) => '<col min="' + (i + 1) + '" max="' + (i + 1) + '" width="' + w + '" customWidth="1"/>').join('') + '</cols>' +
+    '<sheetData>' + sd + '</sheetData>' +
+    '<autoFilter ref="A1:' + colName(W.length - 1) + rows.length + '"/>' +
+    '</worksheet>';
+
+  const styles =
+    '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">' +
+    '<fonts count="2"><font><sz val="11"/><name val="微软雅黑"/></font>' +
+    '<font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="微软雅黑"/></font></fonts>' +
+    '<fills count="3"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill>' +
+    '<fill><patternFill patternType="solid"><fgColor rgb="FF2F6FED"/><bgColor indexed="64"/></patternFill></fill></fills>' +
+    '<borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders>' +
+    '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>' +
+    '<cellXfs count="2"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>' +
+    '<xf numFmtId="0" fontId="1" fillId="2" borderId="0" xfId="0" applyFont="1" applyFill="1" applyAlignment="1">' +
+    '<alignment horizontal="center" vertical="center"/></xf></cellXfs>' +
+    '<cellStyles count="1"><cellStyle name="常规" xfId="0" builtinId="0"/></cellStyles></styleSheet>';
+
+  const files = [
+    { name: '[Content_Types].xml', data: enc(
+      '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+      '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">' +
+      '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>' +
+      '<Default Extension="xml" ContentType="application/xml"/>' +
+      '<Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>' +
+      '<Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>' +
+      '<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>' +
+      '</Types>') },
+    { name: '_rels/.rels', data: enc(
+      '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+      '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+      '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>' +
+      '</Relationships>') },
+    { name: 'xl/workbook.xml', data: enc(
+      '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+      '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" ' +
+      'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">' +
+      '<sheets><sheet name="通城方言字音表" sheetId="1" r:id="rId1"/></sheets></workbook>') },
+    { name: 'xl/_rels/workbook.xml.rels', data: enc(
+      '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+      '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+      '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/>' +
+      '<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>' +
+      '</Relationships>') },
+    { name: 'xl/styles.xml', data: enc(styles) },
+    { name: 'xl/worksheets/sheet1.xml', data: enc(sheet) }
+  ];
+  return zipStore(files);
+}
+
+$('btnExportXlsx').onclick = () => {
+  try {
+    const rows = exportRows();
+    const blob = buildXlsx(rows);
+    download(blob, '通城方言字音记录_' + stamp() + '.xlsx');
+    toast('已导出 Excel：' + (rows.length - 1) + ' 行', 'ok');
+  } catch (err) {
+    toast('导出失败：' + err.message, 'err');
+  }
+};
+
+/* ---------- 11. 参考音系渲染 ---------- */
+function renderRef() {
+  const ymBox = $('refYm'), tBox = $('refTone');
+  const smBox = $('refSm');
+  const gGroups = {};
+  TC_INITIALS.forEach(o => { (gGroups[o.g] = gGroups[o.g] || []).push(o); });
+  smBox.innerHTML = Object.keys(gGroups).map(g =>
+    '<div class="gtitle blue">' + esc(g) + '</div><div class="grid">' +
+    gGroups[g].map(o =>
+      '<div class="gitem"><span class="k">' + esc(o.v) + '</span><span class="e">' + esc(o.ex) + '</span>' +
+      '<span class="n">' + esc(o.n) + '</span></div>').join('') + '</div>').join('');
+  $('refSmCount').textContent = '共 ' + TC_INITIALS.length + ' 个（不计零声母 ' + (TC_INITIALS.length - 1) + ' 个；各家记录 17—22 个）';
+
+  const yGroups = {};
+  TC_FINALS.forEach(o => { (yGroups[o.g] = yGroups[o.g] || []).push(o); });
+  ymBox.innerHTML = Object.keys(yGroups).map(g =>
+    '<div class="gtitle warm">' + esc(g) + '（' + yGroups[g].length + '）</div><div class="grid">' +
+    yGroups[g].map(o =>
+      '<div class="gitem"><span class="k">' + esc(o.v) + '</span><span class="e">' + esc(o.ex) + '</span></div>').join('') + '</div>').join('');
+  $('refYmCount').textContent = '整理 ' + TC_FINALS.length + ' 项（含入声韵；各家记录 66—72 个，含相配的入声韵母）';
+
+  tBox.innerHTML = TC_TONE_DEF.map((t, i) =>
+    '<div class="tcard"><div class="top">' +
+    '<span class="tone-badge ' + ['t1','t2','t3','t4','t5','t6'][i] + '">' + esc(t.v) + '</span>' +
+    '<span class="pitch">' + esc(t.pitch) + '</span>' +
+    '<span class="n" style="font-size:11px;color:#b6bfcd;margin-left:auto">' + esc(t.g) + '</span></div>' +
+    '<div class="ex">' + esc(t.ex) + '</div></div>').join('');
+}
+renderRef();
+
+/* ---------- 12. toast ---------- */
+let toastTimer = null;
+function toast(msg, type) {
+  const el = $('toast');
+  el.textContent = msg;
+  el.className = 'on' + (type ? ' ' + type : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.className = type || ''; }, 2600);
+}
+
+/* ---------- 13. 启动 ---------- */
+render();
+window.addEventListener('beforeunload', () => save(true));
+</script>
+</body>
+</html>
