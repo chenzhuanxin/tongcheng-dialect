@@ -43,3 +43,9 @@ tongcheng-dialect/
 ## 方法与工具
 
 Python + requests/playwright（抓取）· ffmpeg（抽音/抽帧）· rapidocr-onnxruntime（中文 OCR）· numpy/scipy（VAD、共振峰合成）· openpyxl/python-docx（表格与文档）。
+
+## 在线工具
+
+**通城方言字音记录表**（本仓库 `index.html`，[在线打开](https://chenzhuanxin.github.io/tongcheng-dialect/)）：5000 常用汉字 × 普通话音系（拼音/声母/韵母/声调）× 通城方言音系录入表。通城方言声母、韵母、读音、声调（六声：阴平312/阳平22/上声31/阴去24/阳去33/入声5）均支持输入与下拉选择，附文献音系参考表；数据可导出 Excel / JSON，可导入 JSON 续录。
+
+单文件离线可用（下载 `index.html` 双击即开，数据存本机浏览器）。
